@@ -4,5 +4,5 @@
 
 ## Usage
 ```
-docker run -it --rm -v <domain_list_src_dir>:<domain_list_container_dir> secsi/massdns <domain_list_container>.txt
+docker run -it --rm -v <domain_src_dir>:<domain_container_dir> secsi/massdns <domain_container_dir>/<domain_list_file>
 ```

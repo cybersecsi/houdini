@@ -24,5 +24,5 @@ However the module engine for new services is very easy so it won't take a long 
 Attempt to login as the root user (-l root) using a password list with 6 threadson the given SSH server:
 
 ```
-docker run -it --rm -v <wordlist_src_dir>:<wordlist_inner_dir> secsi/hydra -l root -P <wordlist_file> -t <num_threads> ssh://<url>
+docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/hydra -l root -P <wordlist_container_dir>/<wordlist_file> -t <num_threads> ssh://<target_url>
 ```

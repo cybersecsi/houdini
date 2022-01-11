@@ -27,9 +27,24 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/maurosoria/dirsearch",
     },
     {
+        fancy_name: "dnscan",
+        name: "dnscan",
+        official_doc: "https://github.com/rbsec/dnscan",
+    },
+    {
+        fancy_name: "EyeWitness",
+        name: "eyewitness",
+        official_doc: "https://github.com/FortyNorthSecurity/EyeWitness",
+    },
+    {
         fancy_name: "ffuf",
         name: "ffuf",
         official_doc: "https://github.com/ffuf/ffuf",
+    },
+    {
+        fancy_name: "fierce",
+        name: "fierce",
+        official_doc: "	https://github.com/mschwager/fierce",
     },
     {
         fancy_name: "Findsploit",
@@ -40,6 +55,11 @@ const TOOLS: ITool[] = [
         fancy_name: "Gitrob",
         name: "gitrob",
         official_doc: "https://github.com/michenriksen/gitrob",
+    },
+    {
+        fancy_name: "GitTools",
+        name: "gittools",
+        official_doc: "https://github.com/internetwache/GitTool",
     },
     {
         fancy_name: "gobuster",
@@ -77,14 +97,34 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/blechschmidt/massdns",
     },
     {
+        fancy_name: "Nmap",
+        name: "nmap",
+        official_doc: "https://github.com/nmap/nmap",
+    },
+    {
+        fancy_name: "pureDNS",
+        name: "puredns",
+        official_doc: "https://github.com/d3mondev/puredns",
+    },
+    {
         fancy_name: "Race The Web",
         name: "race-the-web",
         official_doc: "https://github.com/TheHackerDev/race-the-web",
     },
     {
+        fancy_name: "RestfulHarvest",
+        name: "restfulharvest",
+        official_doc: "https://github.com/laramies/theHarvester",
+    },
+    {
         fancy_name: "Retire.js",
         name: "retire",
         official_doc: "https://github.com/RetireJS/retire.js",
+    },
+    {
+        fancy_name: "Sandcastle",
+        name: "sandcastle",
+        official_doc: "https://github.com/0xSearches/sandcastle",
     },
     {
         fancy_name: "sqlmap",
@@ -102,9 +142,9 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/laramies/theHarvester",
     },
     {
-        fancy_name: "RestfulHarvest",
-        name: "restfulharvest",
-        official_doc: "https://github.com/laramies/theHarvester",
+        fancy_name: "vim",
+        name: "vim",
+        official_doc: "https://github.com/vim/vim",
     },
     {
         fancy_name: "waybackpy",

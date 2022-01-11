@@ -13,5 +13,5 @@ the server.
 
 Here is the command to run **dirhunt** on a URL:
 ```
-docker run -it --rm secsi/dirhunt <url>
+docker run -it --rm secsi/dirhunt <target_url>
 ```

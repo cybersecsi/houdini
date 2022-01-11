@@ -10,5 +10,5 @@ DIRB’s main purpose is to help in professional web application auditing. Speci
 Here is the command to scan a given URL:
 
 ```
-docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/hydra <url> <wordlist_container_dir>/<wordlist_file>
+docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/hydra <target_url> <wordlist_container_dir>/<wordlist_file>
 ```

@@ -6,7 +6,7 @@ Use it for open source intelligence (*OSINT*) gathering to help determine a comp
 
 ## Usage
 ```
-docker run -it --rm secsi/theharvester -d <domain> -b all
+docker run -it --rm secsi/theharvester -d <target_url> -b all
 
 docker run -it --rm secsi/restfulharvest
 ```

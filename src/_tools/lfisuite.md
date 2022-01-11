@@ -17,5 +17,5 @@
 
 ## Usage
 ```
-docker run -it --rm -v <pathtotest_src>:<pathtotest_container> secsi/lfisuite
+docker run -it --rm -v <src_dir>:<container_dir> secsi/lfisuite
 ```

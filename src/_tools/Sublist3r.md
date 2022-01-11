@@ -4,5 +4,5 @@
 
 ## Usage
 ```
-docker run -it --rm secsi/sublist3r -d <domain>
+docker run -it --rm secsi/sublist3r -d <target_url>
 ```

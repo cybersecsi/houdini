@@ -22,5 +22,5 @@ from the rest of the operating system.
 
 ## Usage
 ```
-docker run -it --rm secsi/masscan -p<port> <target_ip_address>
+docker run -it --rm secsi/masscan -p<target_port> <target_ip_address>
 ```
