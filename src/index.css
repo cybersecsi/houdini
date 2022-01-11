@@ -10,6 +10,10 @@
         @apply flex-col;
         @apply h-screen;
     }
+    a {
+      @apply text-sky-400;
+      @apply underline;
+    }
     h1 {
       @apply text-3xl;
       @apply text-slate-700;
@@ -37,6 +41,7 @@
     }
     ul {
       @apply list-disc;
+      @apply list-inside;
     }
     table {
       @apply table-auto;

@@ -41,7 +41,7 @@ const Home = () => {
             <div>
                 <p className="text-justify">
                     <b>HOUDINI</b> (Hundreds of Offensive and Useful Docker Images for Network Intrusion)  is a curated list of <b>Network Security</b> related Docker Images for Network Intrusion purposes.
-                    A lot of images are created and kept updated through our <a href="https://github.com/cybersecsi/RAUDI">RAUDI</a> project which is able to automatically update a Docker Image every time there is a new version.
+                    A lot of images are created and kept updated through our <b><a href="https://github.com/cybersecsi/RAUDI">RAUDI</a></b> project which is able to automatically update a Docker Image every time there is a new version.
                 </p>
 
                 <label className="relative block my-6">

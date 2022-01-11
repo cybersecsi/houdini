@@ -25,7 +25,7 @@ yarn run build
 ```
 
 ## Web App
-This 
+To use HOUDINI, click the link below: 
 - https://houdini.secsi.io
 
 ## Credits

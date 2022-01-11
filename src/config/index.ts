@@ -103,10 +103,21 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/blechschmidt/massdns",
     },
     {
+        fancy_name: "Metasploit",
+        name: "metasploit-framework",
+        official_doc: "https://github.com/rapid7/metasploit-framework/wiki",
+        organization: "metasploitframework",
+    },
+    {
         fancy_name: "Mobile Security Framework",
         name: "mobile-security-framework-mobsf",
         official_doc: "https://mobsf.github.io/docs",
         organization: "opensecurity",
+    },
+    {
+        fancy_name: "nikto",
+        name: "nikto",
+        official_doc: "https://github.com/sullo/nikto",
     },
     {
         fancy_name: "Nmap",
