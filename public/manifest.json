@@ -1,0 +1,25 @@
+{
+  "short_name": "HOUDINI: Hundreds of Offensive and Useful Docker Images for Network Intrusion",
+  "name": "HOUDINI is a curated list of Network Security related Docker Images for Network Intrusion purposes",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

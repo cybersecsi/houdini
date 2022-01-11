@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    #root {
+        @apply flex;
+        @apply flex-col;
+        @apply h-screen;
+    }
+    h1 {
+      @apply text-3xl;
+      @apply text-slate-700;
+    }
+    h2 {
+      @apply text-2xl;
+      @apply text-slate-700;
+      @apply py-2;
+      @apply font-semibold;
+    }
+    h3 {
+      @apply text-xl;
+      @apply text-slate-700;
+      @apply font-semibold;
+    }
+    h4 {
+      @apply text-lg;
+      @apply text-slate-700;
+      @apply font-semibold;
+    }
+    h5 {
+      @apply text-base;
+      @apply text-slate-700;
+      @apply font-semibold;
+    }
+    ul {
+      @apply list-disc;
+    }
+    table {
+      @apply table-auto;
+      @apply bg-slate-200;
+    }
+    tr {
+      @apply border-solid;
+      @apply border-2;
+      @apply border-slate-300;
+    }
+    th {
+      @apply p-2;
+      @apply text-left;
+    }
+    td {
+      @apply p-2;
+      @apply text-left;
+    }
+    .markdown-content {
+      @apply text-slate-700;
+      @apply text-justify;
+    }
+    .markdown-content a{
+      @apply text-sky-400;
+      @apply underline;
+    }
+    pre {
+      @apply text-sm;
+      @apply my-3;
+      @apply p-2;
+      @apply bg-slate-300;
+    }
+    code {
+      @apply bg-slate-300;
+      @apply p-1;
+      @apply break-words;
+    }
+  }
