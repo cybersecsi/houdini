@@ -3,6 +3,10 @@
 Finsploit is a simple bash script to quickly and easily search both local and online exploit databases.
 
 ## Usage
+```
+docker run -it --rm secsi/findsploit <search_term> 
+```
+## Cheatsheet
 Here is the full usage of ``findsploit``:
 
 ```

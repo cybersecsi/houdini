@@ -6,8 +6,10 @@ Because it uses DNS primarily you will often find mis-configured networks that l
 
 ## Usage
 ```
-docker run -it --rm secsi/fierce --domain google.com --subdomains accounts admin ads
+docker run -it --rm secsi/fierce --domain <target_url>
 ```
+
+## Cheatsheet
 
 Traverse IPs near discovered domains to search for contiguous blocks with the
 `--traverse` flag:

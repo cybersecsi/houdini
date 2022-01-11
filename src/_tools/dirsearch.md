@@ -5,8 +5,11 @@ An advanced command-line tool designed to brute force directories and files in w
 ## Usage
 
 ```
-Usage: docker run -it --rm secsi/dirsearch [-u|--url] target [-e|--extensions] extensions [options]
+docker run -it --rm secsi/dirsearch -u <target_url>
+```
 
+## Cheatsheet
+```
 Options:
   --version             show program's version number and exit
   -h, --help            show this help message and exit

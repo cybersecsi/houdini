@@ -6,10 +6,11 @@ Gitrob is a tool to help find potentially sensitive files pushed to public repos
 Here is the usage of **Gitrob**:
 
 ```
-docker run -it --rm secsi/gitrob [options] <target> [target2] ... [targetN]
+docker run -it --rm secsi/gitrob <target>
 ```
 
-### Options
+## Cheatsheet
+**Options**:
 ```
 -bind-address string
     Address to bind web server to (default "127.0.0.1")

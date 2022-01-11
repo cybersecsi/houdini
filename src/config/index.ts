@@ -2,6 +2,12 @@ import { ITool } from 'types';
 
 const TOOLS: ITool[] = [
     {
+        fancy_name: "Amass",
+        name: "amass",
+        official_doc: "https://github.com/OWASP/Amass",
+        organization: "caffix",
+    },
+    {
         fancy_name: "Apktool",
         name: "apktool",
         official_doc: "https://github.com/iBotPeaches/Apktool",
@@ -97,9 +103,20 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/blechschmidt/massdns",
     },
     {
+        fancy_name: "Mobile Security Framework",
+        name: "mobile-security-framework-mobsf",
+        official_doc: "https://mobsf.github.io/docs",
+        organization: "opensecurity",
+    },
+    {
         fancy_name: "Nmap",
         name: "nmap",
         official_doc: "https://github.com/nmap/nmap",
+    },
+    {
+        fancy_name: "Patator",
+        name: "patator",
+        official_doc: "https://github.com/lanjelot/patator",
     },
     {
         fancy_name: "pureDNS",
@@ -127,6 +144,12 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/0xSearches/sandcastle",
     },
     {
+        fancy_name: "Sn1per",
+        name: "sn1per",
+        official_doc: "https://github.com/1N3/Sn1per/",
+        organization: "xer0dayz",
+    },
+    {
         fancy_name: "sqlmap",
         name: "sqlmap",
         official_doc: "https://github.com/sqlmapproject/sqlmap",
@@ -152,9 +175,27 @@ const TOOLS: ITool[] = [
         official_doc: "https://github.com/akamhy/waybackpy",
     },
     {
+        fancy_name: "Wfuzz",
+        name: "wfuzz",
+        official_doc: "https://wfuzz.readthedocs.io/",
+        organization: "ghcr.io/xmendez",
+    },
+    {
         fancy_name: "WhatWeb",
         name: "whatweb",
         official_doc: "https://github.com/urbanadventurer/WhatWeb",
+    },
+    {
+        fancy_name: "WPScan",
+        name: "wpscan",
+        official_doc: "https://github.com/wpscanteam/wpscan",
+        organization: "wpscanteam",
+    },
+    {
+        fancy_name: "ysoserial",
+        name: "ysoserial",
+        official_doc: "https://github.com/frohoff/ysoserial",
+        organization: "frohoff",
     },
 ]
 

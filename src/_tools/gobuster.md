@@ -8,7 +8,11 @@ Gobuster is a tool used to brute-force:
 - Open Amazon S3 buckets
 
 ## Usage
+```
+docker run -it --rm secsi/gobuster dns -d <target_url>
+```
 
+## Cheatsheet
 ### dns Mode
 ```
 Usage:
