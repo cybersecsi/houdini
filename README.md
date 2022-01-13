@@ -1,6 +1,10 @@
 # 🐳 HOUDINI: Hundreds of Offensive and Useful Docker Images for Network Intrusion
 HOUDINI is a curated list of **Network Security** related Docker Images for Network Intrusion purposes. A lot of images are created and kept updated through our [RAUDI](https://github.com/cybersecsi/RAUDI) repository. Pretty dope, eh?
 
+[![Documentation](https://img.shields.io/badge/Documentation-complete-green.svg?style=flat)](https://github.com/cybersecsi/HOUDINI/blob/main/README.md)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f8b06b7e-bdc6-4af8-aba9-f32e1132cd25/deploy-status)](https://app.netlify.com/sites/houdini/deploys)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/HOUDINI/blob/main/LICENSE)
+
 ## Table of Contents
   - [Web App](#web-app)
   - [Add a Tool](#add-a-tool)
