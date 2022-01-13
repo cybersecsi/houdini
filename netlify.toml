@@ -1,0 +1,7 @@
+# Redirect default Netlify subdomain to primary domain
+
+[[redirects]]
+  from = "https://houdini.netlify.app/*"
+  to = "https://houdini.secsi.io/:splat"
+  status = 301
+  force = true #COMMENT: ensure that we always redirect
