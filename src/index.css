@@ -15,22 +15,22 @@
       @apply underline;
     }
     h1 {
-      @apply text-3xl;
+      @apply text-4xl;
       @apply text-slate-700;
     }
     h2 {
-      @apply text-2xl;
+      @apply text-3xl;
       @apply text-slate-700;
       @apply py-2;
       @apply font-semibold;
     }
     h3 {
-      @apply text-xl;
+      @apply text-2xl;
       @apply text-slate-700;
       @apply font-semibold;
     }
     h4 {
-      @apply text-lg;
+      @apply text-xl;
       @apply text-slate-700;
       @apply font-semibold;
     }
