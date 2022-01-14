@@ -60,7 +60,7 @@ const main = async () => {
             official_doc: answers.official_doc,
         }
 
-        await copyFile(TEMPLATE_SRC_README, `${TOOLS_TARGET_FOLDER}/${config.name}`)
+        await copyFile(TEMPLATE_SRC_README, `${TOOLS_TARGET_FOLDER}/${config.name}.md`)
 
         console.log(`Template documentation copied in ${TOOLS_TARGET_FOLDER}/${config.name}.md`);
         console.log(`Now you have to add the following Object to the file './src/config/tools.ts':`)

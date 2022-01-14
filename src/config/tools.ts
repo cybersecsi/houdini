@@ -73,9 +73,19 @@ export const TOOLS: ITool[] = [
         official_doc: "https://github.com/OJ/gobuster",
     },
     {
+        fancy_name: 'GoogD0rker',
+        name: 'googd0rker',
+        official_doc: 'https://github.com/ZephrFish/GoogD0rker'
+    },
+    {
         fancy_name: "hydra",
         name: "hydra",
         official_doc: "https://github.com/vanhauser-thc/thc-hydra",
+    },
+    {
+        fancy_name: 'impacket',
+        name: 'impacket',
+        official_doc: 'https://github.com/SecureAuthCorp/impacket'
     },
     {
         fancy_name: "The JSON Web Token Toolkit",
