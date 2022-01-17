@@ -60,8 +60,3 @@ Receive notifications for scan and host status changes, URL and domain changes a
 #### Domain Takeovers
 
 List all DNS records vulnerable to domain hijacking and takeover.
-
-## Usage
-```
-docker run -it --rm xer0dayz/sn1per /sniper/sniper -t <target_url>
-```

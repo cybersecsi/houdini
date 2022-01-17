@@ -19,8 +19,3 @@ need to use either the `--src-ip` option to run from a different IP address, or
 use `--src-port` to configure which source ports masscan uses, then also
 configure the internal firewall (like `pf` or `iptables`) to firewall those ports
 from the rest of the operating system.
-
-## Usage
-```
-docker run -it --rm secsi/masscan -p<target_port> <target_ip_address>
-```

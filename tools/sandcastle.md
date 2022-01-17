@@ -14,9 +14,12 @@ The script takes a target's name as the stem argument (e.g. `shopify`) and itera
 [...]
 ```
 
-## Usage
+## Cheatsheet
+
 ```
 docker run -it --rm secsi/sandcastle -t <targetStem> -f bucket-names.txt
+```
 
+```
 docker run -it --rm -v <src_dir>:<container_dir> secsi/sandcastle -t <targetStem> -f <container_dir>/<bucket_names_file>
 ```

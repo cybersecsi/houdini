@@ -63,6 +63,18 @@ const Tool = () => {
                 <Link className="text-sky-400 underline" to="/">..</Link> /{currentTool?.fancy_name}
             </h1>
 
+            <h2>
+                Quick Usage
+            </h2>
+            <p>
+                For this tool the run command is:
+            </p>
+            <pre>
+                <code>
+                    {currentTool?.run_command}
+                </code>
+            </pre>
+
             <ReactMarkdown className="markdown-content" remarkPlugins={[gfm]}>{md}</ReactMarkdown>
 
             <h2>

@@ -35,8 +35,3 @@ Currently it supports the following modules:
 * `umbraco_crack` : Crack Umbraco HMAC-SHA1 password hashes
 * `tcp_fuzz` : Fuzz TCP services
 * `dummy_test` : Testing module
-
-## Usage
-```
-docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/patator <wordlist_container_dir>/<wordlist_file>
-```

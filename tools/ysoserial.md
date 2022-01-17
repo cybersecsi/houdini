@@ -7,8 +7,3 @@ this data, the chain will automatically be invoked and cause the command to be e
 
 It should be noted that the vulnerability lies in the application performing unsafe deserialization and NOT in having
 gadgets on the classpath.
-
-## Usage
-```
-docker run -it --rm frohoff/ysoserial CommonsCollections1 <payload> '<command>'
-```

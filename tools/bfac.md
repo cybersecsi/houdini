@@ -4,11 +4,6 @@ BFAC (Backup File Artifacts Checker) is an automated tool that checks for backup
 
 The goal of BFAC is to be an all-in-one tool for backup-file artifacts black-box testing.
 
-## Usage
-```
-docker run -it --rm secsi/bfac --url <target_url>
-```
-
 ## Cheatsheet
 
 | Description                                                | Command                                                                            |

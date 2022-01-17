@@ -66,7 +66,7 @@ const Home = () => {
                             <div className="text-sky-400 font-bold underline break-words">
                                 <Link to={`/tool/${tool.name}`}>{tool.fancy_name}</Link>
                             </div>
-                            <div className="break-words">{CONFIG.ORGANIZATION}/{tool.name}</div>
+                            <div className="break-words">{tool.organization ?? CONFIG.ORGANIZATION}/{tool.name}</div>
                             <div className="text-sky-400 font-bold underline break-words">
                                 <a href={tool.official_doc}>{tool.official_doc}</a>
                             </div>

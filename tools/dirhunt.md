@@ -8,10 +8,3 @@ much more.
 Dirhunt does not use brute force. But neither is it just a **crawler**. This tool is faster than others because it
 minimizes requests to the server. Generally, this tool takes **between 5-30 seconds**, depending on the website and
 the server.
-
-## Usage
-
-Here is the command to run **dirhunt** on a URL:
-```
-docker run -it --rm secsi/dirhunt <target_url>
-```

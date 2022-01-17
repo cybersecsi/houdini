@@ -14,11 +14,11 @@ Iterate through all commit-objects of a repository
 Try to restore the contents of the commit
 Commits are not sorted by date
 
-## Usage
+## Cheatsheet
 
 Finder
 ```
-docker run -it --rm -v <src_dir>:<container_dir> -w <container_dir> secsi/gittools gitfinder -i inputfile.txt -o outputfile.txt
+docker run -it --rm -v <src_dir>:<container_dir> -w <container_dir> secsi/gittools <command> gitfinder -i inputfile.txt -o outputfile.txt
 ```
 
 Dumper

@@ -14,8 +14,3 @@
   - phpinfo
   - data://
   - expect://
-
-## Usage
-```
-docker run -it --rm -v <src_dir>:<container_dir> secsi/lfisuite
-```

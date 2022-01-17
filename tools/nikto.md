@@ -14,8 +14,3 @@ The goal of the project is to examine a web server to find potential problems an
 - Pointers to lead a human tester to better manual testing
 
 Nikto is built on LibWhisker2 (by Rain Forest Puppy) and can run on any platform which has a Perl environment. It supports SSL, proxies, host authentication, attack encoding and more.
-
-## Usage
-```
-docker run -it --rm secsi/nikto -h <target_url>
-```

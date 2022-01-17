@@ -4,11 +4,6 @@
 
 Because it uses DNS primarily you will often find mis-configured networks that leak internal address space. That’s especially useful in targeted malware. Originally written by RSnake along with others at http://ha.ckers.org/. This is simply a conversion to Python 3 to simplify and modernize the codebase.
 
-## Usage
-```
-docker run -it --rm secsi/fierce --domain <target_url>
-```
-
 ## Cheatsheet
 
 Traverse IPs near discovered domains to search for contiguous blocks with the

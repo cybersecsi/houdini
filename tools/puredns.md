@@ -6,11 +6,4 @@ It uses massdns, a powerful stub DNS resolver, to perform bulk lookups. With the
 
 puredns solves this with its wildcard detection algorithm. It can filter out wildcards based on the DNS answers obtained from a set of trusted resolvers. It also attempts to work around DNS poisoning by validating the answers obtained using those trusted resolvers.
 
-
-
-## Usage
-
-```
-docker run -it --rm -v <src_dir>:<container_dir> secsi/puredns
-```  
 You should download `resolvers.txt` and `<subdomains_file>` in the `host` folder to use `puredns`. See the documentation for more details.  

@@ -1,8 +1,3 @@
 ## Description
 The **Metasploit Framework** is an open source penetration testing and development platform that provides exploits for a variety of applications, operating systems and platforms. Metasploit is one of the most commonly used penetration testing tools.
 The main components of the Metasploit Framework are called *modules*. Modules are standalone pieces of code or software that provide functionality to Metasploit. There are six total modules: exploits, payloads, auxiliary, nops, posts, and encoders
-
-## Usage
-```
-docker run -it --rm metasploitframework/metasploit-framework
-```

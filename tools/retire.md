@@ -10,8 +10,3 @@ Retire.js can be used in many ways:
 4. A Chrome extension
 5. A Firefox extension
 6. Burp and OWASP Zap plugin
-
-## Usage
-```
-docker run -it --rm secsi/retire -h
-```

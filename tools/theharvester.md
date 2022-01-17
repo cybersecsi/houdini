@@ -4,9 +4,8 @@
 
 Use it for open source intelligence (*OSINT*) gathering to help determine a company's external threat landscape on the internet. The tool gathers emails, names, subdomains, IPs and URLs using multiple public data sources.
 
-## Usage
+## Cheatsheet
+### REST API
 ```
-docker run -it --rm secsi/theharvester -d <target_url> -b all
-
 docker run -it --rm secsi/restfulharvest
 ```
