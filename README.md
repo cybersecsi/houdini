@@ -35,7 +35,7 @@ PLEASE use **yarn** over **npm**
 ### Setup
 This is a **React** based application. Before running it you have to install all the needed packages with the following command:
 ```
-yarn install
+yarn install && cd ./webapp && yarn install
 ```
 
 ### Run

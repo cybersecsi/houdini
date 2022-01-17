@@ -212,5 +212,5 @@ export const TOOLS: ITool[] = [
         name: "ysoserial",
         official_doc: "https://github.com/frohoff/ysoserial",
         organization: "frohoff",
-    }
+    },
 ]

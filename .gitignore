@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# HOUDINI
+/webapp/src/_tools
+/webapp/node_modules
