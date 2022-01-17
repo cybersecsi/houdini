@@ -52,6 +52,8 @@ yarn run build
 
 ## Roadmap
 Here is the current roadmap:
+- [ ] Responsive Design
+- [ ] Fix margin, padding in tool pages to make it more readable
 - [ ] Define customizable fields
 - [ ] Add tools (reach at least 100)
 - [ ] Add toolbox for customizing commands
