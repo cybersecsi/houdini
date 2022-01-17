@@ -176,11 +176,6 @@ export const TOOLS: ITool[] = [
         official_doc: "https://github.com/laramies/theHarvester",
     },
     {
-        fancy_name: "vim",
-        name: "vim",
-        official_doc: "https://github.com/vim/vim",
-    },
-    {
         fancy_name: "waybackpy",
         name: "waybackpy",
         official_doc: "https://github.com/akamhy/waybackpy",
@@ -207,5 +202,5 @@ export const TOOLS: ITool[] = [
         name: "ysoserial",
         official_doc: "https://github.com/frohoff/ysoserial",
         organization: "frohoff",
-    },
+    }
 ]

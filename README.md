@@ -50,6 +50,13 @@ To build the app you have to run:
 yarn run build
 ```
 
+## Roadmap
+Here is the current roadmap:
+- [ ] Define customizable fields
+- [ ] Add tools (reach at least 100)
+- [ ] Add toolbox for customizing commands
+- [ ] Add ``bashify`` script
+
 ## Credits
 HOUDINI is proudly developed [@SecSI](https://secsi.io) by:
 - [Angelo Delicato](https://github.com/thelicato)
