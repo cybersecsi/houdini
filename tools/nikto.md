@@ -14,3 +14,25 @@ The goal of the project is to examine a web server to find potential problems an
 - Pointers to lead a human tester to better manual testing
 
 Nikto is built on LibWhisker2 (by Rain Forest Puppy) and can run on any platform which has a Perl environment. It supports SSL, proxies, host authentication, attack encoding and more.
+
+## Cheatsheet
+
+### To scan a particular host
+```
+docker run -it --rm secsi/nikto -host <target_ip_address>
+```
+
+### To scan a host on multiple ports (default = 80)
+```
+docker run -it --rm  secsi/nikto -host <target_ip_address> -port [port number 1], [port number 2], [port number 3]
+```
+
+### To scan a host and output fingerprinted information to a file
+```
+docker run -it --rm -v <output_dir>:/output secsi/nikto -host <target_ip_address> -output /output/<output_file>
+```
+
+### To use a proxy while scanning a host
+```
+docker run -it --rm secsi/nikto -host <target_ip_address> -useproxy <proxy_address>
+```
