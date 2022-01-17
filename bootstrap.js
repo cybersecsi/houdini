@@ -51,6 +51,11 @@ const setToolInfo = async () => {
             },
         },
         {
+            type: 'input',
+            name: 'run_command',
+            message: 'What is the run command for this tool?',
+        },
+        {
             type: "confirm",
             name: "is_finished",
             message: "Check the data, is everything ok?",
@@ -91,6 +96,7 @@ const main = async () => {
             name: answers.name.split('/')[1],
             organization: answers.name.split('/')[0],
             official_doc: answers.official_doc,
+            run_command: answers.run_command,
         }
 
         await copyFile(TEMPLATE_SRC_README, `${TOOLS_TARGET_FOLDER}/${config.name}.md`)
