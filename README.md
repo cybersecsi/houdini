@@ -18,14 +18,14 @@ To use HOUDINI, click the link below:
 
 ## Add a tool
 To add a new tool you have to:
-- Add it to the configuration (*src/config/tools.ts*)
-- Add a **Markdown** file in the tools directory (*src/_tools/*)
+- Add it to the configuration (*webapp/src/config/tools.ts*)
+- Add a **Markdown** file in the tools directory (*tools/*)
 You may do it manually or you may use the **bootstrap** command:
 ```
 yarn run bootstrap
 ```
 
-This command automatically copies a template Markdown in the tools directory and outputs the **JavaScript Object** that you need to insert in the configuration.
+This command automatically copies a template Markdown in the tools directory and adds the **JavaScript Object** in the config file.
 
 ## Development
 This section provides a set of commands to run the application locally. 
@@ -53,6 +53,7 @@ yarn run build
 ## Roadmap
 Here is the current roadmap:
 - [ ] Responsive Design
+- [ ] Add copy botton in ``<code>`` tags
 - [ ] Fix margin, padding in tool pages to make it more readable
 - [ ] Define customizable fields
 - [ ] Add tools (reach at least 100)
