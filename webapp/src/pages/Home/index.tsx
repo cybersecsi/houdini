@@ -26,8 +26,8 @@ const Home = () => {
         setResults(fuse.search(query).map((result) => result.item));
     }
 
-    const setClipboard = (name: string) => {
-        navigator.clipboard.writeText(`docker pull ${CONFIG.ORGANIZATION}/${name}`);
+    const setClipboard = (cmd: string) => {
+        navigator.clipboard.writeText(cmd);
     }
 
     return (
@@ -55,11 +55,12 @@ const Home = () => {
                 </label>
             </div>
 
-            <div className="grid grid-cols-4 gap-4 text-center my-4">
+            <div className="grid grid-cols-5 gap-4 text-center my-4">
                 <div><b>Tool</b></div>
                 <div><b>Docker Image</b></div>
                 <div><b>Official Doc</b></div>
-                <div><b>Quick Pull</b></div>
+                <div><b>Quick Usage</b></div>
+                <div><b>Copy</b></div>
                 {results.map((tool: ITool) => {
                     return (
                         <>
@@ -70,8 +71,11 @@ const Home = () => {
                             <div className="text-sky-400 font-bold underline break-words">
                                 <a href={tool.official_doc}>{tool.official_doc}</a>
                             </div>
+                            <div className="break-words text-left">
+                                <code>{tool.run_command}</code>
+                            </div>
                             <div className="mx-auto">
-                                <div className="p-2 rounded bg-cyan-600 text-white hover:bg-cyan-800 active:bg-cyan-400 cursor-pointer" onClick={() => setClipboard(tool.name)}>
+                                <div className="p-2 rounded bg-cyan-600 text-white hover:bg-cyan-800 active:bg-cyan-400 cursor-pointer" onClick={() => setClipboard(tool.run_command)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.89" viewBox="0 0 15 14.89" fill="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                     <path d="M10,14.89H0v-10H10Zm-9-1H9v-8H1Z" />
                                     <polygon points="15 9.89 10 9.89 10 8.89 14 8.89 14 0.89 6 0.89 6 4.89 5 4.89 5 -0.11 15 -0.11 15 9.89"/>
