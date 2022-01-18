@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CONFIG } from 'config';
 import { ITool } from 'types';
@@ -14,12 +14,19 @@ const fuse = new Fuse(CONFIG.TOOLS, {
 
 
 const Home = () => {
-    const [results, setResults] = useState<ITool[]>(CONFIG.TOOLS);
+    const [tools, setTools] = useState<ITool[]>([])
+    const [results, setResults] = useState<ITool[]>([]);
+
+    useEffect(() => {
+        const _tools = CONFIG.TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
+        setTools(_tools)
+        setResults(_tools)
+    }, [])
 
     const searchWithFuse = (ev: any) => {
         const query = ev.target.value
         if (!query) {
-            setResults(CONFIG.TOOLS)
+            setResults(tools)
             return;
         }
 
