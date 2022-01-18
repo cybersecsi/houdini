@@ -256,4 +256,11 @@ export const TOOLS: ITool[] = [
         organization: "frohoff",
         run_command: "docker run -it --rm frohoff/ysoserial CommonsCollections1 <payload> '<command>'",
     },
+    {
+        fancy_name: "Altdns",
+        name: "altdns",
+        organization: "secsi",
+        official_doc: "https://github.com/infosec-au/altdns",
+        run_command: "docker run -it --rm -v <wordlist_src_dir>:/wordlists -v <output_dir>:/output secsi/altdns -i /wordlists/<subdomain_file> -o data_output -w /wordlists/<wordlist_file> -r -s /output/outfile"
+    },
 ]
