@@ -298,4 +298,11 @@ export const TOOLS: ITool[] = [
         organization: "drwetter",
         run_command: "docker run -it --rm drwetter/testssl.sh <target_domain>"
     },
+    {
+        fancy_name: "Arachni",
+        name: "arachni",
+        official_doc: "https://github.com/Arachni/arachni",
+        organization: "arachni",
+        run_command: "docker run -d --net host --name arachni -p 222:22 -p 7331:7331 -p 9292:9292 arachni/arachni:latest"
+    },
 ]
