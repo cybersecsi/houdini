@@ -18,3 +18,14 @@ Currently this tool supports the following protocols:
  VNC and XMPP.
 
 However the module engine for new services is very easy so it won't take a long time until even more services are supported.
+
+## Cheatsheet
+### SSH Bruteforce
+```
+docker run -it --rm -v <wordlist_src_dir>:/usr/share/wordlists secsi/hydra -L root -P /usr/share/wordlists/<wordlist_file> -t 3 -s port <target_port> ssh 
+```
+
+### FTP Bruteforce
+```
+docker run -it --rm -v <input_dir>:/usr/share/wordlists secsi/hydra -L <input_dir>/users.txt -P <input_dir>/passwords.txt -t 3 -s 21 <target_ip> ftp
+```
