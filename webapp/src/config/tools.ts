@@ -354,4 +354,25 @@ export const TOOLS: ITool[] = [
         organization: "secsi",
         run_command: "docker run -it --rm secsi/arjun"
     },
+    {
+        fancy_name: "SimplyEmail",
+        name: "simplyemail",
+        official_doc: "https://simplysecurity.github.io/SimplyEmail/",
+        organization: "simplysecurity",
+        run_command: "docker run -it --rm simplysecurity/simplyemail -all -e <target_domain>"
+    },
+    {
+        fancy_name: "JoomScan",
+        name: "joomscan",
+        official_doc: "https://github.com/OWASP/joomscan",
+        organization: "secsi",
+        run_command: "docker run -it --rm -v <local_dir>:/joomscan/reports secsi/joomscan -u <target_url>"
+    },
+    {
+        fancy_name: "CMSeeK",
+        name: "cmseek",
+        official_doc: "https://github.com/Tuhinshubhra/CMSeeK",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/cmseek -u <target_url>"
+    },
 ]
