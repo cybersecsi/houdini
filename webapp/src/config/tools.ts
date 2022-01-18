@@ -299,6 +299,13 @@ export const TOOLS: ITool[] = [
         run_command: "docker run -it --rm drwetter/testssl.sh <target_domain>"
     },
     {
+        fancy_name: "Findomain",
+        name: "findomain",
+        official_doc: "https://github.com/Findomain/Findomain",
+        organization: "edu4rdshl",
+        run_command: "docker run --rm -it -v $(pwd):/opt/findomain findomain -c config.toml -t example.com"
+    },
+    {
         fancy_name: "Arachni",
         name: "arachni",
         official_doc: "https://github.com/Arachni/arachni",
