@@ -4,32 +4,31 @@ import { CONFIG } from 'config';
 import { ITool } from 'types';
 import Fuse from 'fuse.js';
 
-const fuse = new Fuse(CONFIG.TOOLS, {
-    keys: [
-        'fancy_name',
-        'name',
-        'official_doc'
-    ]
-});
-
-
 const Home = () => {
+    const [fuse, setFuse] = useState<Fuse<ITool>>();
     const [tools, setTools] = useState<ITool[]>([])
     const [results, setResults] = useState<ITool[]>([]);
 
     useEffect(() => {
         const _tools = CONFIG.TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
+        const _fuse = new Fuse(_tools, {
+            keys: [
+                'fancy_name',
+                'name',
+            ]
+        })
         setTools(_tools)
         setResults(_tools)
+        setFuse(_fuse)
     }, [])
 
     const searchWithFuse = (ev: any) => {
         const query = ev.target.value
-        if (!query) {
+        if (!query || !fuse) {
             setResults(tools)
             return;
         }
-
+        
         setResults(fuse.search(query).map((result) => result.item));
     }
 
