@@ -312,4 +312,46 @@ export const TOOLS: ITool[] = [
         organization: "arachni",
         run_command: "docker run -d --net host --name arachni -p 222:22 -p 7331:7331 -p 9292:9292 arachni/arachni:latest"
     },
+    {
+        fancy_name: "Subfinder",
+        name: "subfinder",
+        official_doc: "https://github.com/projectdiscovery/subfinder",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/subfinder -d <target_domain>"
+    },
+    {
+        fancy_name: "Subjack",
+        name: "subjack",
+        official_doc: "https://github.com/haccer/subjack",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/subjack"
+    },
+    {
+        fancy_name: "Hakrawler",
+        name: "hakrawler",
+        official_doc: "https://github.com/hakluke/hakrawler",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/hakrawler <target_domain>"
+    },
+    {
+        fancy_name: "Photon",
+        name: "photon",
+        official_doc: "https://github.com/s0md3v/Photon",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/photon"
+    },
+    {
+        fancy_name: "GoSpider",
+        name: "gospider",
+        official_doc: "https://github.com/jaeles-project/gospider",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/gospider"
+    },
+    {
+        fancy_name: "Arjun",
+        name: "arjun",
+        official_doc: "https://github.com/s0md3v/Arjun",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/arjun"
+    },
 ]
