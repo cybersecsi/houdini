@@ -94,8 +94,8 @@ const main = async () => {
         const config = {
             fancy_name: answers.fancy_name,
             name: answers.name.split('/')[1],
-            organization: answers.name.split('/')[0],
             official_doc: answers.official_doc,
+            organization: answers.name.split('/')[0],
             run_command: answers.run_command,
         }
 

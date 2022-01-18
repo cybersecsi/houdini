@@ -259,29 +259,43 @@ export const TOOLS: ITool[] = [
     {
         fancy_name: "Altdns",
         name: "altdns",
-        organization: "secsi",
         official_doc: "https://github.com/infosec-au/altdns",
+        organization: "secsi",
         run_command: "docker run -it --rm -v <wordlist_src_dir>:/wordlists -v <output_dir>:/output secsi/altdns -i /wordlists/<subdomain_file> -o data_output -w /wordlists/<wordlist_file> -r -s /output/outfile"
     },
     {
         fancy_name: "Datasploit",
         name: "datasploit",
-        organization: "secsi",
         official_doc: "https://github.com/DataSploit/datasploit",
+        organization: "secsi",
         run_command: "docker run -it --rm -v <config_file>:/datasploit/config.py secsi/datasploit -i <target_domain>"
     },
     {
         fancy_name: "dvcs-ripper",
         name: "dvcs-ripper",
-        organization: "secsi",
         official_doc: "https://github.com/kost/dvcs-ripper",
+        organization: "secsi",
         run_command: "docker run -it --rm secsi/dvcs-ripper"
     },
     {
         fancy_name: "Dorks Eye",
         name: "dorks-eye",
-        organization: "secsi",
         official_doc: "https://github.com/BullsEye0/dorks-eye",
+        organization: "secsi",
         run_command: "docker run -it --rm secsi/dorks-eye <command>"
+    },
+    {
+        fancy_name: "OpenVAS",
+        name: "openvas",
+        official_doc: "https://github.com/greenbone/openvas-scanner",
+        organization: "mikesplain",
+        run_command: "docker run -it --rm -p 443:443 --name openvas mikesplain/openvas"
+    },
+    {
+        fancy_name: "testssl.sh",
+        name: "testssl.sh",
+        official_doc: "https://github.com/drwetter/testssl.sh",
+        organization: "drwetter",
+        run_command: "docker run -it --rm drwetter/testssl.sh <target_domain>"
     },
 ]
