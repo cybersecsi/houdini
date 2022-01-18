@@ -58,6 +58,7 @@ Here is the current roadmap:
 - [ ] Define customizable fields
 - [ ] Add tools (reach at least 100)
 - [ ] Add toolbox for customizing commands
+- [ ] Add webapp snippet
 - [ ] Add ``bashify`` script
 
 ## Credits
