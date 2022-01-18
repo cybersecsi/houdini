@@ -21,5 +21,5 @@ docker run -it --rm secsi/sandcastle -t <targetStem> -f bucket-names.txt
 ```
 
 ```
-docker run -it --rm -v <src_dir>:<container_dir> secsi/sandcastle -t <targetStem> -f <container_dir>/<bucket_names_file>
+docker run -it --rm -v <input_dir>:/input secsi/sandcastle -t <targetStem> -f /input/<bucket_names_file>
 ```

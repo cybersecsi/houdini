@@ -18,15 +18,15 @@ Commits are not sorted by date
 
 Finder
 ```
-docker run -it --rm -v <src_dir>:<container_dir> -w <container_dir> secsi/gittools <command> gitfinder -i inputfile.txt -o outputfile.txt
+docker run -it --rm -v <input_dir>:/input -w /input secsi/gittools <command> gitfinder -i inputfile.txt -o outputfile.txt
 ```
 
 Dumper
 ```
-docker run -it --rm -v <src_dir>:<container_dir> -w <container_dir> secsi/gittools gitdumper <target_url>/.git/ .
+docker run -it --rm -v <input_dir>:/input -w /input secsi/gittools gitdumper <target_url>/.git/ .
 ```
 
 Extractor
 ```
-docker run -it --rm -v <src_dir>:<container_dir> -w <container_dir> secsi/gittools extractor mygitrepo mygitrepodump
+docker run -it --rm -v <input_dir>:/input -w /input secsi/gittools extractor mygitrepo mygitrepodump
 ```

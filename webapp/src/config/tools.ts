@@ -14,13 +14,13 @@ export const TOOLS: ITool[] = [
         name: "amass",
         official_doc: "https://github.com/OWASP/Amass",
         organization: "caffix",
-        run_command: "docker run -it --rm -v <src_dir>:/.config/amass/ caffix/amass enum -share -d <target_url>",
+        run_command: "docker run -it --rm -v <input_dir>:/.config/amass/ caffix/amass enum -share -d <target_url>",
     },
     {
         fancy_name: "Apktool",
         name: "apktool",
         official_doc: "https://github.com/iBotPeaches/Apktool",
-        run_command: "docker run -it --rm -v <src_dir>:<container_dir> secsi/apktool d <apk_file>",
+        run_command: "docker run -it --rm -v <input_dir>:/input secsi/apktool d <apk_file>",
     },
     {
         fancy_name: "BFAC",
@@ -56,7 +56,7 @@ export const TOOLS: ITool[] = [
         fancy_name: "EyeWitness",
         name: "eyewitness",
         official_doc: "https://github.com/FortyNorthSecurity/EyeWitness",
-        run_command: "docker run --rm -it -v <src_dir>:<container_dir> secsi/eyewitness --web --single <target_url>",
+        run_command: "docker run --rm -it -v <input_dir>:/input secsi/eyewitness --web --single <target_url>",
     },
     {
         fancy_name: "ffuf",
@@ -86,7 +86,7 @@ export const TOOLS: ITool[] = [
         fancy_name: "GitTools",
         name: "gittools",
         official_doc: "https://github.com/internetwache/GitTool",
-        run_command: "docker run -it --rm -v <src_dir>:<container_dir> -w <container_dir> secsi/gittools <command>",
+        run_command: "docker run -it --rm -v <input_dir>:/input -w /input secsi/gittools <command>",
     },
     {
         fancy_name: "gobuster",
@@ -104,7 +104,7 @@ export const TOOLS: ITool[] = [
         fancy_name: "hydra",
         name: "hydra",
         official_doc: "https://github.com/vanhauser-thc/thc-hydra",
-        run_command: "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/hydra <command>",
+        run_command: "docker run -it --rm -v <wordlist_src_dir>:/usr/share/wordlists secsi/hydra <command>",
     },
     {
         fancy_name: 'impacket',
@@ -128,7 +128,7 @@ export const TOOLS: ITool[] = [
         fancy_name: "LFI Suite",
         name: "lfisuite",
         official_doc: "https://github.com/D35m0nd142/LFISuite",
-        run_command: "docker run -it --rm -v <src_dir>:<container_dir> secsi/lfisuite",
+        run_command: "docker run -it --rm -v <input_dir>:/input secsi/lfisuite",
     },
     {
         fancy_name: "MASSCAN",
@@ -178,7 +178,7 @@ export const TOOLS: ITool[] = [
         fancy_name: "pureDNS",
         name: "puredns",
         official_doc: "https://github.com/d3mondev/puredns",
-        run_command: "docker run -it --rm -v <src_dir>:<container_dir> secsi/puredns",
+        run_command: "docker run -it --rm -v <input_dir>:/input secsi/puredns",
     },
     {
         fancy_name: "Race The Web",
