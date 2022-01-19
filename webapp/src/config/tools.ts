@@ -1,136 +1,3 @@
-    {
-        fancy_name: "dnstwist",
-        name: "dnstwist",
-        official_doc: "https://github.com/elceef/dnstwist",
-        organization: "elceef",
-        run_command: "docker run -it elceef/dnstwist"
-    },
-    {
-        fancy_name: "celerystalk",
-        name: "celerystalk",
-        official_doc: "https://github.com/sethsec/celerystalk",
-        organization: "sethsec",
-        run_command: "docker run -p 27007:27007 -ti sethsec/celerystalk"
-    },
-    {
-        fancy_name: "GetJS",
-        name: "getjs",
-        official_doc: "https://github.com/003random/getJS",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/getjs <command>"
-    },
-    {
-        fancy_name: "LinkFinder",
-        name: "linkfinder",
-        official_doc: "https://github.com/GerbenJavado/LinkFinder",
-        organization: "secsi",
-        run_command: "docker run -it --rm -v <output_dir>:/linkfinder/output secsi/linkfinder -i <target_url> -o /linkfinder/output/output.html"
-    },
-    {
-        fancy_name: "crowbar",
-        name: "crowbar",
-        official_doc: "https://github.com/galkan/crowbar",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/crowbar"
-    },
-    {
-        fancy_name: "hashID",
-        name: "hashid",
-        official_doc: "https://github.com/psypanda/hashID",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/hashid"
-    },
-    {
-        fancy_name: "routersploit",
-        name: "routersploit",
-        official_doc: "https://github.com/threat9/routersploit",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/routersploit"
-    },
-    {
-        fancy_name: "PivotSuite",
-        name: "pivotsuite",
-        official_doc: "https://github.com/RedTeamOperations/PivotSuite",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/pivotsuite [options] <target_ip> <target_port>"
-    },
-    {
-        fancy_name: "scanless",
-        name: "scanless",
-        official_doc: "https://github.com/vesche/scanless",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/scanless"
-    },
-    {
-        fancy_name: "fast-recon",
-        name: "fast-recon",
-        official_doc: "https://github.com/DanMcInerney/fast-recon",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/fast-recon -d \"<target_domain>\""
-    },
-    {
-        fancy_name: "CloudFail",
-        name: "cloudfail",
-        official_doc: "https://github.com/m0rtem/CloudFail",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/cloudfail"
-    },
-    {
-        fancy_name: "Memcrashed DDOS Exploit Tool",
-        name: "memcrashed-ddos-exploit",
-        official_doc: "https://github.com/649/Memcrashed-DDoS-Exploit",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/memcrashed-ddos-exploit"
-    },
-    {
-        fancy_name: "pagodo",
-        name: "pagodo",
-        official_doc: "https://github.com/opsdisk/pagodo",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/pagodo"
-    },
-    {
-        fancy_name: "Xray",
-        name: "xray",
-        official_doc: "https://github.com/evilsocket/xray",
-        organization: "secsi",
-        run_command: "docker run -it --rm secsi/xray"
-    },
-    {
-        fancy_name: "Aquatone",
-        name: "aquatone",
-        official_doc: "https://github.com/michenriksen/aquatone",
-        organization: "hypnza",
-        run_command: "docker run --rm hypnza/aquatone <command>"
-    },
-    {
-        fancy_name: "BeEF",
-        name: "beef",
-        official_doc: "https://github.com/beefproject/beef",
-        organization: "beefproject",
-        run_command: "docker run -p 3000:3000 -p 6789:6789 -p 61985:61985 -p 61986:61986 --name beef beef"
-    },
-    {
-        fancy_name: "CeWL",
-        name: "cewl",
-        official_doc: "https://github.com/digininja/CeWL",
-        organization: "nocflame",
-        run_command: "docker run -it --rm cewl <target_url>"
-    },
-    {
-        fancy_name: "CVE-Search",
-        name: "cve-search",
-        official_doc: "https://github.com/cve-search/cve-search",
-        organization: "ttimasdf",
-        run_command: "docker run -d -p 5000:5000 --name cve ttimasdf/cve-search:withdb"
-    },
-    {
-        fancy_name: "Decker",
-        name: "decker:kali",
-        official_doc: "https://github.com/stevenaldinger/decker",
-        organization: "stevenaldinger",
-        run_command: "docker run -it --rm -v \"$(pwd)/decker-reports/\":/tmp/reports/ -v \"$(pwd)/examples/\":/decker-config/ -e DECKER_TARGET_HOST=<target_domain> stevenaldinger/decker:kali decker ./decker-config/example.hcl"
-    },
 import { ITool } from 'types';
 
 /*
@@ -619,5 +486,138 @@ export const TOOLS: ITool[] = [
         official_doc: "https://github.com/wapiti-scanner/wapiti",
         organization: "jorgeandrada",
         run_command: "docker run --rm -it jorgeandrada/wapiti \"<target_url>\""
+    },
+    {
+        fancy_name: "dnstwist",
+        name: "dnstwist",
+        official_doc: "https://github.com/elceef/dnstwist",
+        organization: "elceef",
+        run_command: "docker run -it elceef/dnstwist"
+    },
+    {
+        fancy_name: "celerystalk",
+        name: "celerystalk",
+        official_doc: "https://github.com/sethsec/celerystalk",
+        organization: "sethsec",
+        run_command: "docker run -p 27007:27007 -ti sethsec/celerystalk"
+    },
+    {
+        fancy_name: "GetJS",
+        name: "getjs",
+        official_doc: "https://github.com/003random/getJS",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/getjs <command>"
+    },
+    {
+        fancy_name: "LinkFinder",
+        name: "linkfinder",
+        official_doc: "https://github.com/GerbenJavado/LinkFinder",
+        organization: "secsi",
+        run_command: "docker run -it --rm -v <output_dir>:/linkfinder/output secsi/linkfinder -i <target_url> -o /linkfinder/output/output.html"
+    },
+    {
+        fancy_name: "crowbar",
+        name: "crowbar",
+        official_doc: "https://github.com/galkan/crowbar",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/crowbar"
+    },
+    {
+        fancy_name: "hashID",
+        name: "hashid",
+        official_doc: "https://github.com/psypanda/hashID",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/hashid"
+    },
+    {
+        fancy_name: "routersploit",
+        name: "routersploit",
+        official_doc: "https://github.com/threat9/routersploit",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/routersploit"
+    },
+    {
+        fancy_name: "PivotSuite",
+        name: "pivotsuite",
+        official_doc: "https://github.com/RedTeamOperations/PivotSuite",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/pivotsuite [options] <target_ip> <target_port>"
+    },
+    {
+        fancy_name: "scanless",
+        name: "scanless",
+        official_doc: "https://github.com/vesche/scanless",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/scanless"
+    },
+    {
+        fancy_name: "fast-recon",
+        name: "fast-recon",
+        official_doc: "https://github.com/DanMcInerney/fast-recon",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/fast-recon -d \"<target_domain>\""
+    },
+    {
+        fancy_name: "CloudFail",
+        name: "cloudfail",
+        official_doc: "https://github.com/m0rtem/CloudFail",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/cloudfail"
+    },
+    {
+        fancy_name: "Memcrashed DDOS Exploit Tool",
+        name: "memcrashed-ddos-exploit",
+        official_doc: "https://github.com/649/Memcrashed-DDoS-Exploit",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/memcrashed-ddos-exploit"
+    },
+    {
+        fancy_name: "pagodo",
+        name: "pagodo",
+        official_doc: "https://github.com/opsdisk/pagodo",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/pagodo"
+    },
+    {
+        fancy_name: "Xray",
+        name: "xray",
+        official_doc: "https://github.com/evilsocket/xray",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/xray"
+    },
+    {
+        fancy_name: "Aquatone",
+        name: "aquatone",
+        official_doc: "https://github.com/michenriksen/aquatone",
+        organization: "hypnza",
+        run_command: "docker run --rm hypnza/aquatone <command>"
+    },
+    {
+        fancy_name: "BeEF",
+        name: "beef",
+        official_doc: "https://github.com/beefproject/beef",
+        organization: "beefproject",
+        run_command: "docker run -p 3000:3000 -p 6789:6789 -p 61985:61985 -p 61986:61986 --name beef beef"
+    },
+    {
+        fancy_name: "CeWL",
+        name: "cewl",
+        official_doc: "https://github.com/digininja/CeWL",
+        organization: "nocflame",
+        run_command: "docker run -it --rm cewl <target_url>"
+    },
+    {
+        fancy_name: "CVE-Search",
+        name: "cve-search",
+        official_doc: "https://github.com/cve-search/cve-search",
+        organization: "ttimasdf",
+        run_command: "docker run -d -p 5000:5000 --name cve ttimasdf/cve-search:withdb"
+    },
+    {
+        fancy_name: "Decker",
+        name: "decker",
+        official_doc: "https://github.com/stevenaldinger/decker",
+        organization: "stevenaldinger",
+        run_command: "docker run -it --rm -v \"$(pwd)/decker-reports/\":/tmp/reports/ -v \"$(pwd)/examples/\":/decker-config/ -e DECKER_TARGET_HOST=<target_domain> stevenaldinger/decker:kali decker ./decker-config/example.hcl"
     },
 ]
