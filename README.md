@@ -65,6 +65,7 @@ Here is the current roadmap:
 HOUDINI is proudly developed [@SecSI](https://secsi.io) by:
 - [Angelo Delicato](https://github.com/thelicato)
 - [Daniele Capone](https://github.com/daniele-capone)
+- [Emanuele Galdi](https://github.com/emalderson)
 
 ## License
 **HOUDINI** is an open-source and free software released under the [GNU GPL v3](/LICENSE).

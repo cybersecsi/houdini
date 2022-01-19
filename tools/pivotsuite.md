@@ -1,0 +1,2 @@
+## Description
+PivotSuite is a portable, platform independent and powerful network pivoting toolkit, Which helps Red Teamers / Penetration Testers to use a compromised system to move around inside a network. It is a Standalone Utility, Which can use as a Server or as a Client.
