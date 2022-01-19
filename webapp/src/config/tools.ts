@@ -375,4 +375,116 @@ export const TOOLS: ITool[] = [
         organization: "secsi",
         run_command: "docker run -it --rm secsi/cmseek -u <target_url>"
     },
+    {
+        fancy_name: "dex2jar",
+        name: "dex2jar",
+        official_doc: "https://github.com/pxb1988/dex2jar",
+        organization: "secsi",
+        run_command: "docker run -it --rm -v <local_dir>:<container_dir> secsi/dex2jar -f <container_dir>/<apk_to_decompile>.apk -o <container_dir>/output.jar"
+    },
+    {
+        fancy_name: "Ground control",
+        name: "ground-control",
+        official_doc: "https://github.com/jobertabma/ground-control",
+        organization: "secsi",
+        run_command: "docker run -it --rm -p 80:80 -p 443:443 -p 8080:8080 -p 8443:8443 secsi/ground-control"
+    },
+    {
+        fancy_name: "oxml_xxe",
+        name: "oxml_xxe",
+        official_doc: "https://github.com/BuffaloWill/oxml_xxe",
+        organization: "secsi",
+        run_command: "docker run -it --rm -p 4567:4567 secsi/oxml_xxe"
+    },
+    {
+        fancy_name: "psalm",
+        name: "psalm",
+        official_doc: "https://github.com/vimeo/psalm",
+        organization: "secsi",
+        run_command: "docker run -it --rm -v <local_dir>:/src secsi/psalm --root=/src"
+    },
+    {
+        fancy_name: "XXEinjector",
+        name: "xxeinjector",
+        official_doc: "https://github.com/enjoiz/XXEinjector",
+        organization: "secsi",
+        run_command: "docker run -it --rm -v <local_dir>:/xxeinjector secsi/xxeinjector --host=<target_ip> --path=/etc --file=<filename> --ssl"
+    },
+    {
+        fancy_name: "WAFW00F",
+        name: "wafw00f",
+        official_doc: "https://github.com/EnableSecurity/wafw00f",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/wafw00f"
+    },
+    {
+        fancy_name: "SpiderFoot",
+        name: "spiderfoot",
+        official_doc: "https://github.com/smicallef/spiderfoot",
+        organization: "ctdc",
+        run_command: "docker run -it --rm -p 5009:5001 ctdc/spiderfoot"
+    },
+    {
+        fancy_name: "gowitness",
+        name: "gowitness",
+        official_doc: "https://github.com/sensepost/gowitness",
+        organization: "leonjza",
+        run_command: "docker run -it --rm -v $(pwd):/data leonjza/gowitness gowitness"
+    },
+    {
+        fancy_name: "httprobe",
+        name: "httprobe",
+        official_doc: "https://github.com/tomnomnom/httprobe",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/httprobe"
+    },
+    {
+        fancy_name: "Striker",
+        name: "striker",
+        official_doc: "https://github.com/s0md3v/Striker",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/striker <target_domain>"
+    },
+    {
+        fancy_name: "hakrevdns",
+        name: "hakrevdns",
+        official_doc: "https://github.com/hakluke/hakrevdns",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/hakrevdns"
+    },
+    {
+        fancy_name: "spyse.py",
+        name: "spysepy",
+        official_doc: "https://github.com/zeropwn/spyse.py",
+        organization: "secsi",
+        run_command: "docker run -it --rm secsi/spysepy"
+    },
+    {
+        fancy_name: "HTTrack",
+        name: "httrack",
+        official_doc: "https://github.com/xroche/httrack",
+        organization: "ralfbs",
+        run_command: "docker run -it --rm -v <local_dir>:/app -e HTTRACK_URI=<target_url> ralfbs/httrack"
+    },
+    {
+        fancy_name: "mitmproxy",
+        name: "mitmproxy",
+        official_doc: "https://github.com/mitmproxy/mitmproxy",
+        organization: "mitmproxy",
+        run_command: "docker run --rm -it -p 8080:8080 mitmproxy/mitmproxy"
+    },
+    {
+        fancy_name: "Faraday",
+        name: "faraday",
+        official_doc: "https://github.com/infobyte/faraday",
+        organization: "faradaysec",
+        run_command: "docker run -it --rm -v /path/to/my_doc_folder:/faraday-license -v /path/to/my_storage_folder:/faraday-storage -v /path/to/my_config_folder:/faraday-config faradaysec/faraday"
+    },
+    {
+        fancy_name: "Wapiti",
+        name: "wapiti",
+        official_doc: "https://github.com/wapiti-scanner/wapiti",
+        organization: "jorgeandrada",
+        run_command: "docker run --rm -it jorgeandrada/wapiti \"<target_url>\""
+    },
 ]
