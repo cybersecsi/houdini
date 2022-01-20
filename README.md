@@ -15,7 +15,7 @@ HOUDINI is a curated list of **Network Security** related Docker Images for Netw
 
 ## Web App
 <p align="center">
-  <img src="docs/houdini-home.png" height=456px width=800px>
+  <img src="docs/houdini-home.png">
 </p>
 
 To use HOUDINI, click the link below: 
@@ -24,7 +24,7 @@ To use HOUDINI, click the link below:
 Other than listing **a lot** of tools we provide ``docker run`` commands for every one of them and useful **Cheatsheets** for some of them (You can also contribute by suggesting new commands to add). 
 
 <p align="center">
-  <img src="docs/houdini-cheatsheet.png" height=447px width=800px>
+  <img src="docs/houdini-cheatsheet.png">
 </p>
 
 ## Add a tool
@@ -34,7 +34,7 @@ A tool is composed by:
 
 We want people to contribute, so we created a script to automate the process of adding a new tool. All you have to do is add the **description** and (optionally) the **cheatsheet**. The command is ``bootstrap``, here is an example:
 <p align="center">
-  <img src="docs/bootstrap.gif" height=439px width=800px>
+  <img src="docs/bootstrap.gif">
 </p>
 
 To use the ``boostrap`` command you have to:
