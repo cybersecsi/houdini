@@ -77,6 +77,10 @@ const setToolInfo = async () => {
     }
 }
 
+const newLineChars = () => {
+    return process.platform === "win32" ? "\r\n" : "\n"
+}
+
 const beautifyObjectConfig = (config) => {
     const TAB_SPACES = "    "
     const jsonConfig = JSON.stringify(config, null, " ")
@@ -84,7 +88,7 @@ const beautifyObjectConfig = (config) => {
     configArray = configArray.map((line) => line.replace(" ", TAB_SPACES+TAB_SPACES).replace('"',"").replace('"',""))
     configArray[0] = TAB_SPACES+configArray[0]
     configArray[configArray.length-1] = TAB_SPACES+configArray[configArray.length-1]+","
-    return configArray.join("\r\n")
+    return configArray.join(newLineChars())
 }
 
 const main = async () => {
@@ -103,10 +107,10 @@ const main = async () => {
         console.log(`Template documentation copied in ${TOOLS_TARGET_FOLDER}/${config.name}.md`);
         
         const fileData = await readFile(TOOLS_CONFIG_FILE_PATH, 'utf8')
-        let dataArray = fileData.split("\r\n")
+        let dataArray = fileData.split(newLineChars())
         const beautifiedConfig = beautifyObjectConfig(config)
         dataArray.splice(-1, 0, beautifiedConfig)
-        const data = dataArray.join("\r\n")
+        const data = dataArray.join(newLineChars())
         
         await writeFile(TOOLS_CONFIG_FILE_PATH, data)
         
