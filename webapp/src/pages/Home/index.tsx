@@ -37,6 +37,7 @@ const Home = () => {
             keys: [
                 'fancy_name',
                 'name',
+                'organization'
             ]
         })
         // Set state
