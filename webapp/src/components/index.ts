@@ -1,0 +1,1 @@
+export { default as ClipboardCode } from "components/ClipboardCode";

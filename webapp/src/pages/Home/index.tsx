@@ -5,6 +5,7 @@ import { ITool } from 'types';
 import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { BsArrowReturnRight } from "react-icons/bs";
+import { ClipboardCode } from 'components';
 
 
 const Home = () => {
@@ -51,10 +52,6 @@ const Home = () => {
         setResults(fuse.search(query).map((result) => result.item));
     }
 
-    const setClipboard = (cmd: string) => {
-        navigator.clipboard.writeText(cmd);
-    }
-
     return (
         <>
             <div className="flex mb-8">
@@ -86,7 +83,6 @@ const Home = () => {
                 </label>
             </div>
 
-
             {results.map((tool: ITool) => {
                 return (
                     <>
@@ -111,29 +107,10 @@ const Home = () => {
                                 </div>
                                 */}
                             </div>
-                            <div className="relative">
-                                <pre className="relative">
-                                    <code>{tool.run_command}</code>
-                                </pre>     
-                                                      
-                                <div className='group'>
-                                    <button className="absolute inset-y-0 right-0 flex items-center p-2 rounded bg-cyan-600 hover:bg-cyan-800 active:bg-cyan-400 transition-colors duration-300" onClick={() => setClipboard(tool.run_command)}>
-                                        {/* Copy Icon */}
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.89" viewBox="0 0 15 14.89" fill="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                                            <path d="M10,14.89H0v-10H10Zm-9-1H9v-8H1Z" />
-                                            <polygon points="15 9.89 10 9.89 10 8.89 14 8.89 14 0.89 6 0.89 6 4.89 5 4.89 5 -0.11 15 -0.11 15 9.89"/>
-                                        </svg>
-                                    </button>
-                                    {/* Tooltip */}
-                                    <div className="absolute mx-2 right-0 bottom-11 z-0 opacity-0 group-active:opacity-100 group-active:transition-opacity duration-1000 cursor-default">
-                                        <div className="bg-black text-white text-xs rounded py-1 px-4 bottom-full">
-                                            Copied!
-                                            <svg className="absolute text-black h-2 w-full left-7 top-full" x="0px" y="0px" viewBox="0 0 255 255"><polygon className="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
+                            <ClipboardCode fixedBtn>
+                                {tool.run_command}
+                            </ClipboardCode>
                         </div>
                     </>
                 )

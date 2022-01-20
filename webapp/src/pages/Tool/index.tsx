@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm'
 import { CONFIG } from 'config';
 import { ITool } from 'types';
+import { ClipboardCode } from 'components';
 
 const Loading = () => {
     return (
@@ -36,7 +37,6 @@ const Tool = () => {
                 const file = await import(`_tools/${_currentTool.name}.md`)
                 const response = await fetch(file.default);
                 const _md = await response.text();
-                console.log(_md)
                 setMd(_md);
                 setCurrentTool(_currentTool)
                 setTimeout(() => {
@@ -69,13 +69,28 @@ const Tool = () => {
             <p>
                 For this tool the run command is:
             </p>
-            <pre>
-                <code>
-                    {currentTool?.run_command}
-                </code>
-            </pre>
 
-            <ReactMarkdown className="markdown-content" remarkPlugins={[gfm]}>{md}</ReactMarkdown>
+            <ClipboardCode fixedBtn>
+                {currentTool?.run_command}
+            </ClipboardCode>
+
+            <ReactMarkdown 
+                className="markdown-content" 
+                remarkPlugins={[gfm]}
+                components={{
+                    pre({node, className, children, ...props}) {
+                        const codeChild: any = node.children.find((child: any) => child.type === 'element' && child.tagName === 'code')
+                        const code = codeChild.children[0].value;
+                        return (
+                            <ClipboardCode>
+                                {code}
+                            </ClipboardCode>
+                        )
+                    }
+                }}
+            >
+                {md}
+            </ReactMarkdown>
 
             <h2>
                 Official Documentation

@@ -84,8 +84,10 @@
     code {
       @apply text-sm;
       @apply bg-slate-200;
-      @apply p-1;
       @apply break-words;
+    }
+    p code {
+      @apply p-1;
     }
     table code {
       @apply text-sm;
@@ -100,6 +102,36 @@
     .markdown-content a{
       @apply text-sky-400;
       @apply underline;
+    }
+    .clipboardcode-fixed-pre {
+      width: calc(100% - 32px);
+    }
+    .clipboardcode-btn{
+      @apply transition-colors;
+      @apply absolute;
+      @apply bg-cyan-600 ;
+      @apply hover:bg-cyan-800;
+      @apply active:bg-cyan-400;
+      @apply flex;
+      @apply items-center;
+      @apply p-2;
+      @apply duration-200;
+      @apply h-8; 
+    }
+    .clipboardcode-default-btn {
+      @apply opacity-0;
+      @apply group-hover:opacity-100;
+      @apply transition-opacity;
+      @apply rounded;
+      @apply inset-y-0;
+      @apply top-2;
+      @apply right-2;
+    }
+    .clipboardcode-fixed-btn {
+      @apply top-0;
+      @apply right-0;
+      @apply h-full;
+      @apply rounded-r;
     }
 
   }
