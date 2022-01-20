@@ -54,9 +54,10 @@ yarn run build
 Here is the current roadmap:
 - [ ] Responsive Design
 - [ ] Add copy botton in ``<code>`` tags (make it a component)
+- [ ] Check ``bootstrap`` command on Linux systems
 - [x] Fix margin, padding in tool pages to make it more readable
+- [x] Add tools (reach at least 100)
 - [ ] Define customizable fields
-- [ ] Add tools (reach at least 100)
 - [ ] Add toolbox for customizing commands
 - [ ] Add webapp snippet (to keep interesting commands)
 - [ ] Add ``bashify`` script
