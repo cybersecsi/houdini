@@ -4,6 +4,8 @@ import { CONFIG } from 'config';
 import { ITool } from 'types';
 import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { BsArrowReturnRight } from "react-icons/bs";
+
 
 const Home = () => {
     const [fuse, setFuse] = useState<Fuse<ITool>>();
@@ -81,10 +83,13 @@ const Home = () => {
                 return (
                     <>
                         <h3 className="text-center">
-                            <Link to={`/tool/${tool.name}`} className='no-underline'>{tool.fancy_name}</Link>
+                            <Link to={`/tool/${tool.name}`} className='no-underline'>
+                                {tool.fancy_name} 
+                                <BsArrowReturnRight className="inline ml-1 pt-1"/>
+                            </Link>
                         </h3>
                         <div className="block rounded-lg shadow-lg bg-white w-full mb-16 p-4">
-                            <div className="grid grid-cols-2 gap-4 text-left">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left">
                                 {/* Docker Image */}
                                 <div className="break-words"><b>Docker Image</b>: {tool.organization ?? CONFIG.ORGANIZATION}/{tool.name}</div>
                                 {/* Official Doc */}
