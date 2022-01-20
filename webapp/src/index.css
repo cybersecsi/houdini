@@ -6,9 +6,10 @@
 
 @layer base {
     body {
-      @apply text-slate-700;
-      @apply leading-8;
-      @apply overflow-x-hidden;
+        @apply text-slate-700;
+        @apply leading-8;
+        @apply overflow-x-hidden;
+        @apply scroll-smooth;
     }
     #root {
         @apply flex;

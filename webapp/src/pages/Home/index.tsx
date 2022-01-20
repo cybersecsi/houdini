@@ -15,9 +15,17 @@ const Home = () => {
 
     useHotkeys('shift+k', (event: KeyboardEvent) => {
         event.preventDefault();
-        searchbarRef.current.focus();
+        event.stopPropagation()
+        const intersectionObserver = new IntersectionObserver((entries) => {
+            let [entry] = entries;
+            if (entry.isIntersecting) {
+                searchbarRef.current.focus();
+            }
+        });
+        intersectionObserver.observe(searchbarRef.current);
+        searchbarRef.current.scrollIntoView({behavior: 'smooth' })        
         return false;
-    });
+    }, {enableOnTags: ["INPUT"]});
 
     useEffect(() => {
         const _tools = CONFIG.TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
@@ -33,7 +41,7 @@ const Home = () => {
     }, [])
 
     const searchWithFuse = (ev: any) => {
-        ev.preventDefault();
+        //ev.preventDefault();
         const query = ev.target.value
         if (!query || !fuse) {
             setResults(tools)
@@ -94,7 +102,7 @@ const Home = () => {
                                 <div className="break-words"><b>Docker Image</b>: {tool.organization ?? CONFIG.ORGANIZATION}/{tool.name}</div>
                                 {/* Official Doc */}
                                 <div className="break-words">
-                                    <b>Official Doc</b>: <a href={tool.official_doc}>{tool.official_doc}</a>
+                                    <b>Official Doc</b>: <a href={tool.official_doc} target="_blank" rel="noreferrer">{tool.official_doc}</a>
                                 </div>
                                 {/* Labels */}
                                 {/*
