@@ -1,0 +1,130 @@
+<!-- omit in toc -->
+# Contributing to HOUDINI
+Thanks in advance for taking the time to contribute.
+
+All types of contributions are encouraged and valued. See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. The community looks forward to your contributions.
+
+If you like the project, but you just don't have enough time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which would make us happy:
+- Star the project
+- Tweet about it
+- Refer this project in your project's README
+- Mention the project at local meetups and tell your friends/collegues
+
+<!-- omit in toc -->
+## Table of Contents
+
+- [Code of Conduct](#code-of-conduct)
+- [I Have a Question](#i-have-a-question)
+- [I Want To Contribute](#i-want-to-contribute)
+  - [Add a new tool](#add-a-new-tool)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Creating a Pull Request](#creating-a-pull-request)
+    - [Before Creating a Pull Request](#before-creating-a-pull-request)
+    - [How Do I Submit a Good Pull Request?](#how-do-i-submit-a-good-pull-request)
+
+## Code of Conduct
+This project and everyone participating in it is governed by [HOUDINI Code of Conduct](https://github.com/cybersecsi/HOUDINI/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <angelo.delicato@secsi.io>.
+
+## I Have a Question
+
+> If you want to ask a question, we assume that you have read the available [Documentation](https://github.com/cybersecsi/HOUDINI).
+
+Before you ask a question, it is best to search for existing [Issues](https://github.com/cybersecsi/HOUDINI/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
+
+If you then still feel the need to ask a question and need clarification, we recommend the following:
+
+- Open an [Issue](https://github.com/cybersecsi/HOUDINI/issues/new) that follows this [issue template](https://github.com/cybersecsi/HOUDINI/blob/main/.github/ISSUE_TEMPLATE/question.md).
+- Provide as much context as you can about what you're running into.
+- Provide platform versions (OS, Browser, etc.), depending on what seems relevant.
+
+We will then take care of the issue as soon as possible.
+
+## I Want To Contribute
+
+### Add a new tool
+
+We continuously work to add new cool features to HOUDINI and provide new tools and cheatsheets. If you don't want to jump right into the React application code you may contribute by adding a new tool to the list. Before continuing in this section please carefully read the [documentation](https://github.com/cybersecsi/HOUDINI) (in particular read the section '*Add a tool*' that highlights how to quickly add a new tool.). 
+
+<!-- omit in toc -->
+#### MUST
+The following rules **MUST** be followed when adding a new tool:
+- Check if the tool has already been added (check in the */tools* folder)
+- Use the ``yarn run bootstrap`` command and answer ALL the questions
+- Edit the newly created ``.md`` file in the */tools* directory and add **at least** a description (if you add also a cheatsheet we will be happier)
+
+After adding a new tool you may make a PR as described in the [specific section](#creating-a-pull-request).
+
+### Reporting Bugs
+
+<!-- omit in toc -->
+#### Before Submitting a Bug Report
+
+A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
+
+- Make sure that you are using the latest version.
+- Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/cybersecsi/HOUDINI). If you are looking for support, you might want to check [this section](#i-have-a-question)).
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/cybersecsi/HOUDINI/issues?q=label%3Abug).
+- Also make sure to search the internet (including Stack Overflow) to see if users outside of the GitHub community have discussed the issue.
+- Collect information about the bug:
+  - Stack trace (Traceback)
+  - OS, Platform and Version (Windows, Linux, macOS, x86)
+  - Version of the Python, Docker, depending on what seems relevant.
+  - Possibly your input and the output
+  - Can you reliably reproduce the issue? And can you also reproduce it with older versions?
+
+<!-- omit in toc -->
+#### How Do I Submit a Good Bug Report?
+
+> You must never report security related issues, vulnerabilities or bugs to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to <angelo.delicato@secsi.io>.
+
+We use GitHub issues to track bugs and errors. If you run into an issue with the project:
+
+- Open an [Issue](https://github.com/cybersecsi/HOUDINI/issues/new) that follows this [issue template](https://github.com/cybersecsi/HOUDINI/blob/main/.github/ISSUE_TEMPLATE/bug_report.md).
+- Explain the behavior you would expect and the actual behavior.
+- Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
+- Provide the information you collected in the previous section.
+
+Once it's filed:
+
+- The project team will label the issue accordingly.
+- A team member will try to reproduce the issue with your provided steps. If there are no reproduction steps or no obvious way to reproduce the issue, the team will ask you for those steps and mark the issue as `needs-repro`. Bugs with the `needs-repro` tag will not be addressed until they are reproduced.
+- If the team is able to reproduce the issue, it will be marked `needs-fix`, as well as possibly other tags (such as `critical`), and the issue will be left to be implemented by someone.
+
+### Suggesting Enhancements
+
+This section guides you through submitting an enhancement suggestion for HOUDINI, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
+
+<!-- omit in toc -->
+#### How Do I Submit a Good Enhancement Suggestion?
+
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/cybersecsi/HOUDINI/issues).
+
+- Open an [Issue](https://github.com/cybersecsi/HOUDINI/issues/new) that follows this [issue template](https://github.com/cybersecsi/HOUDINI/blob/main/.github/ISSUE_TEMPLATE/feature_request.md).
+- Use a **clear and descriptive title** for the issue to identify the suggestion.
+- Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
+- **Describe the current behavior** and **explain which behavior you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
+- You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part which the suggestion is related to. 
+- **Explain why this enhancement would be useful** to most HOUDINI users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
+
+### Creating a Pull Request
+
+If you want to fix a bug or propose a new feature you can also create a Pull Request.
+
+#### Before Creating a Pull Request
+
+- Check if there is an [Issue](https://github.com/cybersecsi/HOUDINI/issues?q=is%3Aissue) that highlights the same problem that you want to solve or that requests the same feature that you want to implement. If this is the case, then remember to link the Issue in your Pull Request.
+- Check if a similar [Pull Request](https://github.com/cybersecsi/HOUDINI/pulls) has already been created.
+- Consider creating an Issue before creating a Pull Request.
+
+#### How Do I Submit a Good Pull Request?
+
+- Use a **clear and descriptive title** for the Pull Request.
+- Follow this [Pull Request template](https://github.com/cybersecsi/HOUDINI/blob/main/.github/pull_request_template.md).
+- **Link the Issue** related to this Pull Request, if present.
+- Provide a **step-by-step description of the solution you proposed** in as many details as possible. 
+- **Use comments** in the code that you provide.
+
+<!-- omit in toc -->
+## Attribution
+This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!
