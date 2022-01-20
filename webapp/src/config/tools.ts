@@ -620,4 +620,46 @@ export const TOOLS: ITool[] = [
         organization: "stevenaldinger",
         run_command: "docker run -it --rm -v \"$(pwd)/decker-reports/\":/tmp/reports/ -v \"$(pwd)/examples/\":/decker-config/ -e DECKER_TARGET_HOST=<target_domain> stevenaldinger/decker:kali decker ./decker-config/example.hcl"
     },
+    {
+        fancy_name: "dnsenum",
+        name: "dnsenum",
+        official_doc: "https://github.com/fwaeytens/dnsenum/",
+        organization: "guidelacour",
+        run_command: "docker run -it --rm guidelacour/dnsenum ./dnsenum.pl <target_domain> --file dns.txt"
+    },
+    {
+        fancy_name: "qark",
+        name: "qark",
+        official_doc: "https://github.com/linkedin/qark",
+        organization: "ledokun",
+        run_command: "docker run -it --rm -v /path/to/apk:/path/to/apk ledokun/qark --filepath /path/to/apk/sample.apk --timeout 3600"
+    },
+    {
+        fancy_name: "rshijack",
+        name: "rshijack",
+        official_doc: "https://github.com/kpcyrd/rshijack",
+        organization: "kpcyrd",
+        run_command: "docker run -it --init --rm --net=host kpcyrd/rshijack eth0 172.16.13.20:37386 172.16.13.19:23"
+    },
+    {
+        fancy_name: "RustScan",
+        name: "rustscan",
+        official_doc: "https://github.com/RustScan/RustScan",
+        organization: "rustscan",
+        run_command: "docker run -it --rm --name rustscan rustscan/rustscan:2.0 <rustscan arguments here> <target_ip>"
+    },
+    {
+        fancy_name: "SearchSploit",
+        name: "searchsploit",
+        official_doc: "https://github.com/rc042/searchsploit",
+        organization: "reedcrif",
+        run_command: "docker run --rm reedcrif/searchsploit [options]"
+    },
+    {
+        fancy_name: "SonarScanner CLI",
+        name: "sonar-scanner-cli",
+        official_doc: "https://github.com/SonarSource/sonar-scanner-cli-docker",
+        organization: "sonarsource",
+        run_command: "docker run --rm -e SONAR_HOST_URL=\"http://{SONARQUBE_URL}\" -e SONAR_LOGIN=\"myAuthenticationToken\" -v \"${YOUR_REPO}:/usr/src\" sonarsource/sonar-scanner-cli"
+    },
 ]
