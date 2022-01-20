@@ -662,4 +662,25 @@ export const TOOLS: ITool[] = [
         organization: "sonarsource",
         run_command: "docker run --rm -e SONAR_HOST_URL=\"http://{SONARQUBE_URL}\" -e SONAR_LOGIN=\"myAuthenticationToken\" -v \"${YOUR_REPO}:/usr/src\" sonarsource/sonar-scanner-cli"
     },
+    {
+        fancy_name: "OWASP ZAP",
+        name: "zap2docker-stable",
+        official_doc: "https://www.zaproxy.org/docs/docker/about/",
+        organization: "owasp",
+        run_command: "docker run -u zap -p 8080:8080 -i owasp/zap2docker-stable zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.key=<api-key>"
+    },
+    {
+        fancy_name: "ZMap",
+        name: "zmap",
+        official_doc: "https://zmap.io/",
+        organization: "ilyaglow",
+        run_command: "docker run -it --rm --net=host ilyaglow/zmap -p80 8.8.8.0/24"
+    },
+    {
+        fancy_name: "Wappalyzer",
+        name: "cli",
+        official_doc: "https://github.com/AliasIO/wappalyzer",
+        organization: "wappalyzer",
+        run_command: "docker run -it --rm wappalyzer/cli <target_url> [options]"
+    },
 ]
