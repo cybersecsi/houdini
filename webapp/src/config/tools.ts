@@ -660,7 +660,7 @@ export const TOOLS: ITool[] = [
         name: "sonar-scanner-cli",
         official_doc: "https://github.com/SonarSource/sonar-scanner-cli-docker",
         organization: "sonarsource",
-        run_command: "docker run --rm -e SONAR_HOST_URL=\"http://{SONARQUBE_URL}\" -e SONAR_LOGIN=\"myAuthenticationToken\" -v \"${YOUR_REPO}:/usr/src\" sonarsource/sonar-scanner-cli"
+        run_command: "docker run --rm -e SONAR_HOST_URL=\"http://{SONARQUBE_URL}\" -e SONAR_LOGIN=\"myAuthenticationToken\" -v \"<YOUR_REPO>:/usr/src\" sonarsource/sonar-scanner-cli"
     },
     {
         fancy_name: "OWASP ZAP",
