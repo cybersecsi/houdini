@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const copyFile = require('fs/promises').copyFile;
 const writeFile = require('fs/promises').writeFile;
 const readFile = require('fs/promises').readFile;
-const asciiArt = require('ascii-art')
 
 // Default values
 const TEMPLATE_SRC_README = './template/README.md';
@@ -10,7 +9,13 @@ const TOOLS_TARGET_FOLDER = './tools';
 const TOOLS_CONFIG_FILE_PATH = './webapp/src/config/tools.ts';
 
 const sexyIntro = () => {
-    asciiArt.font('SecSI', 'default', true)
+    console.log("  _____               _____  _____ ")
+    console.log(" / ____|             / ____||_   _|")
+    console.log("| (___    ___   ___ | (___    | |  ")
+    console.log(" \\___ \\  / _ \\ / __| \\___ \\   | |  ")
+    console.log(" ____) ||  __/| (__  ____) | _| |_ ")
+    console.log("|_____/  \\___| \\___||_____/ |_____|")
+    console.log("")
 }
 
 const setToolInfo = async () => {
@@ -92,7 +97,7 @@ const beautifyObjectConfig = (config) => {
 }
 
 const main = async () => {
-    //sexy_intro()
+    sexyIntro()
     try {
         const answers = await setToolInfo()
         const config = {
