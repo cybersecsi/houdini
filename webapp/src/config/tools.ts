@@ -390,6 +390,13 @@ export const TOOLS: ITool[] = [
         run_command: "docker run -it --rm -p 80:80 -p 443:443 -p 8080:8080 -p 8443:8443 secsi/ground-control"
     },
     {
+        fancy_name: "netifyd",
+        name: "netifyd",
+        official_doc: "https://www.netify.ai/resources",
+        organization: "secsi",
+        run_command: "docker run -d -it --cap-add=net_admin --rm secsi/netifyd -I/E <interface> "
+    },
+    {
         fancy_name: "oxml_xxe",
         name: "oxml_xxe",
         official_doc: "https://github.com/BuffaloWill/oxml_xxe",
