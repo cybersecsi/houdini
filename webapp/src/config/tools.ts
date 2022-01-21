@@ -7,6 +7,7 @@ A tool is composed by a few fields:
 - name: the name of the Docker Image
 - organization: the organization it belongs to. This field is optional, when missing it is replaced with the default value
 - official_doc: a link to the official documentation
+- run_command: the quick command to execute the container
 */
 
 export const TOOLS: ITool[] = data;

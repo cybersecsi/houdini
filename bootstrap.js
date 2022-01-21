@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const copyFile = require('fs/promises').copyFile;
 const writeFile = require('fs/promises').writeFile;
 const readFile = require('fs/promises').readFile;
-const jsonfile = require('jsonfile');
 
 // Default values
 const TEMPLATE_SRC_README = './template/README.md';
@@ -82,21 +81,6 @@ const setToolInfo = async () => {
         console.error(e)
     }
 }
-
-const newLineChars = () => {
-    return process.platform === "win32" ? "\r\n" : "\n"
-}
-
-const beautifyObjectConfig = (config) => {
-    const TAB_SPACES = "    "
-    const jsonConfig = JSON.stringify(config, null, " ")
-    let configArray = jsonConfig.split('\n')
-    configArray = configArray.map((line) => line.replace(" ", TAB_SPACES+TAB_SPACES).replace('"',"").replace('"',""))
-    configArray[0] = TAB_SPACES+configArray[0]
-    configArray[configArray.length-1] = TAB_SPACES+configArray[configArray.length-1]+","
-    return configArray.join(newLineChars())
-}
-
 
 const main = async () => {
     sexyIntro()

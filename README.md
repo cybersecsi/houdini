@@ -97,10 +97,11 @@ Everyone is invited to contribute!
 We created a **very detailed** document to describe [how to contribute to HOUDINI](https://github.com/cybersecsi/HOUDINI/blob/main/CONTRIBUTING.md).
 
 ## Credits
-HOUDINI is proudly developed [@SecSI](https://secsi.io) by:
+HOUDINI is an idea of [Gaetano Perrone](https://github.com/giper45) and is proudly developed [@SecSI](https://secsi.io) by:
 - [Angelo Delicato](https://github.com/thelicato)
 - [Daniele Capone](https://github.com/daniele-capone)
 - [Emanuele Galdi](https://github.com/emalderson)
+- [Gaetano Perrone](https://github.com/giper45)
 
 ## License
 **HOUDINI** is an open-source and free software released under the [GNU GPL v3](/LICENSE).
