@@ -2,11 +2,12 @@ const inquirer = require('inquirer');
 const copyFile = require('fs/promises').copyFile;
 const writeFile = require('fs/promises').writeFile;
 const readFile = require('fs/promises').readFile;
+const jsonfile = require('jsonfile');
 
 // Default values
 const TEMPLATE_SRC_README = './template/README.md';
 const TOOLS_TARGET_FOLDER = './tools';
-const TOOLS_CONFIG_FILE_PATH = './webapp/src/config/tools.ts';
+const TOOLS_CONFIG_FILE_PATH = './webapp/src/config/tools.json';
 
 const sexyIntro = () => {
     console.log("  _____               _____  _____ ")
@@ -96,6 +97,7 @@ const beautifyObjectConfig = (config) => {
     return configArray.join(newLineChars())
 }
 
+
 const main = async () => {
     sexyIntro()
     try {
@@ -111,13 +113,12 @@ const main = async () => {
         await copyFile(TEMPLATE_SRC_README, `${TOOLS_TARGET_FOLDER}/${config.name}.md`)
         console.log(`Template documentation copied in ${TOOLS_TARGET_FOLDER}/${config.name}.md`);
         
-        const fileData = await readFile(TOOLS_CONFIG_FILE_PATH, 'utf8')
-        let dataArray = fileData.split(newLineChars())
-        const beautifiedConfig = beautifyObjectConfig(config)
-        dataArray.splice(-1, 0, beautifiedConfig)
-        const data = dataArray.join(newLineChars())
-        
-        await writeFile(TOOLS_CONFIG_FILE_PATH, data)
+        const jsonToolsFile = await readFile(TOOLS_CONFIG_FILE_PATH, 'utf8')
+        let tools = JSON.parse(jsonToolsFile)
+        // Add tool and sort
+        tools.push(config)
+        tools = tools.sort((a, b) => a.name.localeCompare(b.name));
+        await writeFile(TOOLS_CONFIG_FILE_PATH, JSON.stringify(tools, null, 4),)
         
         console.log(`The following object has been added to the file '${TOOLS_CONFIG_FILE_PATH}':`)
         console.log(config)
