@@ -9,4 +9,4 @@ A tool is composed by a few fields:
 - official_doc: a link to the official documentation
 */
 
-export const TOOLS: ITool[] = data
+export const TOOLS: ITool[] = data;
