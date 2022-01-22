@@ -5,6 +5,7 @@ HOUDINI is a curated list of **Network Security** related Docker Images for Netw
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f8b06b7e-bdc6-4af8-aba9-f32e1132cd25/deploy-status)](https://app.netlify.com/sites/houdini/deploys)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/HOUDINI/blob/main/LICENSE)
 
+
 ## Table of Contents
   - [Web App](#web-app)
   - [Add a Tool](#add-a-tool)
@@ -27,6 +28,14 @@ Other than listing **a lot** of tools we provide ``docker run`` commands for eve
 <p align="center">
   <img src="docs/houdini-cheatsheet.png">
 </p>
+
+### Built With  
+The following technologies are used to build the web app:  
+* [React.js](https://reactjs.org/)
+* [yarn](https://yarnpkg.com/) 
+* [fusejs](https://fusejs.io/)
+* [JSX](https://www.typescriptlang.org/docs/handbook/jsx.html)
+* [tailwindcss](https://tailwindcss.com/)
 
 ## Add a tool
 A tool is composed by:

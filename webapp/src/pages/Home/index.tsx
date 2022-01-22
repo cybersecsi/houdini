@@ -6,6 +6,7 @@ import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { BsArrowReturnRight } from "react-icons/bs";
 import { ClipboardCode } from 'components';
+import { Categories } from 'components';
 
 
 const Home = () => {
@@ -96,7 +97,7 @@ const Home = () => {
                         ref={searchbarRef} 
                         onChange={searchWithFuse}
                     />
-
+                    {/* <Categories></Categories> */}
 
                     <span className="absolute inset-y-0 right-0 flex items-center pl-2 select-none mr-1">
                         <span className="border-2 border-gray-200 text-gray-300 rounded text-xs p-1 mr-1">Shift</span>
@@ -114,6 +115,7 @@ const Home = () => {
                                 <BsArrowReturnRight className="inline ml-1 pt-1"/>
                             </Link>
                         </h3>
+                        <h5 className="text-center my-2">{tool.description}</h5>
                         <div className="block rounded-lg shadow-lg bg-white w-full mb-16 p-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left">
                                 {/* Docker Image */}

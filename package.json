@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "fs-extra": "^10.0.0",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "react-select": "^5.2.2"
   }
 }
