@@ -30,7 +30,7 @@
    "reversing",
    "disassembler"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <input_dir>:/input secsi/apktool d <apk_file>"
  },
  {
@@ -88,7 +88,7 @@
    "webapp",
    "recon"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/bfac --url <target_url>"
  },
  {
@@ -210,7 +210,7 @@
    "scanner",
    "webapp"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/dirb <target_url> <wordlist_container_dir>/<wordlist_file>"
  },
  {
@@ -222,7 +222,7 @@
    "scanner",
    "webapp"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/dirhunt <target_url>"
  },
  {
@@ -234,7 +234,7 @@
    "scanner",
    "webapp"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/dirsearch -u <target_url>"
  },
  {
@@ -244,7 +244,7 @@
   "categories": [
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/dnscan -d <target_url> -w subdomains-10000.txt -t 10 -R 1.0.0.1"
  },
  {
@@ -303,7 +303,7 @@
    "recon",
    "misc"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run --rm -it -v <input_dir>:/input secsi/eyewitness --web --single <target_url>"
  },
  {
@@ -342,7 +342,7 @@
    "webapp",
    "fuzzer"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/ffuf -w <wordlist_container_dir>/<wordlist_file> -u <target_url>"
  },
  {
@@ -353,7 +353,7 @@
   "categories": [
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/fierce --domain <target_url>"
  },
  {
@@ -375,7 +375,7 @@
   "categories": [
    "misc"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/findsploit <search_term>"
  },
  {
@@ -399,7 +399,7 @@
    "scanner",
    "git"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/gitrob <target>"
  },
  {
@@ -412,7 +412,7 @@
    "scanner",
    "git"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <input_dir>:/input -w /input secsi/gittools <command>"
  },
  {
@@ -424,7 +424,7 @@
    "scanner",
    "webapp"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/gobuster dns -d <target_url>"
  },
  {
@@ -434,7 +434,7 @@
   "categories": [
    "recon"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/googd0rker -d <target_domain>"
  },
  {
@@ -534,7 +534,7 @@
   "categories": [
    "cracker"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <wordlist_src_dir>:/usr/share/wordlists secsi/hydra <command>"
  },
  {
@@ -544,7 +544,7 @@
   "categories": [
    "networking"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/impacket"
  },
  {
@@ -566,7 +566,7 @@
   "categories": [
    "cracker"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/jwt_tool <JWT>"
  },
  {
@@ -577,7 +577,7 @@
    "recon",
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/knockpy <target_url>"
  },
  {
@@ -590,7 +590,7 @@
    "scanner",
    "exploitation"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <input_dir>:/input secsi/lfisuite"
  },
  {
@@ -613,7 +613,7 @@
   "categories": [
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/masscan -p<target_port> <target_ip_address>"
  },
  {
@@ -624,7 +624,7 @@
   "categories": [
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <domain_src_dir>:<domain_container_dir> secsi/massdns <domain_container_dir>/<domain_list_file>"
  },
  {
@@ -689,7 +689,7 @@
    "scanner",
    "webapp"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/nikto -h <target_url>"
  },
  {
@@ -700,7 +700,7 @@
   "categories": [
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm --privileged secsi/nmap -p <target_port> <target_ip_address>"
  },
  {
@@ -746,7 +746,7 @@
   "categories": [
    "cracker"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/patator <wordlist_container_dir>/<wordlist_file>"
  },
  {
@@ -794,7 +794,7 @@
    "recon",
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm -v <input_dir>:/input secsi/puredns"
  },
  {
@@ -816,7 +816,7 @@
   "name": "race-the-web",
   "official_doc": "https://github.com/TheHackerDev/race-the-web",
   "categories": [],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/race-the-web"
  },
  {
@@ -829,7 +829,7 @@
    "javascript",
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/retire"
  },
  {
@@ -874,7 +874,7 @@
    "scanner",
    "cloud"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/sandcastle"
  },
  {
@@ -969,7 +969,7 @@
    "fuzzer",
    "exploitation"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/sqlmap -u \"<target_url>\""
  },
  {
@@ -1016,7 +1016,7 @@
    "recon",
    "scanner"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/sublist3r -d <target_url>"
  },
  {
@@ -1039,7 +1039,7 @@
   "categories": [
    "recon"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/theharvester -d <target_url> -b all"
  },
  {
@@ -1067,7 +1067,7 @@
   "name": "waybackpy",
   "official_doc": "https://github.com/akamhy/waybackpy",
   "categories": [],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/waybackpy --url \"<target_url>\" --user_agent \"my-unique-user-agent\" --oldest"
  },
  {
@@ -1087,7 +1087,7 @@
    "recon",
    "webapp"
   ],
-  "organization": "",
+  "organization": "secsi",
   "run_command": "docker run -it --rm secsi/whatweb -v -a 3 <target_url>"
  },
  {
