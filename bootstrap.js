@@ -7,6 +7,8 @@ const readFile = require('fs/promises').readFile;
 const TEMPLATE_SRC_README = './template/README.md';
 const TOOLS_TARGET_FOLDER = './tools';
 const TOOLS_CONFIG_FILE_PATH = './webapp/src/config/tools.json';
+const MAX_DESCRIPTION_SIZE = 100;
+const AVAILABLE_CATEGORIES= ['anti-forensic', 'automation', 'automobile', 'backdoor', 'binary', 'blackarch', 'bluetooth', 'code-audit', 'cracker', 'crypto', 'cryptography', 'database', 'debugger', 'decompiler', 'defensive', 'disassembler', 'distributives', 'dos', 'drone', 'environments', 'exploitation', 'fingerprint', 'firmware', 'forensic', 'fuzzer', 'hardware', 'honeypot', 'ids', 'keylogger', 'malware', 'misc', 'mobile', 'mobilereversing', 'networking', 'packer', 'proxy', 'radio', 'recon', 'reversing', 'scanner', 'sniffer', 'social', 'spoof', 'stego', 'tunnel', 'unpacker', 'voip', 'webapp', 'windows', 'wireless']
 
 const sexyIntro = () => {
     console.log("  _____               _____  _____ ")
@@ -61,6 +63,24 @@ const setToolInfo = async () => {
             message: 'What is the run command for this tool?',
         },
         {
+            type: 'checkbox',
+            name: 'categories',
+            choices: AVAILABLE_CATEGORIES,
+            message: 'Select the categories:',
+        },
+
+        {
+            type: 'input',
+            name: 'description',
+            message: `Insert a brief description (max ${MAX_DESCRIPTION_SIZE} characters, otherwise leave empty):`,
+            validate(value) {
+                if (value.length <= MAX_DESCRIPTION_SIZE) {
+                    return true
+                } 
+                return `Max ${MAX_DESCRIPTION_SIZE} characters, actually you typed ${value.length} characters...`
+            }
+        },
+        {
             type: "confirm",
             name: "is_finished",
             message: "Check the data, is everything ok?",
@@ -86,12 +106,18 @@ const main = async () => {
     sexyIntro()
     try {
         const answers = await setToolInfo()
-        const config = {
+        let config = {
             fancy_name: answers.fancy_name,
             name: answers.name.split('/')[1],
             official_doc: answers.official_doc,
             organization: answers.name.split('/')[0],
             run_command: answers.run_command,
+            categories: answers.categories,
+        }
+
+        // Since it is an optional value add it only if there is actually something!
+        if (answers.description.length > 0) {
+            config.description = answers.description
         }
 
         await copyFile(TEMPLATE_SRC_README, `${TOOLS_TARGET_FOLDER}/${config.name}.md`)
