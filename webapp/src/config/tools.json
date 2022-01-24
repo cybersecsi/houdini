@@ -134,7 +134,7 @@
             "containers",
             "malware"
         ],
-        "description": "CoreOs Clair https://github.com/coreos/clair"
+        "description": "Clair is an open source project for the [static analysis] of vulnerabilities in application containers"
     },
     {
         "fancy_name": "CloudFail",
