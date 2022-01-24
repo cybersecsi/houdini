@@ -20,7 +20,6 @@ const ClipboardCode = (props: React.PropsWithChildren<ClipboardCodeProps>) => {
                     {props.children}
                 </code>
             </pre>
-
             <button className={`clipboardcode-btn ${btnClasses} text-white`} onClick={() => clipboard.copy(props.children)}>
                 {/* Copy Icon */}
                 {clipboard.copied ? (<BsHandThumbsUpFill/>) : (<BiCopy/>)}
