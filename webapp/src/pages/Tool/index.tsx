@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm'
 import { TOOLS } from 'config';
-import { ITool } from 'types';
+import { ICategory, ITool } from 'types';
 import { ClipboardCode } from 'components';
 
 const Loading = () => {
@@ -63,6 +63,7 @@ const Tool = () => {
                 <Link className="text-sky-400 underline" to="/">..</Link> /{currentTool?.fancy_name}
             </h1>
 
+            {/* Quick Usage */}
             <h2>
                 Quick Usage
             </h2>
@@ -74,6 +75,21 @@ const Tool = () => {
                 {currentTool?.run_command}
             </ClipboardCode>
 
+            {/* Categories */}
+            <h2>
+                Categories
+            </h2>
+            <p>
+                {currentTool?.categories.map((category: string) => {
+                    return (
+                        <span key={`category-${category}`} className="border-2 border-gray-300 text-gray-400 p-1 rounded m-1">
+                            {category}
+                        </span>
+                    )
+                })}
+            </p>
+
+            {/* Description & (optional) Cheatsheet */}
             <ReactMarkdown 
                 className="markdown-content" 
                 remarkPlugins={[gfm]}
@@ -92,6 +108,8 @@ const Tool = () => {
                 {md}
             </ReactMarkdown>
 
+
+            {/* Reference */}
             <h2>
                 Official Documentation
             </h2>

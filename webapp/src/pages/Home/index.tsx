@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CONFIG, TOOLS } from 'config';
-import { ITool } from 'types';
+import { ITool, ICategory } from 'types';
 import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { BsArrowReturnRight } from "react-icons/bs";
@@ -10,7 +10,8 @@ import { ClipboardCode } from 'components';
 
 const Home = () => {
     const [fuse, setFuse] = useState<Fuse<ITool>>();
-    const [tools, setTools] = useState<ITool[]>([])
+    const [tools, setTools] = useState<ITool[]>([]);
+    const [categories, setCategories] = useState<ICategory[]>([]);
     const [results, setResults] = useState<ITool[]>([]);
     const [showShortcutKeys, setShowShortcuteKeys] = useState<boolean>(false);
     const searchbarRef = useRef<any>();
@@ -18,7 +19,7 @@ const Home = () => {
 
     useHotkeys('shift+k', (event: KeyboardEvent) => {
         event.preventDefault();
-        event.stopPropagation()
+        event.stopPropagation();
         const intersectionObserver = new IntersectionObserver((entries) => {
             let [entry] = entries;
             if (entry.isIntersecting) {
@@ -33,6 +34,7 @@ const Home = () => {
     useEffect(() => {
         // Set search function
         const _tools = TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
+        const _categories: ICategory[] = [...new Set(TOOLS.map((tool: ITool) => tool.categories).flat())].map((category: string) => {return {name:category, active: true}})
         const _fuse = new Fuse(_tools, {
             keys: [
                 'fancy_name',
@@ -41,9 +43,10 @@ const Home = () => {
             ]
         })
         // Set state
-        setTools(_tools)
-        setResults(_tools)
-        setFuse(_fuse)
+        setTools(_tools);
+        setResults(_tools);
+        setFuse(_fuse);
+        setCategories(_categories);
         // Handle shortcut keys positioning on screen
         const searchbarIntersectionObserver = new IntersectionObserver((entries) => {
             let [entry] = entries;
@@ -58,7 +61,6 @@ const Home = () => {
     }, [])
 
     const searchWithFuse = (ev: any) => {
-        //ev.preventDefault();
         const query = ev.target.value
         if (!query || !fuse) {
             setResults(tools)
@@ -66,6 +68,32 @@ const Home = () => {
         }
         
         setResults(fuse.search(query).map((result) => result.item));
+        
+        //Reset categories when searching
+        const _categories = categories.map((category: ICategory) => { return  {name: category.name, active: true} })
+        setCategories(_categories);
+    }
+
+    const toggleCategory = (targetCategory: ICategory) => {
+        const _categories = categories.map((category: ICategory) => {
+            if (category.name === targetCategory.name) {
+                return {
+                    name: category.name,
+                    active: !category.active,
+                }
+            }
+            else {
+                return category
+            }
+        })
+        const activeCategories = _categories.filter((category: ICategory) => category.active).map((category: ICategory) => category.name)
+        const _results = results.filter((result: ITool) => {
+            return result.categories.some((category: string) => {
+                return activeCategories.indexOf(category) >= 0;
+            })
+        })
+        setCategories(_categories);
+        setResults(_results);
     }
 
     return (
@@ -80,12 +108,25 @@ const Home = () => {
                 </p>
             </div>
 
+            {/* Categories */}
+            <div className="flex flex-wrap justify-center mt-4">
+                {categories.map((category: ICategory, key: number) => {
+                    const spanClasses = category.active ? "border-sky-600 text-sky-700 hover:border-sky-400 hover:text-sky-500" : "border-gray-300 text-gray-400 hover:border-gray-500 hover:text-gray-600"
+                    return (
+                        <span key={`category-${key}`} className={`border-2 p-1 rounded m-1 cursor-pointer transition-colors duration-300 ${spanClasses}`} onClick={() => toggleCategory(category)}>
+                            {category.name}
+                        </span>
+                    )
+                })}
+            </div>
+
+            {/* Search bar */}
             <div>
                 <label className="relative block my-6">
                     <span className="sr-only">Search</span>
                     <span className="absolute inset-y-0 left-0 flex items-center pl-2">
                         <svg className="h-5 w-5 fill-gray-300" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                            <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
                         </svg>
                     </span>
                     <input 
@@ -106,7 +147,7 @@ const Home = () => {
 
             {results.map((tool: ITool) => {
                 return (
-                    <>
+                    <div key={tool.name}>
                         <h3 className="text-center">
                             <Link to={`/tool/${tool.name}`} className='no-underline'>
                                 {tool.fancy_name} 
@@ -117,7 +158,7 @@ const Home = () => {
                             <h5 className="text-center mt-2 mb-6">{tool.description}</h5>
                         )}
                         <div className="block rounded-lg shadow-lg bg-white w-full mb-16 p-4">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left items-center">
                                 {/* Docker Image */}
                                 <div className="break-words"><b>Docker Image</b>: {tool.organization ?? CONFIG.ORGANIZATION}/{tool.name}</div>
                                 {/* Official Doc */}
@@ -125,17 +166,15 @@ const Home = () => {
                                     <b>Official Doc</b>: <a href={tool.official_doc} target="_blank" rel="noreferrer">{tool.official_doc}</a>
                                 </div>
                                 {/* Categories */}
-                                <div className="break-words">
+                                <div className="break-words flex flex-wrap items-center md:justify-left justify-center">
                                     <b>Categories</b>:
-                                    <div>
                                         {tool.categories?.map((category: string) => {
                                             return (
-                                                <span className="border-2 border-gray-300 text-gray-400 p-1 rounded mx-1">
+                                                <span key={`${tool.name}-${category}`} className="border-2 border-gray-300 text-gray-400 p-1 rounded m-1">
                                                     {category}
                                                 </span>
                                             )
                                         })}
-                                    </div>
                                 </div>
                                 
                             </div>
@@ -144,7 +183,7 @@ const Home = () => {
                                 {tool.run_command}
                             </ClipboardCode>
                         </div>
-                    </>
+                    </div>
                 )
             })}
 

@@ -5,7 +5,7 @@ import WhaleIcon from 'assets/whale.png';
 const Header = () => {
     return (
         <>
-            <header className="container mx-auto py-6 font-Karla">
+            <header className="w-4/5 md:w-full container mx-auto py-6 font-Karla">
                 <h1 className="text-6xl text-center select-none flex justify-center align-center">
                     <Link to={`/`} className='no-underline text-slate-600 hover:text-slate-900'>
                         <img src={WhaleIcon} className="inline h-12" alt="Whale" />
