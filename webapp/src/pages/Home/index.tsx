@@ -34,7 +34,7 @@ const Home = () => {
     useEffect(() => {
         // Set search function
         const _tools = TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
-        const _categories: ICategory[] = [...new Set(TOOLS.map((tool: ITool) => tool.categories).flat())].map((category: string) => {return {name:category, active: true}})
+        const _categories: ICategory[] = [...new Set(TOOLS.map((tool: ITool) => tool.categories).flat())].map((category: string) => {return {name:category, active: false}})
         const _fuse = new Fuse(_tools, {
             keys: [
                 'fancy_name',
@@ -70,7 +70,7 @@ const Home = () => {
         setResults(fuse.search(query).map((result) => result.item));
         
         //Reset categories when searching
-        const _categories = categories.map((category: ICategory) => { return  {name: category.name, active: true} })
+        const _categories = categories.map((category: ICategory) => { return  {name: category.name, active: false} })
         setCategories(_categories);
     }
 
@@ -86,14 +86,23 @@ const Home = () => {
                 return category
             }
         })
-        const activeCategories = _categories.filter((category: ICategory) => category.active).map((category: ICategory) => category.name)
-        const _results = results.filter((result: ITool) => {
-            return result.categories.some((category: string) => {
-                return activeCategories.indexOf(category) >= 0;
+
+        
+
+
+        const activeCategories = _categories.filter((category: ICategory) => category.active).map((category: ICategory) => category.name);
+        if (activeCategories.length > 0) {
+            const _results = tools.filter((result: ITool) => {
+                return result.categories.some((category: string) => {
+                    return activeCategories.indexOf(category) >= 0;
+                })
             })
-        })
+            setResults(_results);
+        }
+        else {
+            setResults(tools)
+        }
         setCategories(_categories);
-        setResults(_results);
     }
 
     return (
