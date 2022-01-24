@@ -25,7 +25,6 @@
  {
   "fancy_name": "Apktool",
   "name": "apktool",
-  "description": "",
   "official_doc": "https://github.com/iBotPeaches/Apktool",
   "categories": [
    "reversing",
@@ -95,7 +94,6 @@
  {
   "fancy_name": "celerystalk",
   "name": "celerystalk",
-  "description": "",
   "official_doc": "https://github.com/sethsec/celerystalk",
   "categories": [
    "automation"
@@ -106,7 +104,6 @@
  {
   "fancy_name": "CeWL",
   "name": "cewl",
-  "description": "",
   "official_doc": "https://github.com/digininja/CeWL",
   "categories": [
    "automation",
@@ -118,7 +115,6 @@
  {
   "fancy_name": "Wappalyzer",
   "name": "wappalyzer",
-  "description": "",
   "official_doc": "https://github.com/AliasIO/wappalyzer",
   "categories": [
    "webapp",
@@ -132,7 +128,6 @@
  {
   "fancy_name": "CloudFail",
   "name": "cloudfail",
-  "description": "",
   "official_doc": "https://github.com/m0rtem/CloudFail",
   "categories": [
    "recon"
@@ -156,7 +151,6 @@
  {
   "fancy_name": "crowbar",
   "name": "crowbar",
-  "description": "",
   "official_doc": "https://github.com/galkan/crowbar",
   "categories": [
    "cracker"
@@ -190,7 +184,6 @@
  {
   "fancy_name": "Decker",
   "name": "decker",
-  "description": "",
   "official_doc": "https://github.com/stevenaldinger/decker",
   "categories": [
    "automation"
@@ -201,7 +194,6 @@
  {
   "fancy_name": "dex2jar",
   "name": "dex2jar",
-  "description": "",
   "official_doc": "https://github.com/pxb1988/dex2jar",
   "categories": [
    "hardware",
@@ -213,7 +205,6 @@
  {
   "fancy_name": "Dirb",
   "name": "dirb",
-  "description": "",
   "official_doc": "http://dirb.sourceforge.net/",
   "categories": [
    "scanner",
@@ -249,7 +240,6 @@
  {
   "fancy_name": "dnscan",
   "name": "dnscan",
-  "description": "",
   "official_doc": "https://github.com/rbsec/dnscan",
   "categories": [
    "scanner"
@@ -284,7 +274,6 @@
  {
   "fancy_name": "Dorks Eye",
   "name": "dorks-eye",
-  "description": "",
   "official_doc": "https://github.com/BullsEye0/dorks-eye",
   "categories": [
    "recon",
@@ -336,7 +325,6 @@
  {
   "fancy_name": "fast-recon",
   "name": "fast-recon",
-  "description": "",
   "official_doc": "https://github.com/DanMcInerney/fast-recon",
   "categories": [
    "scanner",
@@ -383,7 +371,6 @@
  {
   "fancy_name": "Findsploit",
   "name": "findsploit",
-  "description": "",
   "official_doc": "https://github.com/1N3/Findsploit",
   "categories": [
    "misc"
@@ -394,7 +381,6 @@
  {
   "fancy_name": "GetJS",
   "name": "getjs",
-  "description": "",
   "official_doc": "https://github.com/003random/getJS",
   "categories": [
    "recon",
@@ -444,7 +430,6 @@
  {
   "fancy_name": "GoogD0rker",
   "name": "googd0rker",
-  "description": "",
   "official_doc": "https://github.com/ZephrFish/GoogD0rker",
   "categories": [
    "recon"
@@ -479,7 +464,6 @@
  {
   "fancy_name": "Ground control",
   "name": "ground-control",
-  "description": "",
   "official_doc": "https://github.com/jobertabma/ground-control",
   "categories": [
    "misc"
@@ -513,7 +497,6 @@
  {
   "fancy_name": "hashID",
   "name": "hashid",
-  "description": "",
   "official_doc": "https://github.com/psypanda/hashID",
   "categories": [
    "crypto"
@@ -557,7 +540,6 @@
  {
   "fancy_name": "impacket",
   "name": "impacket",
-  "description": "",
   "official_doc": "https://github.com/SecureAuthCorp/impacket",
   "categories": [
    "networking"
@@ -580,7 +562,6 @@
  {
   "fancy_name": "The JSON Web Token Toolkit",
   "name": "jwt_tool",
-  "description": "",
   "official_doc": "https://github.com/ticarpi/jwt_tool",
   "categories": [
    "cracker"
@@ -591,7 +572,6 @@
  {
   "fancy_name": "knock",
   "name": "knockpy",
-  "description": "",
   "official_doc": "https://github.com/guelfoweb/knock",
   "categories": [
    "recon",
@@ -650,7 +630,6 @@
  {
   "fancy_name": "Memcrashed DDOS Exploit Tool",
   "name": "memcrashed-ddos-exploit",
-  "description": "",
   "official_doc": "https://github.com/649/Memcrashed-DDoS-Exploit",
   "categories": [
    "misc"
@@ -661,7 +640,6 @@
  {
   "fancy_name": "Metasploit",
   "name": "metasploit-framework",
-  "description": "",
   "official_doc": "https://github.com/rapid7/metasploit-framework/wiki",
   "categories": [
    "scanner",
@@ -687,7 +665,6 @@
  {
   "fancy_name": "Mobile Security Framework",
   "name": "mobile-security-framework-mobsf",
-  "description": "",
   "official_doc": "https://mobsf.github.io/docs",
   "categories": [
    "mobile"
@@ -733,7 +710,6 @@
  {
   "fancy_name": "oxml_xxe",
   "name": "oxml_xxe",
-  "description": "",
   "official_doc": "https://github.com/BuffaloWill/oxml_xxe",
   "categories": [
    "scanner",
@@ -792,7 +768,6 @@
  {
   "fancy_name": "psalm",
   "name": "psalm",
-  "description": "",
   "official_doc": "https://github.com/vimeo/psalm",
   "categories": [
    "code-audit",
@@ -806,7 +781,6 @@
  {
   "fancy_name": "pureDNS",
   "name": "puredns",
-  "description": "",
   "official_doc": "https://github.com/d3mondev/puredns",
   "categories": [
    "recon",
@@ -832,7 +806,6 @@
  {
   "fancy_name": "Race The Web",
   "name": "race-the-web",
-  "description": "",
   "official_doc": "https://github.com/TheHackerDev/race-the-web",
   "categories": [],
   "organization": "",
@@ -854,7 +827,6 @@
  {
   "fancy_name": "routersploit",
   "name": "routersploit",
-  "description": "",
   "official_doc": "https://github.com/threat9/routersploit",
   "categories": [
    "exploitation"
@@ -865,7 +837,6 @@
  {
   "fancy_name": "rshijack",
   "name": "rshijack",
-  "description": "",
   "official_doc": "https://github.com/kpcyrd/rshijack",
   "categories": [
    "networking",
@@ -950,7 +921,6 @@
  {
   "fancy_name": "SonarScanner CLI",
   "name": "sonar-scanner-cli",
-  "description": "",
   "official_doc": "https://github.com/SonarSource/sonar-scanner-cli-docker",
   "categories": [
    "code-audit",
@@ -974,7 +944,6 @@
  {
   "fancy_name": "spyse.py",
   "name": "spysepy",
-  "description": "",
   "official_doc": "https://github.com/zeropwn/spyse.py",
   "categories": [
    "recon"
@@ -1080,7 +1049,6 @@
  {
   "fancy_name": "Wapiti",
   "name": "wapiti",
-  "description": "",
   "official_doc": "https://github.com/wapiti-scanner/wapiti",
   "categories": [],
   "organization": "jorgeandrada",
@@ -1089,7 +1057,6 @@
  {
   "fancy_name": "waybackpy",
   "name": "waybackpy",
-  "description": "",
   "official_doc": "https://github.com/akamhy/waybackpy",
   "categories": [],
   "organization": "",
@@ -1098,7 +1065,6 @@
  {
   "fancy_name": "Wfuzz",
   "name": "wfuzz",
-  "description": "",
   "official_doc": "https://wfuzz.readthedocs.io/",
   "categories": [],
   "organization": "ghcr.io/xmendez",
@@ -1167,7 +1133,6 @@
  {
   "fancy_name": "OWASP ZAP",
   "name": "zap2docker-stable",
-  "description": "",
   "official_doc": "https://www.zaproxy.org/docs/docker/about/",
   "categories": [
    "webapp",

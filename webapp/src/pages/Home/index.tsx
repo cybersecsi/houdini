@@ -113,21 +113,31 @@ const Home = () => {
                                 <BsArrowReturnRight className="inline ml-1 pt-1"/>
                             </Link>
                         </h3>
-                        <h5 className="text-center my-2">{tool.description}</h5>
+                        {tool.description && (
+                            <h5 className="text-center mt-2 mb-6">{tool.description}</h5>
+                        )}
                         <div className="block rounded-lg shadow-lg bg-white w-full mb-16 p-4">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
                                 {/* Docker Image */}
                                 <div className="break-words"><b>Docker Image</b>: {tool.organization ?? CONFIG.ORGANIZATION}/{tool.name}</div>
                                 {/* Official Doc */}
                                 <div className="break-words">
                                     <b>Official Doc</b>: <a href={tool.official_doc} target="_blank" rel="noreferrer">{tool.official_doc}</a>
                                 </div>
-                                {/* Labels */}
-                                {/*
-                                <div className="font-bold break-words">
-                                    <b>Labels</b>:
+                                {/* Categories */}
+                                <div className="break-words">
+                                    <b>Categories</b>:
+                                    <div>
+                                        {tool.categories?.map((category: string) => {
+                                            return (
+                                                <span className="border-2 border-gray-300 text-gray-400 p-1 rounded mx-1">
+                                                    {category}
+                                                </span>
+                                            )
+                                        })}
+                                    </div>
                                 </div>
-                                */}
+                                
                             </div>
 
                             <ClipboardCode fixedBtn>
