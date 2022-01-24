@@ -124,6 +124,18 @@
         "run_command": "docker run -it --rm cewl <target_url>"
     },
     {
+        "fancy_name": "clair",
+        "name": "clair-local-scan",
+        "official_doc": "https://github.com/arminc/clair-local-scan",
+        "organization": "arminc",
+        "run_command": "docker run -d --name clair-db arminc/clair-db:latest && docker run -p 6060:6060 --link clair-db:postgres -d --name clair arminc/clair-local-scan:v2.0.8_fe9b059d930314b54c78f75afe265955faf4fdc1",
+        "categories": [
+            "code-audit",
+            "containers"
+        ],
+        "description": "CoreOs Clair https://github.com/coreos/clair"
+    },
+    {
         "fancy_name": "CloudFail",
         "name": "cloudfail",
         "official_doc": "https://github.com/m0rtem/CloudFail",
