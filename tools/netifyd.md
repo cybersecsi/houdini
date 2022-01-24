@@ -13,5 +13,4 @@ You can also use in background without the `-R` flag:
 
 ``` 
 docker run -it --cap-add=net_admin --rm secsi/netifyd -I/E <interface> 
-
 ```

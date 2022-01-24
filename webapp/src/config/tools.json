@@ -673,6 +673,14 @@
   "run_command": "docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf"
  },
  {
+  "fancy_name": "netifyd",
+  "name": "netifyd",
+  "official_doc": "https://www.netify.ai/resources",
+  "organization": "secsi",
+  "run_command": "docker run -d -it --cap-add=net_admin --rm secsi/netifyd -I/E <interface>",
+  "categories": ["networking", "misc"]
+ },
+ {
   "fancy_name": "nikto",
   "name": "nikto",
   "description": "A web server scanner which performs comprehensive tests against web servers for multiple items",
