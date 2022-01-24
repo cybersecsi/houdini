@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm'
 import { TOOLS } from 'config';
-import { ICategory, ITool } from 'types';
+import { ITool } from 'types';
 import { ClipboardCode } from 'components';
 
 const Loading = () => {

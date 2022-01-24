@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "node check && react-scripts start",
-    "build": "node check && react-scripts build",
+    "build": "node check && react-scripts build && node sitemap-builder",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
