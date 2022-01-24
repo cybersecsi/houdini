@@ -5,9 +5,9 @@ HOUDINI is a curated list of **Network Security** related Docker Images for Netw
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f8b06b7e-bdc6-4af8-aba9-f32e1132cd25/deploy-status)](https://app.netlify.com/sites/houdini/deploys)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/HOUDINI/blob/main/LICENSE)
 
-
 ## Table of Contents
   - [Web App](#web-app)
+  - [Built with](#built-with)
   - [Add a Tool](#add-a-tool)
   - [Development](#development)
   - [Roadmap](#roadmap)
@@ -29,13 +29,25 @@ Other than listing **a lot** of tools we provide ``docker run`` commands for eve
   <img src="docs/houdini-cheatsheet.png">
 </p>
 
-### Built With  
-The following technologies are used to build the web app:  
-* [React.js](https://reactjs.org/)
-* [yarn](https://yarnpkg.com/) 
-* [fusejs](https://fusejs.io/)
-* [JSX](https://www.typescriptlang.org/docs/handbook/jsx.html)
-* [tailwindcss](https://tailwindcss.com/)
+### Built with  
+HOUDINI is created using:
+* [React](https://reactjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+
+And using the following packages:
+* [fuse.js](https://www.npmjs.com/package/fuse.js)
+* [react-github-btn](https://www.npmjs.com/package/react-github-btn)
+* [react-github-corner](https://www.npmjs.com/package/react-github-corner)
+* [react-hotkeys-hook](https://www.npmjs.com/package/react-hotkeys-hook)
+* [react-icons](https://www.npmjs.com/package/react-icons)
+* [react-markdown](https://www.npmjs.com/package/react-markdown)
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+* [remark-gfm](https://www.npmjs.com/package/remark-gfm)
+* [use-clipboard-copy](https://www.npmjs.com/package/use-clipboard-copy)
+* [fs-extra](https://www.npmjs.com/package/fs-extra)
+* [inquirer](https://www.npmjs.com/package/inquirer)
+
 
 ## Add a tool
 A tool is composed by:
@@ -95,7 +107,7 @@ Here is the current roadmap:
 - [x] Check ``bootstrap`` command on Linux systems
 - [x] Fix margin, padding in tool pages to make it more readable
 - [x] Add tools (reach at least 100)
-- [ ] Add labels **[MUST]**
+- [x] Add labels **[MUST]**
 - [ ] Define customizable fields **[COULD]**
 - [ ] Add toolbox for customizing commands **[COULD]**
 - [ ] Add webapp snippet (to keep interesting commands) **[COULD]**

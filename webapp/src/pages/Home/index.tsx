@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { CONFIG } from 'config';
+import { CONFIG, TOOLS } from 'config';
 import { ITool } from 'types';
 import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { BsArrowReturnRight } from "react-icons/bs";
 import { ClipboardCode } from 'components';
-import { Categories } from 'components';
 
 
 const Home = () => {
@@ -33,7 +32,7 @@ const Home = () => {
 
     useEffect(() => {
         // Set search function
-        const _tools = CONFIG.TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
+        const _tools = TOOLS.sort((a: ITool , b:ITool) => a.name > b.name ? 1 : -1 )
         const _fuse = new Fuse(_tools, {
             keys: [
                 'fancy_name',
@@ -91,13 +90,12 @@ const Home = () => {
                     </span>
                     <input 
                         className="placeholder:italic placeholder:text-gray-400 block bg-white w-full border border-gray-300 rounded-md py-4 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" 
-                        placeholder={`Search among ${CONFIG.TOOLS.length} tools...`}
+                        placeholder={`Search among ${TOOLS.length} tools...`}
                         type="text" 
                         name="search" 
                         ref={searchbarRef} 
                         onChange={searchWithFuse}
                     />
-                    {/* <Categories></Categories> */}
 
                     <span className="absolute inset-y-0 right-0 flex items-center pl-2 select-none mr-1">
                         <span className="border-2 border-gray-200 text-gray-300 rounded text-xs p-1 mr-1">Shift</span>

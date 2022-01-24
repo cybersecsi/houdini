@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm'
-import { CONFIG } from 'config';
+import { TOOLS } from 'config';
 import { ITool } from 'types';
 import { ClipboardCode } from 'components';
 
@@ -26,7 +26,7 @@ const Tool = () => {
 
     useEffect(() => {
         const setup = async () => {
-            const _currentTool = CONFIG.TOOLS.find((tool: ITool) => tool.name === name)
+            const _currentTool = TOOLS.find((tool: ITool) => tool.name === name)
             if (!_currentTool) {
                 navigate('/');
                 return;
