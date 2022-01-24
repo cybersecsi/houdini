@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node copy_config.js && cd webapp && yarn run start",
     "update": "node copy_config.js",
-    "build": "node copy_config.js && cd webapp && yarn run build",
+    "build": "node copy_config.js && cd webapp && yarn run build && node sitemap-builder",
     "bootstrap": "node bootstrap.js"
   },
   "dependencies": {
