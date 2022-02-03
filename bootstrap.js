@@ -7,8 +7,8 @@ const readFile = require('fs/promises').readFile;
 const TEMPLATE_SRC_README = './template/README.md';
 const TOOLS_TARGET_FOLDER = './tools';
 const TOOLS_CONFIG_FILE_PATH = './webapp/src/config/tools.json';
-const MAX_DESCRIPTION_SIZE = 100;
-const AVAILABLE_CATEGORIES= ['anti-forensic', 'automation', 'automobile', 'backdoor', 'binary', 'blackarch', 'bluetooth', 'code-audit', 'containers', 'cracker', 'crypto', 'cryptography', 'database', 'debugger', 'decompiler', 'defensive', 'disassembler', 'distributives', 'dos', 'drone', 'environments', 'exploitation', 'fingerprint', 'firmware', 'forensic', 'fuzzer', 'hardware', 'honeypot', 'ids', 'keylogger', 'malware', 'misc', 'mobile', 'mobilereversing', 'networking', 'packer', 'proxy', 'radio', 'recon', 'reversing', 'scanner', 'sniffer', 'social', 'spoof', 'stego', 'tunnel', 'unpacker', 'voip', 'webapp', 'windows', 'wireless']
+const MAX_DESCRIPTION_SIZE = 150;
+const AVAILABLE_CATEGORIES= ['anti-forensic', 'automation', 'automobile', 'backdoor', 'binary', 'blackarch', 'bluetooth', 'code-audit', 'containers', 'cracker', 'crypto', 'cryptography', 'database', 'debugger', 'decompiler', 'defensive', 'disassembler', 'distributives', 'dos', 'drone', 'environments', 'exploitation', 'fingerprint', 'firmware', 'forensic', 'fuzzer', 'hardware', 'honeypot', 'ids', 'keylogger', 'malware', 'misc', 'mobile', 'mobilereversing', 'networking', 'packer', 'proxy', 'radio', 'recon', 'reversing', 'scanner', 'sniffer', 'social', 'spoof', 'stego', 'tunnel', 'unpacker', 'voip', 'webapp', 'windows', 'wireless', 'wordlists']
 
 const sexyIntro = () => {
     console.log("  _____               _____  _____ ")

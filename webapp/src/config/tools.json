@@ -294,6 +294,15 @@
         "run_command": "docker run -it --rm secsi/dorks-eye <command>"
     },
     {
+        "fancy_name": "dozzle",
+        "name": "dozzle",
+        "official_doc": "https://github.com/amir20/dozzle",
+        "organization": "amir20",
+        "run_command": "docker run --name dozzle -d --volume=/var/run/docker.sock:/var/run/docker.sock -p 8888:8080 amir20/dozzle:latest",
+        "categories": [],
+        "description": "A small lightweight application with a web based interface to monitor Docker logs."
+    },
+    {
         "fancy_name": "dvcs-ripper",
         "name": "dvcs-ripper",
         "description": "Rip web accessible (distributed) version control systems: SVN/GIT/...",
@@ -923,6 +932,18 @@
         ],
         "organization": "reedcrif",
         "run_command": "docker run --rm reedcrif/searchsploit [options]"
+    },
+    {
+        "fancy_name": "seclists",
+        "name": "seclists",
+        "official_doc": "https://github.com/danielmiessler/SecLists",
+        "organization": "secsi",
+        "run_command": "docker run -d --name seclists --rm secsi/seclists",
+        "categories": [
+            "recon",
+            "wordlists"
+        ],
+        "description": "SecLists is a collection of multiple types of lists used during security assessments."
     },
     {
         "fancy_name": "SimplyEmail",
