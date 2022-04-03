@@ -83,6 +83,12 @@ This is a **React** based application. Before running it you have to install all
 yarn install && cd ./webapp && yarn install
 ```
 
+### Build
+To build the app you have to run:
+```
+yarn run build
+```
+
 ### Run
 To execute the app locally you have to run:
 ```
@@ -94,11 +100,6 @@ Please note that the folder used for showing the Markdown files in the React app
 yarn run update
 ```
 
-### Build
-To build the app you have to run:
-```
-yarn run build
-```
 
 ## Roadmap
 Here is the current roadmap:

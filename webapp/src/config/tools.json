@@ -131,7 +131,7 @@
         "run_command": "docker run -d --name clair-db arminc/clair-db:latest && docker run -p 6060:6060 --link clair-db:postgres -d --name clair arminc/clair-local-scan:v2.0.8_fe9b059d930314b54c78f75afe265955faf4fdc1",
         "categories": [
             "code-audit",
-            "containers",
+            "docker",
             "malware"
         ],
         "description": "Clair is an open source project for the [static analysis] of vulnerabilities in application containers"
@@ -201,6 +201,15 @@
         ],
         "organization": "stevenaldinger",
         "run_command": "docker run -it --rm -v \"$(pwd)/decker-reports/\":/tmp/reports/ -v \"$(pwd)/examples/\":/decker-config/ -e DECKER_TARGET_HOST=<target_domain> stevenaldinger/decker:kali decker ./decker-config/example.hcl"
+    },
+    {
+        "fancy_name": "dejavu",
+        "name": "dejavu",
+        "official_doc": "https://dejavu.appbase.io/",
+        "organization": "appbaseio",
+        "run_command": "docker run -p 1358:1358 -d appbaseio/dejavu",
+        "categories": ["docker", "elasticsearch"],
+        "description": "dejavu is the missing web UI for Elasticsearch. "
     },
     {
         "fancy_name": "dex2jar",
@@ -299,7 +308,10 @@
         "official_doc": "https://github.com/amir20/dozzle",
         "organization": "amir20",
         "run_command": "docker run --name dozzle -d --volume=/var/run/docker.sock:/var/run/docker.sock -p 8888:8080 amir20/dozzle:latest",
-        "categories": [],
+        "categories": [
+            "docker",
+            "cloud"
+        ],
         "description": "A small lightweight application with a web based interface to monitor Docker logs."
     },
     {
@@ -711,7 +723,7 @@
         "run_command": "docker run -it --net container:<container_name> nicolaka/netshoot",
         "categories": [
             "networking",
-            "containers"
+            "docker"
         ],
         "description": "netshoot: a Docker + Kubernetes network trouble-shooting swiss-army container"
     },
