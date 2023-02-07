@@ -1081,6 +1081,17 @@
         "run_command": "docker run -it --rm secsi/sqlmap -u \"<target_url>\""
     },
     {
+        "fancy_name": "SSLyze",
+        "name": "sslyze",
+        "official_doc": "https://github.com/nabla-c0d3/sslyze",
+        "organization": "nablac0d3",
+        "run_command": "docker run -it --rm nablac0d3/sslyze <target_url>",
+        "categories": [
+            "scanner"
+        ],
+        "description": "SSLyze is a fast and powerful SSL/TLS scanning tool and Python library."
+    },
+    {
         "fancy_name": "Striker",
         "name": "striker",
         "description": "An offensive information and vulnerability scanner.",
