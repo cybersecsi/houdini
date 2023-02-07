@@ -751,6 +751,17 @@
         "run_command": "docker run -it --rm --privileged secsi/nmap -p <target_port> <target_ip_address>"
     },
     {
+        "fancy_name": "Nuclei",
+        "name": "nuclei",
+        "official_doc": "https://github.com/projectdiscovery/nuclei",
+        "organization": "projectdiscovery",
+        "run_command": "docker run -it --rm projectdiscovery/nuclei -u <target_url>",
+        "categories": [
+            "scanner"
+        ],
+        "description": "Fast and customizable vulnerability scanner based on simple YAML based DSL."
+    },
+    {
         "fancy_name": "OpenVAS",
         "name": "openvas",
         "description": "The OpenVAS scanning Daemon",
