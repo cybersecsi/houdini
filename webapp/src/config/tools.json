@@ -1005,6 +1005,18 @@
         "run_command": "docker run -it --rm simplysecurity/simplyemail -all -e <target_domain>"
     },
     {
+        "fancy_name": "SlowHTTPTest",
+        "name": "slowhttptest",
+        "official_doc": "https://github.com/shekyan/slowhttptest",
+        "organization": "shekyan",
+        "run_command": "docker run -it --rm shekyan/slowhttptest <args>",
+        "categories": [
+            "misc",
+            "networking"
+        ],
+        "description": "SlowHTTPTest is a highly configurable tool that simulates some Application Layer Denial of Service attacks by prolonging HTTP connections."
+    },
+    {
         "fancy_name": "Sn1per",
         "name": "sn1per",
         "description": "Automated Pentest Recon Scanner.",
