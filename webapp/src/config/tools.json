@@ -103,6 +103,17 @@
         "run_command": "docker run -it --rm secsi/bfac --url <target_url>"
     },
     {
+        "fancy_name": "Binwalk",
+        "name": "binwalk",
+        "official_doc": "https://github.com/ReFirmLabs/binwalk",
+        "organization": "refirmlabs",
+        "run_command": "docker run refirmlabs/binwalk -h",
+        "categories": [
+            "firmware"
+        ],
+        "description": "Binwalk is a fast, easy to use tool for analyzing, reverse engineering, and extracting firmware images."
+    },
+    {
         "fancy_name": "celerystalk",
         "name": "celerystalk",
         "official_doc": "https://github.com/sethsec/celerystalk",
@@ -208,7 +219,10 @@
         "official_doc": "https://dejavu.appbase.io/",
         "organization": "appbaseio",
         "run_command": "docker run -p 1358:1358 -d appbaseio/dejavu",
-        "categories": ["docker", "elasticsearch"],
+        "categories": [
+            "docker",
+            "elasticsearch"
+        ],
         "description": "dejavu is the missing web UI for Elasticsearch. "
     },
     {
