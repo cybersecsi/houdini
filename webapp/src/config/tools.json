@@ -829,8 +829,8 @@
         "categories": [
             "cracker"
         ],
-        "organization": "secsi",
-        "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/patator <wordlist_container_dir>/<wordlist_file>"
+        "organization": "lanjelot",
+        "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> lanjelot/patator <wordlist_container_dir>/<wordlist_file>"
     },
     {
         "fancy_name": "Photon",
