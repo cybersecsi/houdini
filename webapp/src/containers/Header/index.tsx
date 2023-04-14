@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import GitHubButton from "react-github-btn";
 import WhaleIcon from 'assets/whale.png';
+import { Ads } from 'components';
 
 const Header = () => {
     return (
@@ -19,6 +20,8 @@ const Header = () => {
                 </div>
 
                 <h2 className="text-3xl text-center mt-6 font-normal">Hundreds of Offensive and Useful Docker Images for Network Intrusion</h2>
+
+                <Ads/>
             </header>
 
         </>
