@@ -21,18 +21,20 @@ const ad = roboDroidAd;
 
 const Ads = () => {
   return (
-    <a className="no-underline" href={ad.link} target="_blank" rel="noreferrer">
-      <div className="relative flex max-w-5xl mx-auto border-2 border-slate-200 p-4 rounded-md font-Karla gap-4 bg-slate-50 items-center transition-all duration-300 hover:border-sky-400 cursor-pointer">
-        <div className="absolute top-2 right-4 text-sm font-bold bg-sky-400 border-2 text-slate-100 border-sky-600 p-1 rounded-sm">
-          ADS
+    <div className="max-w-5xl mx-auto">
+      <a className="no-underline" href={ad.link} target="_blank" rel="noreferrer">
+        <div className="relative flex border-2 border-slate-200 p-4 rounded-md font-Karla gap-4 bg-slate-50 items-center transition-all duration-300 hover:border-sky-400 cursor-pointer">
+          <div className="absolute top-2 right-4 text-sm font-bold bg-sky-400 border-2 text-slate-100 border-sky-600 p-1 rounded-sm">
+            ADS
+          </div>
+          <img className="h-20" src={ad.logo} alt={ad.title}/>
+          <div className="flex flex-col gap-2">
+            <h2 className="my-0 text-2xl">{ad.title}</h2>
+            <p className="text-sm text-justify text-slate-700">{ad.description}</p>
+          </div>
         </div>
-        <img className="h-20" src={ad.logo} alt={ad.title}/>
-        <div className="flex flex-col gap-2">
-          <h2 className="my-0 text-2xl">{ad.title}</h2>
-          <p className="text-sm text-justify text-slate-700">{ad.description}</p>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   )
 }
 
