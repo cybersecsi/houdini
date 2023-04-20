@@ -10,6 +10,7 @@
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "copyfiles": "^2.4.1",
     "fuse.js": "^6.5.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -26,6 +27,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
+    "copy-tools": "copyfiles -u 2 ../tools/**/*.md src/_tools/",
     "start": "node check && react-scripts start",
     "build": "node check && react-scripts build && node sitemap-builder",
     "test": "react-scripts test",
