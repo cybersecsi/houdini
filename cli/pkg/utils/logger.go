@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+const boldStart = "\033[1m"
+const boldEnd = "\033[0m"
 const colorReset = "\033[0m"
 const colorRed = "\033[31m"
 const colorGreen = "\033[32m"
@@ -46,4 +48,8 @@ func Debug(s string) {
 func Success(s string) {
 	dt := time.Now()
 	fmt.Printf("%s[%s] - [SUCCESS] - %s%s\n", string(colorGreen), dt.Format(dateFormat), s, colorReset)
+}
+
+func Bold(s string) {
+	fmt.Printf("%s%s%s\n", boldStart, s, boldEnd)
 }
