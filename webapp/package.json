@@ -31,8 +31,8 @@
     "copy-tools": "copyfiles -u 2  ../tools/**/*.md src/_tools/",
     "check": "node scripts/check",
     "build-sitemap": "node scripts/sitemap-builder",
-    "start": "node scripts/check && react-scripts start",
-    "build": "node scripts/check && react-scripts build && node scripts/sitemap-builder",
+    "start": "yarn check && react-scripts start",
+    "build": "yarn copy-tools && yarn check && react-scripts build && yarn build-sitemap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
