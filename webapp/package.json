@@ -27,9 +27,12 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "copy-tools": "copyfiles -u 2 ../tools/**/*.md src/_tools/",
-    "start": "node check && react-scripts start",
-    "build": "node check && react-scripts build && node sitemap-builder",
+    "bootstrap": "node scripts/bootstrap",
+    "copy-tools": "copyfiles -u 2  ../tools/**/*.md src/_tools/",
+    "check": "node scripts/check",
+    "build-sitemap": "node scripts/sitemap-builder",
+    "start": "node scripts/check && react-scripts start",
+    "build": "node scripts/check && react-scripts build && node scripts/sitemap-builder",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -53,6 +56,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
+    "inquirer": "^9.1.5",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.10"
   }
