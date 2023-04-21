@@ -8,10 +8,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cybersecsi/HOUDINI/pkg/utils"
+	"github.com/cybersecsi/HOUDINI/houdini/pkg/utils"
 )
 
-const houdiniToolsURL = "https://raw.githubusercontent.com/cybersecsi/HOUDINI/main/webapp/src/config/tools.json"
+const houdiniToolsURL = "https://raw.githubusercontent.com/cybersecsi/HOUDINI/houdini/main/webapp/src/config/tools.json"
 
 func CheckAndCreateHoudiniDir() {
 	homeDir, err := os.UserHomeDir()

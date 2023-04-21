@@ -1,4 +1,4 @@
-module github.com/cybersecsi/HOUDINI
+module github.com/cybersecsi/HOUDINI/houdini
 
 go 1.20
 

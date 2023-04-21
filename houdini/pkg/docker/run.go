@@ -9,7 +9,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/cybersecsi/HOUDINI/pkg/utils"
+	"github.com/cybersecsi/HOUDINI/houdini/pkg/utils"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
