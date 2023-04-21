@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/cybersecsi/HOUDINI/cli/cmd"
-	"github.com/cybersecsi/HOUDINI/cli/pkg/houdini"
-	"github.com/cybersecsi/HOUDINI/cli/pkg/utils"
+	"github.com/cybersecsi/HOUDINI/cmd"
+	"github.com/cybersecsi/HOUDINI/pkg/houdini"
+	"github.com/cybersecsi/HOUDINI/pkg/utils"
 )
 
 func main() {

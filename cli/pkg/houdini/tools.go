@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cybersecsi/HOUDINI/cli/pkg/types"
-	"github.com/cybersecsi/HOUDINI/cli/pkg/utils"
+	"github.com/cybersecsi/HOUDINI/pkg/types"
+	"github.com/cybersecsi/HOUDINI/pkg/utils"
 )
 
 func LoadTools() {

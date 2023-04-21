@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cybersecsi/HOUDINI/cli/pkg/utils"
+	"github.com/cybersecsi/HOUDINI/pkg/utils"
 )
 
 const houdiniToolsURL = "https://raw.githubusercontent.com/cybersecsi/HOUDINI/main/webapp/src/config/tools.json"

@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/cybersecsi/HOUDINI/cli/pkg/types"
+	"github.com/cybersecsi/HOUDINI/pkg/types"
 )
 
 var CurrentPrompt string = "0"

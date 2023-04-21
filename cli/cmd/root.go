@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cybersecsi/HOUDINI/cli/pkg/docker"
-	"github.com/cybersecsi/HOUDINI/cli/pkg/houdini"
-	"github.com/cybersecsi/HOUDINI/cli/pkg/utils"
+	"github.com/cybersecsi/HOUDINI/pkg/docker"
+	"github.com/cybersecsi/HOUDINI/pkg/houdini"
+	"github.com/cybersecsi/HOUDINI/pkg/utils"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
 )
