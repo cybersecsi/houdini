@@ -34,6 +34,15 @@ func LoadTools() {
 	}
 }
 
+func GetToolNames() []string {
+	names := []string{}
+	for _, tool := range utils.Tools {
+		toolName := fmt.Sprintf("%s/%s", tool.Organization, tool.Name)
+		names = append(names, toolName)
+	}
+	return names
+}
+
 func ListTools() {
 	for _, tool := range utils.Tools {
 		fmt.Printf("%s/%s\n", tool.Organization, tool.Name)

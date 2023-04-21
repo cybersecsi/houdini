@@ -11,7 +11,7 @@ import (
 	"github.com/cybersecsi/HOUDINI/houdini/pkg/utils"
 )
 
-const houdiniToolsURL = "https://raw.githubusercontent.com/cybersecsi/HOUDINI/houdini/main/webapp/src/config/tools.json"
+const houdiniToolsURL = "https://raw.githubusercontent.com/cybersecsi/HOUDINI/main/webapp/src/config/tools.json"
 
 func CheckAndCreateHoudiniDir() {
 	homeDir, err := os.UserHomeDir()
@@ -60,6 +60,7 @@ func DownloadToolsFile() {
 			utils.Error("Failed to write tools.json file")
 			os.Exit(1)
 		}
+		utils.Success("File tools.json correctly downloaded")
 	}
 }
 

@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/AlecAivazis/survey/v2"
+	"github.com/AlecAivazis/survey/v2/terminal"
 	"github.com/cybersecsi/HOUDINI/houdini/pkg/docker"
 	"github.com/cybersecsi/HOUDINI/houdini/pkg/houdini"
 	"github.com/cybersecsi/HOUDINI/houdini/pkg/utils"
-	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
 )
 
@@ -19,22 +20,30 @@ var rootCmd = &cobra.Command{
 		utils.Bold("Interactive mode")
 		help()
 
-		prompt := promptui.Prompt{
-			Label: "houdini>",
+		userInput := ""
+		prompt := &survey.Input{
+			Message: "houdini>",
 		}
 
 		for {
-			result, err := prompt.Run()
+			err := survey.AskOne(prompt, &userInput, survey.WithIcons(func(icons *survey.IconSet) {
+				icons.Question.Text = "🐋"
+			}))
 			if err != nil {
-				fmt.Print(utils.CurrentPrompt)
 				utils.CurrentPrompt = "0"
-				fmt.Println("Error:", err)
+				if err == terminal.InterruptErr {
+					fmt.Println("CTRL-C is disabled in the current console, use the 'exit' command close.")
+				} else {
+					fmt.Println(err.Error())
+				}
 				continue
 			}
 
-			switch result {
+			switch userInput {
 			case "run":
 				run()
+			case "quick":
+				quick()
 			case "update":
 				update()
 			case "list":
@@ -46,8 +55,9 @@ var rootCmd = &cobra.Command{
 			case "exit":
 				os.Exit(0)
 			default:
-				fmt.Printf("Unknown command '%s', type 'help' to get the available commands\n", result)
+				fmt.Printf("Unknown command '%s', type 'help' to get the available commands\n", userInput)
 			}
+			fmt.Println("")
 		}
 	},
 }
@@ -62,6 +72,7 @@ func Execute() {
 func help() {
 	fmt.Println("Available commands:")
 	fmt.Println("- run: runs a HOUDINI tool")
+	fmt.Println("- quick: runs the quick command of a HOUDINI tool")
 	fmt.Println("- update: updates the list of tools from HOUDINI repository")
 	fmt.Println("- list: displays the list of all available HOUDINI tools")
 	fmt.Println("- clear: cleanup the output")
@@ -71,29 +82,35 @@ func help() {
 }
 
 func run() {
-	prompt := promptui.Prompt{
-		Label: "Tool: ",
-	}
-
-	result, err := prompt.Run()
-
+	runCommand, err := docker.GetFullRunCommand()
 	if err != nil {
-		fmt.Printf("Prompt failed %v\n", err)
+		fmt.Println("Error:", err)
 		return
 	}
+	confirmRun := utils.ConfirmAction(fmt.Sprintf("Are you sure to run the command: '%s'?", runCommand))
+	if confirmRun {
+		utils.CurrentPrompt = "1"
+		fmt.Printf("Running the command '%s'\n", runCommand)
+		docker.RunTool(runCommand)
+	} else {
+		fmt.Println("Run canceled")
+	}
+}
 
-	tool, err := houdini.FindTool(result)
+func quick() {
+	runCommand, err := docker.GetQuickRunCommand()
 	if err != nil {
-		fmt.Print(err)
+		fmt.Println("Error:", err)
 		return
 	}
-
-	runCommand := utils.CompileRunCommand(tool.RunCommand)
-
-	fmt.Printf("Running the command '%s'\n", runCommand)
-
-	utils.CurrentPrompt = "1"
-	docker.RunTool(runCommand)
+	confirmRun := utils.ConfirmAction(fmt.Sprintf("Are you sure to run the command: '%s'?", runCommand))
+	if confirmRun {
+		utils.CurrentPrompt = "1"
+		fmt.Printf("Running the command '%s'\n", runCommand)
+		docker.RunTool(runCommand)
+	} else {
+		fmt.Println("Run canceled")
+	}
 }
 
 func update() {

@@ -6,6 +6,8 @@ import (
 	"os"
 	"regexp"
 	"strings"
+
+	"github.com/AlecAivazis/survey/v2"
 )
 
 func CompileRunCommand(runCommand string) string {
@@ -36,4 +38,18 @@ func CompileRunCommand(runCommand string) string {
 
 	// Return the final string with replaced values
 	return runCommand
+}
+
+func ConfirmAction(actionTxt string) bool {
+	actionConfirmed := true
+	prompt := &survey.Confirm{
+		Message: actionTxt,
+		Default: true,
+	}
+	err := survey.AskOne(prompt, &actionConfirmed)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return false
+	}
+	return actionConfirmed
 }
