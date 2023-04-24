@@ -1,9 +1,12 @@
 name: "Deploy to Netlify"
 
-on: push
-
+on:
+  push:
+    branches:
+      - main
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     name: "Deploy to Netlify"
     steps:
       - uses: jsmrcaga/action-netlify-deploy@v2.0.0
