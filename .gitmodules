@@ -1,3 +1,4 @@
 [submodule "cli"]
 	path = cli
 	url = https://github.com/cybersecsi/houdini-cli
+	branch = main
