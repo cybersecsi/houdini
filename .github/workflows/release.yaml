@@ -24,4 +24,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: robodroid-library-${{github.ref_name}}.tar.gz
+          files: houdini-library-${{github.ref_name}}.tar.gz
