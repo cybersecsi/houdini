@@ -1,7 +1,7 @@
 {
   "name": "houdini-web",
   "license": "GPL-3.0",
-  "version": "0.0.2",
+  "version": "0.2.2",
   "type": "module",
   "scripts": {
     "fetch-library": "npx ts-node --esm scripts/fetch_library.ts",
