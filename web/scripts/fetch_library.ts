@@ -1,15 +1,12 @@
 import fetch, { RequestInit } from 'node-fetch'
 import { fetchLatest } from "gh-release-fetch";
 import { dirname, resolve } from "path";
-import { readdir, writeFile } from 'fs/promises'
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const repository = "cybersecsi/houdini";
 const srcFolder = resolve(__dirname, "..", "src");
-const toolsListFile = resolve(__dirname, "..", "src", "config", "tools.json");
-const libraryFolder = resolve(__dirname, "..", "src", "library");
 
 const resolveRelease = async (repository: string, fetchOptions?: RequestInit): Promise<string> => {
   const res = await fetch(
@@ -38,19 +35,10 @@ const downloadRelease = async () => {
   });
 };
 
-const createToolsFile = async () => {
-  const res = await readdir(libraryFolder);
-  const toolsList = {
-    tools: res
-  }
-  await writeFile(toolsListFile, JSON.stringify(toolsList, null, 2));
-}
-
 const main = async () => {
   console.log("HOUDINI library download started");
   await downloadRelease();
   console.log("HOUDINI library download completed!");
-  createToolsFile()
 };
 
 main();

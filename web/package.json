@@ -6,7 +6,8 @@
   "scripts": {
     "fetch-library": "npx ts-node --esm scripts/fetch_library.ts",
     "copy-library": "copyfiles -u 2  ../library/**/* src/library/",
-    "postinstall": "pnpm copy-library",
+    "generate-tools-list": "npx ts-node --esm scripts/generate_tools_list.ts",
+    "postinstall": "pnpm copy-library && pnpm generate-tools-list",
     "check": "npx ts-node --esm scripts/check.ts",
     "build-sitemap": "npx ts-node --esm scripts/sitemap-builder.ts",
     "dev": "pnpm check && vite",
