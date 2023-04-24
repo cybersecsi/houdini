@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm'
+import { Helmet } from "react-helmet";
 import { ITool } from '@/types';
 import { ClipboardCode } from '@/components';
 import { getTool } from '@/utils/helper';
@@ -59,6 +60,10 @@ const Tool = () => {
 
     return (
         <>
+            <Helmet>
+              <title>{ currentTool?.fancy_name} - HOUDINI</title>
+              <meta name="description" content={currentTool?.description} />
+            </Helmet>
             <h1 className="font-semibold">
                 <Link className="text-sky-400 underline" to="/">..</Link> /{currentTool?.fancy_name}
             </h1>

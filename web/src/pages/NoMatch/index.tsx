@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const NoMatch = () => {
     return (
         <>
+            <Helmet>
+              <title>Page not found - HOUDINI</title>
+            </Helmet>
             <div className="relative h-full w-full">
                 <div className="absolute inset-0 text-center flex flex-col justify-center">
                     <div>
