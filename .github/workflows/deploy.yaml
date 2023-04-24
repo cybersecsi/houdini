@@ -1,0 +1,13 @@
+name: "Deploy to Netlify"
+
+on: push
+
+jobs:
+  deploy:
+    name: "Deploy to Netlify"
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: f8b06b7e-bdc6-4af8-aba9-f32e1132cd25
+          NETLIFY_DEPLOY_TO_PROD: true
