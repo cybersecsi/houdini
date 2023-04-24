@@ -18,7 +18,7 @@ jobs:
           cwd: .
           command: c
           files: |
-            ./tools
+            ./library
           outPath: houdini-library-${{github.ref_name}}.tar.gz
       - name: Release
         uses: softprops/action-gh-release@v1
