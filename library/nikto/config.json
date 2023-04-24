@@ -1,0 +1,12 @@
+{
+  "fancy_name": "nikto",
+  "name": "nikto",
+  "description": "A web server scanner which performs comprehensive tests against web servers for multiple items",
+  "official_doc": "https://github.com/sullo/nikto",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/nikto -h <target_url>"
+}

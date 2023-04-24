@@ -1,0 +1,12 @@
+{
+  "fancy_name": "gobuster",
+  "name": "gobuster",
+  "description": "Directory/file & DNS busting tool written in Go.",
+  "official_doc": "https://github.com/OJ/gobuster",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/gobuster dns -d <target_url>"
+}

@@ -1,0 +1,12 @@
+{
+  "fancy_name": "testssl.sh",
+  "name": "testssl.sh",
+  "description": "Testing TLS/SSL encryption",
+  "official_doc": "https://github.com/drwetter/testssl.sh",
+  "categories": [
+    "crypto",
+    "scanner"
+  ],
+  "organization": "drwetter",
+  "run_command": "docker run -it --rm drwetter/testssl.sh <target_domain>"
+}

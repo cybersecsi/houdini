@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Patator",
+  "name": "patator",
+  "description": "A multi-purpose bruteforcer.",
+  "official_doc": "https://github.com/lanjelot/patator",
+  "categories": [
+    "cracker"
+  ],
+  "organization": "lanjelot",
+  "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> lanjelot/patator <wordlist_container_dir>/<wordlist_file>"
+}

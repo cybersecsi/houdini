@@ -1,0 +1,12 @@
+{
+  "fancy_name": "GoSpider",
+  "name": "gospider",
+  "description": "Fast web spider written in Go.",
+  "official_doc": "https://github.com/jaeles-project/gospider",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/gospider"
+}

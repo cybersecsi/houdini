@@ -1,0 +1,10 @@
+{
+  "fancy_name": "Ground control",
+  "name": "ground-control",
+  "official_doc": "https://github.com/jobertabma/ground-control",
+  "categories": [
+    "misc"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -p 80:80 -p 443:443 -p 8080:8080 -p 8443:8443 secsi/ground-control"
+}

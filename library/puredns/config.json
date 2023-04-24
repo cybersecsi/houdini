@@ -1,0 +1,11 @@
+{
+  "fancy_name": "pureDNS",
+  "name": "puredns",
+  "official_doc": "https://github.com/d3mondev/puredns",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <input_dir>:/input secsi/puredns"
+}

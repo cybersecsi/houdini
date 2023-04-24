@@ -1,0 +1,11 @@
+{
+  "fancy_name": "MASSCAN",
+  "name": "masscan",
+  "description": "TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes",
+  "official_doc": "https://github.com/robertdavidgraham/masscan",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/masscan -p<target_port> <target_ip_address>"
+}

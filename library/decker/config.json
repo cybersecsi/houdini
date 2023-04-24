@@ -1,0 +1,10 @@
+{
+  "fancy_name": "Decker",
+  "name": "decker",
+  "official_doc": "https://github.com/stevenaldinger/decker",
+  "categories": [
+    "automation"
+  ],
+  "organization": "stevenaldinger",
+  "run_command": "docker run -it --rm -v \"$(pwd)/decker-reports/\":/tmp/reports/ -v \"$(pwd)/examples/\":/decker-config/ -e DECKER_TARGET_HOST=<target_domain> stevenaldinger/decker:kali decker ./decker-config/example.hcl"
+}

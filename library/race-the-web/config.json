@@ -1,0 +1,8 @@
+{
+  "fancy_name": "Race The Web",
+  "name": "race-the-web",
+  "official_doc": "https://github.com/TheHackerDev/race-the-web",
+  "categories": [],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/race-the-web"
+}

@@ -1,0 +1,11 @@
+{
+  "fancy_name": "rshijack",
+  "name": "rshijack",
+  "official_doc": "https://github.com/kpcyrd/rshijack",
+  "categories": [
+    "networking",
+    "sniffing"
+  ],
+  "organization": "kpcyrd",
+  "run_command": "docker run -it --init --rm --net=host kpcyrd/rshijack eth0 172.16.13.20:37386 172.16.13.19:23"
+}

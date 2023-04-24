@@ -1,0 +1,11 @@
+{
+  "fancy_name": "SimplyEmail",
+  "name": "simplyemail",
+  "description": "Email recon made fast and easy, with a framework to build on http://CyberSyndicates.com.",
+  "official_doc": "https://simplysecurity.github.io/SimplyEmail/",
+  "categories": [
+    "recon"
+  ],
+  "organization": "simplysecurity",
+  "run_command": "docker run -it --rm simplysecurity/simplyemail -all -e <target_domain>"
+}

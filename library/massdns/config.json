@@ -1,0 +1,11 @@
+{
+  "fancy_name": "MassDNS",
+  "name": "massdns",
+  "description": "A high-performance DNS stub resolver in C.",
+  "official_doc": "https://github.com/blechschmidt/massdns",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <domain_src_dir>:<domain_container_dir> secsi/massdns <domain_container_dir>/<domain_list_file>"
+}

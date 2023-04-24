@@ -1,0 +1,13 @@
+{
+  "fancy_name": "sqlmap",
+  "name": "sqlmap",
+  "description": "Automatic SQL injection and database takeover tool",
+  "official_doc": "https://github.com/sqlmapproject/sqlmap",
+  "categories": [
+    "webapp",
+    "fuzzer",
+    "exploitation"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/sqlmap -u \"<target_url>\""
+}

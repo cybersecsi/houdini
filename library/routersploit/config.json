@@ -1,0 +1,10 @@
+{
+  "fancy_name": "routersploit",
+  "name": "routersploit",
+  "official_doc": "https://github.com/threat9/routersploit",
+  "categories": [
+    "exploitation"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/routersploit"
+}

@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Photon",
+  "name": "photon",
+  "description": "Incredibly fast crawler which extracts urls, emails, files, website accounts and much more.",
+  "official_doc": "https://github.com/s0md3v/Photon",
+  "categories": [
+    "recon",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/photon"
+}

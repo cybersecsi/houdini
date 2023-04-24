@@ -1,0 +1,12 @@
+{
+  "fancy_name": "gowitness",
+  "name": "gowitness",
+  "description": "A golang, web screenshot utility using Chrome Headless.",
+  "official_doc": "https://github.com/sensepost/gowitness",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "leonjza",
+  "run_command": "docker run -it --rm -v $(pwd):/data leonjza/gowitness gowitness"
+}

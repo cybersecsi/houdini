@@ -1,0 +1,12 @@
+{
+  "fancy_name": "mitmproxy",
+  "name": "mitmproxy",
+  "description": "SSL-capable man-in-the-middle HTTP proxy",
+  "official_doc": "https://github.com/mitmproxy/mitmproxy",
+  "categories": [
+    "proxy",
+    "exploitation"
+  ],
+  "organization": "mitmproxy",
+  "run_command": "docker run --rm -it -p 8080:8080 mitmproxy/mitmproxy"
+}

@@ -1,0 +1,12 @@
+{
+  "fancy_name": "dejavu",
+  "name": "dejavu",
+  "official_doc": "https://dejavu.appbase.io/",
+  "organization": "appbaseio",
+  "run_command": "docker run -p 1358:1358 -d appbaseio/dejavu",
+  "categories": [
+    "docker",
+    "elasticsearch"
+  ],
+  "description": "dejavu is the missing web UI for Elasticsearch. "
+}

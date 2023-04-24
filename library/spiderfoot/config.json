@@ -1,0 +1,11 @@
+{
+  "fancy_name": "SpiderFoot",
+  "name": "spiderfoot",
+  "description": "The Open Source Footprinting Tool.",
+  "official_doc": "https://github.com/smicallef/spiderfoot",
+  "categories": [
+    "recon"
+  ],
+  "organization": "ctdc",
+  "run_command": "docker run -it --rm -p 5009:5001 ctdc/spiderfoot"
+}

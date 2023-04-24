@@ -1,0 +1,12 @@
+{
+  "fancy_name": "seclists",
+  "name": "seclists",
+  "official_doc": "https://github.com/danielmiessler/SecLists",
+  "organization": "secsi",
+  "run_command": "docker run -d --name seclists --rm secsi/seclists",
+  "categories": [
+    "recon",
+    "wordlists"
+  ],
+  "description": "SecLists is a collection of multiple types of lists used during security assessments."
+}

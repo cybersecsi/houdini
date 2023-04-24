@@ -1,0 +1,8 @@
+{
+  "fancy_name": "Wapiti",
+  "name": "wapiti",
+  "official_doc": "https://github.com/wapiti-scanner/wapiti",
+  "categories": [],
+  "organization": "jorgeandrada",
+  "run_command": "docker run --rm -it jorgeandrada/wapiti \"<target_url>\""
+}

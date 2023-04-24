@@ -1,0 +1,12 @@
+{
+  "fancy_name": "RustScan",
+  "name": "rustscan",
+  "description": "Faster Nmap Scanning with Rust.",
+  "official_doc": "https://github.com/RustScan/RustScan",
+  "categories": [
+    "scanner",
+    "exploitation"
+  ],
+  "organization": "rustscan",
+  "run_command": "docker run -it --rm --name rustscan rustscan/rustscan:2.0 <rustscan arguments here> <target_ip>"
+}

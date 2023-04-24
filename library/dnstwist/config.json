@@ -1,0 +1,12 @@
+{
+  "fancy_name": "dnstwist",
+  "name": "dnstwist",
+  "description": "Domain name permutation engine for detecting typo squatting, phishing and corporate espionage.",
+  "official_doc": "https://github.com/elceef/dnstwist",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "elceef",
+  "run_command": "docker run -it elceef/dnstwist"
+}

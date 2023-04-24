@@ -1,0 +1,14 @@
+{
+  "fancy_name": "qark",
+  "name": "qark",
+  "description": "Tool to look for several security related Android application vulnerabilities.",
+  "official_doc": "https://github.com/linkedin/qark",
+  "categories": [
+    "scanner",
+    "exploitation",
+    "fuzzer",
+    "mobile"
+  ],
+  "organization": "ledokun",
+  "run_command": "docker run -it --rm -v /path/to/apk:/path/to/apk ledokun/qark --filepath /path/to/apk/sample.apk --timeout 3600"
+}

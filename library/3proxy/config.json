@@ -1,0 +1,11 @@
+{
+  "fancy_name": "3proxy",
+  "name": "3proxy",
+  "official_doc": "http://3proxy.ru/",
+  "organization": "secsi",
+  "run_command": "docker run --name 3proxy -d -p 3128:3128 --env PROXY_LOGIN=pr0xyUser --env PROXY_PASSWORD=passw0rd secsi/3proxy",
+  "categories": [
+    "proxy"
+  ],
+  "description": "Tiny free proxy server."
+}

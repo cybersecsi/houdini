@@ -1,0 +1,12 @@
+{
+  "fancy_name": "pagodo",
+  "name": "pagodo",
+  "description": "Google dork script to collect potentially vulnerable web pages and applications on the Internet.",
+  "official_doc": "https://github.com/opsdisk/pagodo",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/pagodo"
+}

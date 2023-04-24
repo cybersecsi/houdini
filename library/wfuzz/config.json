@@ -1,0 +1,8 @@
+{
+  "fancy_name": "Wfuzz",
+  "name": "wfuzz",
+  "official_doc": "https://wfuzz.readthedocs.io/",
+  "categories": [],
+  "organization": "ghcr.io/xmendez",
+  "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> ghcr.io/xmendez/wfuzz wfuzz"
+}

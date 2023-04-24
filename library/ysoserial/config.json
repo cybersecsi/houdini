@@ -1,0 +1,12 @@
+{
+  "fancy_name": "ysoserial",
+  "name": "ysoserial",
+  "description": "A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.",
+  "official_doc": "https://github.com/frohoff/ysoserial",
+  "categories": [
+    "webapp",
+    "exploitation"
+  ],
+  "organization": "frohoff",
+  "run_command": "docker run -it --rm frohoff/ysoserial CommonsCollections1 <payload> '<command>'"
+}

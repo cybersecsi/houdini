@@ -1,0 +1,11 @@
+{
+  "fancy_name": "oxml_xxe",
+  "name": "oxml_xxe",
+  "official_doc": "https://github.com/BuffaloWill/oxml_xxe",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -p 4567:4567 secsi/oxml_xxe"
+}

@@ -1,0 +1,11 @@
+{
+  "fancy_name": "hydra",
+  "name": "hydra",
+  "description": "Very fast network logon cracker which support many different services",
+  "official_doc": "https://github.com/vanhauser-thc/thc-hydra",
+  "categories": [
+    "cracker"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <wordlist_src_dir>:/usr/share/wordlists secsi/hydra <command>"
+}

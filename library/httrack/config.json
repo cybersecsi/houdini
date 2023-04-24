@@ -1,0 +1,11 @@
+{
+  "fancy_name": "HTTrack",
+  "name": "httrack",
+  "description": "An easy-to-use offline browser utility",
+  "official_doc": "https://github.com/xroche/httrack",
+  "categories": [
+    "recon"
+  ],
+  "organization": "ralfbs",
+  "run_command": "docker run -it --rm -v <local_dir>:/app -e HTTRACK_URI=<target_url> ralfbs/httrack"
+}

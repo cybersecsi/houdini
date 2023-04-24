@@ -1,0 +1,10 @@
+{
+  "fancy_name": "GoogD0rker",
+  "name": "googd0rker",
+  "official_doc": "https://github.com/ZephrFish/GoogD0rker",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/googd0rker -d <target_domain>"
+}

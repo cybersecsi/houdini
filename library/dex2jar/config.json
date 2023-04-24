@@ -1,0 +1,11 @@
+{
+  "fancy_name": "dex2jar",
+  "name": "dex2jar",
+  "official_doc": "https://github.com/pxb1988/dex2jar",
+  "categories": [
+    "hardware",
+    "reversing"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <local_dir>:<container_dir> secsi/dex2jar -f <container_dir>/<apk_to_decompile>.apk -o <container_dir>/output.jar"
+}

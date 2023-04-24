@@ -1,0 +1,4 @@
+## Description
+See what sort of trouble users can get in trying to type your domain name. Find lookalike domains that adversaries can use to attack you. Can detect typosquatters, phishing attacks, fraud, and brand impersonation. Useful as an additional source of targeted threat intelligence.
+
+DNS fuzzing is an automated workflow for discovering potentially malicious domains targeting your organisation. This tool works by generating a large list of permutations based on a domain name you provide and then checking if any of those permutations are in use. Additionally, it can generate fuzzy hashes of the web pages to see if they are part of an ongoing phishing attack or brand impersonation, and much more!

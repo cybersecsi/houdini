@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Binwalk",
+  "name": "binwalk",
+  "official_doc": "https://github.com/ReFirmLabs/binwalk",
+  "organization": "refirmlabs",
+  "run_command": "docker run refirmlabs/binwalk -h",
+  "categories": [
+    "firmware"
+  ],
+  "description": "Binwalk is a fast, easy to use tool for analyzing, reverse engineering, and extracting firmware images."
+}

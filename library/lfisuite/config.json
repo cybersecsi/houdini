@@ -1,0 +1,13 @@
+{
+  "fancy_name": "LFI Suite",
+  "name": "lfisuite",
+  "description": "Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner.",
+  "official_doc": "https://github.com/D35m0nd142/LFISuite",
+  "categories": [
+    "webapp",
+    "scanner",
+    "exploitation"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <input_dir>:/input secsi/lfisuite"
+}

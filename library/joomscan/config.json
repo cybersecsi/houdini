@@ -1,0 +1,12 @@
+{
+  "fancy_name": "JoomScan",
+  "name": "joomscan",
+  "description": "Detects file inclusion, sql injection, command execution vulnerabilities of a target Joomla! web site.",
+  "official_doc": "https://github.com/OWASP/joomscan",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <local_dir>:/joomscan/reports secsi/joomscan -u <target_url>"
+}

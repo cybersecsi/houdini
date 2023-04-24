@@ -1,0 +1,11 @@
+{
+  "fancy_name": "GetJS",
+  "name": "getjs",
+  "official_doc": "https://github.com/003random/getJS",
+  "categories": [
+    "recon",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/getjs <command>"
+}

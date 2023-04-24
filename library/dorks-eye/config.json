@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Dorks Eye",
+  "name": "dorks-eye",
+  "official_doc": "https://github.com/BullsEye0/dorks-eye",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/dorks-eye <command>"
+}

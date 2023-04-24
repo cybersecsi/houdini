@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Sublist3r",
+  "name": "sublist3r",
+  "description": "A Fast subdomains enumeration tool for penetration testers.",
+  "official_doc": "https://github.com/aboul3la/Sublist3r",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/sublist3r -d <target_url>"
+}

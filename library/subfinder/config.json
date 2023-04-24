@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Subfinder",
+  "name": "subfinder",
+  "description": "Modular subdomain discovery tool that can discover massive amounts of valid subdomains for any target.",
+  "official_doc": "https://github.com/projectdiscovery/subfinder",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/subfinder -d <target_domain>"
+}

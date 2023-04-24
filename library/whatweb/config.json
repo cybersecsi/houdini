@@ -1,0 +1,12 @@
+{
+  "fancy_name": "WhatWeb",
+  "name": "whatweb",
+  "description": "Next generation web scanner that identifies what websites are running.",
+  "official_doc": "https://github.com/urbanadventurer/WhatWeb",
+  "categories": [
+    "recon",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/whatweb -v -a 3 <target_url>"
+}

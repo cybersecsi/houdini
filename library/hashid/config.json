@@ -1,0 +1,10 @@
+{
+  "fancy_name": "hashID",
+  "name": "hashid",
+  "official_doc": "https://github.com/psypanda/hashID",
+  "categories": [
+    "crypto"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/hashid"
+}

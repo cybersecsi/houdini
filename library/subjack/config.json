@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Subjack",
+  "name": "subjack",
+  "description": "Subdomain Takeover tool written in Go.",
+  "official_doc": "https://github.com/haccer/subjack",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/subjack"
+}

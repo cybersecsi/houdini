@@ -1,0 +1,10 @@
+{
+  "fancy_name": "The JSON Web Token Toolkit",
+  "name": "jwt_tool",
+  "official_doc": "https://github.com/ticarpi/jwt_tool",
+  "categories": [
+    "cracker"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/jwt_tool <JWT>"
+}

@@ -1,0 +1,17 @@
+{
+  "fancy_name": "Sn1per",
+  "name": "sn1per",
+  "description": "Automated Pentest Recon Scanner.",
+  "official_doc": "https://github.com/1N3/Sn1per/",
+  "categories": [
+    "automation",
+    "exploitation",
+    "scanner",
+    "recon",
+    "fingerprint",
+    "networking",
+    "fuzzer"
+  ],
+  "organization": "xer0dayz",
+  "run_command": "docker run -it --rm xer0dayz/sn1per /sniper/sniper -t <target_url>"
+}

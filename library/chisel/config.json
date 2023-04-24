@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Chisel",
+  "name": "chisel",
+  "official_doc": "https://github.com/jpillora/chisel",
+  "organization": "jpillora",
+  "run_command": "docker run --rm -it jpillora/chisel --help",
+  "categories": [
+    "tunnel"
+  ],
+  "description": "Chisel is a fast TCP/UDP tunnel, transported over HTTP, secured via SSH. Single executable including both client and server."
+}

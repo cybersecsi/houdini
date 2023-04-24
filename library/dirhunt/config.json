@@ -1,0 +1,12 @@
+{
+  "fancy_name": "dirhunt",
+  "name": "dirhunt",
+  "description": "Find web directories without bruteforce.",
+  "official_doc": "https://github.com/Nekmo/dirhunt",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/dirhunt <target_url>"
+}

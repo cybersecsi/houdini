@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Dirb",
+  "name": "dirb",
+  "official_doc": "http://dirb.sourceforge.net/",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/dirb <target_url> <wordlist_container_dir>/<wordlist_file>"
+}

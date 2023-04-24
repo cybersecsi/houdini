@@ -1,0 +1,10 @@
+{
+  "fancy_name": "celerystalk",
+  "name": "celerystalk",
+  "official_doc": "https://github.com/sethsec/celerystalk",
+  "categories": [
+    "automation"
+  ],
+  "organization": "sethsec",
+  "run_command": "docker run -p 27007:27007 -ti sethsec/celerystalk"
+}

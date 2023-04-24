@@ -1,0 +1,11 @@
+{
+  "fancy_name": "netifyd",
+  "name": "netifyd",
+  "official_doc": "https://www.netify.ai/resources",
+  "organization": "secsi",
+  "run_command": "docker run -d -it --cap-add=net_admin --rm secsi/netifyd -I/E <interface>",
+  "categories": [
+    "networking",
+    "misc"
+  ]
+}

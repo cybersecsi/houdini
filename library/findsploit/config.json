@@ -1,0 +1,10 @@
+{
+  "fancy_name": "Findsploit",
+  "name": "findsploit",
+  "official_doc": "https://github.com/1N3/Findsploit",
+  "categories": [
+    "misc"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/findsploit <search_term>"
+}

@@ -1,0 +1,13 @@
+{
+  "fancy_name": "clair",
+  "name": "clair-local-scan",
+  "official_doc": "https://github.com/arminc/clair-local-scan",
+  "organization": "arminc",
+  "run_command": "docker run -d --name clair-db arminc/clair-db:latest && docker run -p 6060:6060 --link clair-db:postgres -d --name clair arminc/clair-local-scan:v2.0.8_fe9b059d930314b54c78f75afe265955faf4fdc1",
+  "categories": [
+    "code-audit",
+    "docker",
+    "malware"
+  ],
+  "description": "Clair is an open source project for the [static analysis] of vulnerabilities in application containers"
+}

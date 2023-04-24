@@ -1,0 +1,11 @@
+{
+  "fancy_name": "theHarvester",
+  "name": "theharvester",
+  "description": "Python tool for gathering e-mail accounts and subdomain names from different public sources (search engines, pgp key servers).",
+  "official_doc": "https://github.com/laramies/theHarvester",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/theharvester -d <target_url> -b all"
+}

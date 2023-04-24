@@ -1,0 +1,11 @@
+{
+  "fancy_name": "httprobe",
+  "name": "httprobe",
+  "description": "Take a list of domains and probe for working HTTP and HTTPS servers",
+  "official_doc": "https://github.com/tomnomnom/httprobe",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/httprobe"
+}

@@ -1,0 +1,11 @@
+{
+  "fancy_name": "fast-recon",
+  "name": "fast-recon",
+  "official_doc": "https://github.com/DanMcInerney/fast-recon",
+  "categories": [
+    "scanner",
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/fast-recon -d \"<target_domain>\""
+}

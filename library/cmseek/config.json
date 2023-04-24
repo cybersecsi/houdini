@@ -1,0 +1,13 @@
+{
+  "fancy_name": "CMSeeK",
+  "name": "cmseek",
+  "description": "CMS (Content Management Systems) Detection and Exploitation suite.",
+  "official_doc": "https://github.com/Tuhinshubhra/CMSeeK",
+  "categories": [
+    "webapp",
+    "fingerprint",
+    "exploitation"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/cmseek -u <target_url>"
+}

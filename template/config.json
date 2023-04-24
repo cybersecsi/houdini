@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Fancy Name of the Tool",
+  "name": "tool_name",
+  "official_doc": "http://example.com",
+  "organization": "secsi",
+  "run_command": "docker run --name <tool_name> -it --rm secsi/<tool_name> <command>",
+  "categories": [
+    "scanner"
+  ],
+  "description": "A brief description of the tool"
+}

@@ -1,0 +1,12 @@
+{
+  "fancy_name": "ffuf",
+  "name": "ffuf",
+  "description": "Fast web fuzzer written in Go.",
+  "official_doc": "https://github.com/ffuf/ffuf",
+  "categories": [
+    "webapp",
+    "fuzzer"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/ffuf -w <wordlist_container_dir>/<wordlist_file> -u <target_url>"
+}

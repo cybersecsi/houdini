@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Xray",
+  "name": "xray",
+  "description": "A tool for recon, mapping and OSINT gathering from public networks.",
+  "official_doc": "https://github.com/evilsocket/xray",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/xray"
+}

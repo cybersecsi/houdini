@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Hakrawler",
+  "name": "hakrawler",
+  "description": "Simple, fast web crawler designed for easy, quick discovery of endpoints and assets within a web application.",
+  "official_doc": "https://github.com/hakluke/hakrawler",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/hakrawler <target_domain>"
+}

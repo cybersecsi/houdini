@@ -1,0 +1,12 @@
+{
+  "fancy_name": "BFAC",
+  "name": "bfac",
+  "description": "An automated tool that checks for backup artifacts that may disclose the web-application's source code.",
+  "official_doc": "https://github.com/mazen160/bfac",
+  "categories": [
+    "webapp",
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/bfac --url <target_url>"
+}

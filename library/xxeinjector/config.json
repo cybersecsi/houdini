@@ -1,0 +1,12 @@
+{
+  "fancy_name": "XXEinjector",
+  "name": "xxeinjector",
+  "description": "Tool for automatic exploitation of XXE vulnerability using direct and different out of band methods.",
+  "official_doc": "https://github.com/enjoiz/XXEinjector",
+  "categories": [
+    "exploitation",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <local_dir>:/xxeinjector secsi/xxeinjector --host=<target_ip> --path=/etc --file=<filename> --ssl"
+}

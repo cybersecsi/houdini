@@ -1,0 +1,13 @@
+{
+  "fancy_name": "Gitrob",
+  "name": "gitrob",
+  "description": "Scan Github For Sensitive Files.",
+  "official_doc": "https://github.com/michenriksen/gitrob",
+  "categories": [
+    "recon",
+    "scanner",
+    "git"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/gitrob <target>"
+}

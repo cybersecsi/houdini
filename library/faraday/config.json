@@ -1,0 +1,16 @@
+{
+  "fancy_name": "Faraday",
+  "name": "faraday",
+  "description": "A new concept (IPE) Integrated Penetration-Test Environment a multiuser Penetration test IDE. Designed for distribution, indexation and analyze of the generated data during the process of a security audit.",
+  "official_doc": "https://github.com/infobyte/faraday",
+  "categories": [
+    "scanner",
+    "exploitation",
+    "fuzzer",
+    "fingerprint",
+    "automation",
+    "misc"
+  ],
+  "organization": "faradaysec",
+  "run_command": "docker run -it --rm -v /path/to/my_doc_folder:/faraday-license -v /path/to/my_storage_folder:/faraday-storage -v /path/to/my_config_folder:/faraday-config faradaysec/faraday"
+}

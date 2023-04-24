@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Arjun",
+  "name": "arjun",
+  "description": "HTTP parameter discovery suite.",
+  "official_doc": "https://github.com/s0md3v/Arjun",
+  "categories": [
+    "webapp",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/arjun"
+}

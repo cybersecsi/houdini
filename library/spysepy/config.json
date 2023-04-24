@@ -1,0 +1,10 @@
+{
+  "fancy_name": "spyse.py",
+  "name": "spysepy",
+  "official_doc": "https://github.com/zeropwn/spyse.py",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/spysepy"
+}

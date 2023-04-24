@@ -1,0 +1,11 @@
+{
+  "fancy_name": "hakrevdns",
+  "name": "hakrevdns",
+  "description": "Small, fast tool for performing reverse DNS lookups en masse.",
+  "official_doc": "https://github.com/hakluke/hakrevdns",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/hakrevdns"
+}

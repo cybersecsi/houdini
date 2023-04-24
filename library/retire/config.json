@@ -1,0 +1,13 @@
+{
+  "fancy_name": "Retire.js",
+  "name": "retire",
+  "description": "Scanner detecting the use of JavaScript libraries with known vulnerabilities.",
+  "official_doc": "https://github.com/RetireJS/retire.js",
+  "categories": [
+    "code-audit",
+    "javascript",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/retire"
+}

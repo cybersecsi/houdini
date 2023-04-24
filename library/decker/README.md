@@ -1,0 +1,2 @@
+## Description
+Decker is a penetration testing orchestration framework. It leverages HashiCorp Configuration Language 2 (the same config language as Terraform) to allow declarative penetration testing as code, so your tests can be versioned, shared, reused, and collaborated on with your team or the community.

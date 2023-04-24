@@ -1,0 +1,13 @@
+{
+  "fancy_name": "EyeWitness",
+  "name": "eyewitness",
+  "description": "Designed to take screenshots of websites, provide some server header info, and identify default credentials if possible.",
+  "official_doc": "https://github.com/FortyNorthSecurity/EyeWitness",
+  "categories": [
+    "webapp",
+    "recon",
+    "misc"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run --rm -it -v <input_dir>:/input secsi/eyewitness --web --single <target_url>"
+}

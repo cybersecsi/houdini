@@ -1,0 +1,12 @@
+{
+  "fancy_name": "LinkFinder",
+  "name": "linkfinder",
+  "description": "Discovers endpoint and their parameters in JavaScript files.",
+  "official_doc": "https://github.com/GerbenJavado/LinkFinder",
+  "categories": [
+    "recon",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <output_dir>:/linkfinder/output secsi/linkfinder -i <target_url> -o /linkfinder/output/output.html"
+}

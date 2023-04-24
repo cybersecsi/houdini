@@ -1,0 +1,10 @@
+{
+  "fancy_name": "dnscan",
+  "name": "dnscan",
+  "official_doc": "https://github.com/rbsec/dnscan",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/dnscan -d <target_url> -w subdomains-10000.txt -t 10 -R 1.0.0.1"
+}

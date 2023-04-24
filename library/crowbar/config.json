@@ -1,0 +1,10 @@
+{
+  "fancy_name": "crowbar",
+  "name": "crowbar",
+  "official_doc": "https://github.com/galkan/crowbar",
+  "categories": [
+    "cracker"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/crowbar"
+}

@@ -1,0 +1,13 @@
+{
+  "fancy_name": "spidy",
+  "name": "spidy",
+  "official_doc": "https://github.com/rivermont/spidy",
+  "organization": "secsi",
+  "run_command": "docker run --rm -it -v $PWD:/input -v $PWD:/data spidy",
+  "categories": [
+    "recon",
+    "scanner",
+    "webapp"
+  ],
+  "description": "An easy command-line web crawler"
+}

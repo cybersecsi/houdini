@@ -1,0 +1,11 @@
+{
+  "fancy_name": "knock",
+  "name": "knockpy",
+  "official_doc": "https://github.com/guelfoweb/knock",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/knockpy <target_url>"
+}

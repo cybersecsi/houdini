@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Aquatone",
+  "name": "aquatone",
+  "description": "a set of tools for performing reconnaissance on domain names.",
+  "official_doc": "https://github.com/michenriksen/aquatone",
+  "categories": [
+    "scanner",
+    "recon"
+  ],
+  "organization": "hypnza",
+  "run_command": "docker run --rm hypnza/aquatone <command>"
+}

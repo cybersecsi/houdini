@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Findomain",
+  "name": "findomain",
+  "description": "A tool that use Certificate Transparency logs to find subdomains.",
+  "official_doc": "https://github.com/Findomain/Findomain",
+  "categories": [
+    "scanner",
+    "recon"
+  ],
+  "organization": "edu4rdshl",
+  "run_command": "docker run --rm -it -v $(pwd):/opt/findomain findomain -c config.toml -t example.com"
+}

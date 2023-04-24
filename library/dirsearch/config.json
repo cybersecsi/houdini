@@ -1,0 +1,12 @@
+{
+  "fancy_name": "dirsearch",
+  "name": "dirsearch",
+  "description": "HTTP(S) directory/file brute forcer.",
+  "official_doc": "https://github.com/maurosoria/dirsearch",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/dirsearch -u <target_url>"
+}

@@ -1,0 +1,12 @@
+{
+  "fancy_name": "SlowHTTPTest",
+  "name": "slowhttptest",
+  "official_doc": "https://github.com/shekyan/slowhttptest",
+  "organization": "shekyan",
+  "run_command": "docker run -it --rm shekyan/slowhttptest <args>",
+  "categories": [
+    "misc",
+    "networking"
+  ],
+  "description": "SlowHTTPTest is a highly configurable tool that simulates some Application Layer Denial of Service attacks by prolonging HTTP connections."
+}

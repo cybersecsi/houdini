@@ -1,0 +1,10 @@
+{
+  "fancy_name": "Mobile Security Framework",
+  "name": "mobile-security-framework-mobsf",
+  "official_doc": "https://mobsf.github.io/docs",
+  "categories": [
+    "mobile"
+  ],
+  "organization": "opensecurity",
+  "run_command": "docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf"
+}

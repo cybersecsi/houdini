@@ -1,0 +1,12 @@
+{
+  "fancy_name": "SearchSploit",
+  "name": "searchsploit",
+  "description": "The official Exploit Database search tool.",
+  "official_doc": "https://github.com/rc042/searchsploit",
+  "categories": [
+    "automation",
+    "exploitation"
+  ],
+  "organization": "reedcrif",
+  "run_command": "docker run --rm reedcrif/searchsploit [options]"
+}

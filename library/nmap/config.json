@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Nmap",
+  "name": "nmap",
+  "description": "Utility for network discovery and security auditing",
+  "official_doc": "https://github.com/nmap/nmap",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm --privileged secsi/nmap -p <target_port> <target_ip_address>"
+}

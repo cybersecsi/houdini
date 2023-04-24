@@ -1,0 +1,8 @@
+{
+  "fancy_name": "waybackpy",
+  "name": "waybackpy",
+  "official_doc": "https://github.com/akamhy/waybackpy",
+  "categories": [],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/waybackpy --url \"<target_url>\" --user_agent \"my-unique-user-agent\" --oldest"
+}

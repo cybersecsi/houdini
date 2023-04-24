@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Sandcastle",
+  "name": "sandcastle",
+  "description": "A Python script for AWS S3 bucket enumeration.",
+  "official_doc": "https://github.com/0xSearches/sandcastle",
+  "categories": [
+    "scanner",
+    "cloud"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/sandcastle"
+}

@@ -1,0 +1,11 @@
+{
+  "fancy_name": "fierce",
+  "name": "fierce",
+  "description": "A DNS reconnaissance tool for locating non-contiguous IP space. A DNS scanner.",
+  "official_doc": "https://github.com/mschwager/fierce",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/fierce --domain <target_url>"
+}

@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Arachni",
+  "name": "arachni",
+  "description": "A feature-full, modular, high-performance Ruby framework aimed towards helping penetration testers and administrators evaluate the security of web applications.",
+  "official_doc": "https://github.com/Arachni/arachni",
+  "categories": [
+    "webapp"
+  ],
+  "organization": "arachni",
+  "run_command": "docker run -d --net host --name arachni -p 222:22 -p 7331:7331 -p 9292:9292 arachni/arachni:latest"
+}

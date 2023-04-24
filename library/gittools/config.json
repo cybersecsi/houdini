@@ -1,0 +1,13 @@
+{
+  "fancy_name": "GitTools",
+  "name": "gittools",
+  "description": "A repository with 3 tools for pwn'ing websites with .git repositories available'.",
+  "official_doc": "https://github.com/internetwache/GitTool",
+  "categories": [
+    "recon",
+    "scanner",
+    "git"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <input_dir>:/input -w /input secsi/gittools <command>"
+}

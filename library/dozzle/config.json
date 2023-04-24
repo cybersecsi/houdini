@@ -1,0 +1,12 @@
+{
+  "fancy_name": "dozzle",
+  "name": "dozzle",
+  "official_doc": "https://github.com/amir20/dozzle",
+  "organization": "amir20",
+  "run_command": "docker run --name dozzle -d --volume=/var/run/docker.sock:/var/run/docker.sock -p 8888:8080 amir20/dozzle:latest",
+  "categories": [
+    "docker",
+    "cloud"
+  ],
+  "description": "A small lightweight application with a web based interface to monitor Docker logs."
+}

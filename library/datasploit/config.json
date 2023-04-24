@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Datasploit",
+  "name": "datasploit",
+  "description": "A tool to perform various OSINT techniques, aggregate all the raw data, visualize it on a dashboard, and facilitate alerting and monitoring on the data.",
+  "official_doc": "https://github.com/DataSploit/datasploit",
+  "categories": [
+    "recon",
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <config_file>:/datasploit/config.py secsi/datasploit -i <target_domain>"
+}

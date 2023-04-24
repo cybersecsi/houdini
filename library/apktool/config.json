@@ -1,0 +1,11 @@
+{
+  "fancy_name": "Apktool",
+  "name": "apktool",
+  "official_doc": "https://github.com/iBotPeaches/Apktool",
+  "categories": [
+    "reversing",
+    "disassembler"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <input_dir>:/input secsi/apktool d <apk_file>"
+}

@@ -1,0 +1,12 @@
+{
+  "fancy_name": "WAFW00F",
+  "name": "wafw00f",
+  "description": "Identify and fingerprint Web Application Firewall (WAF) products protecting a website.",
+  "official_doc": "https://github.com/EnableSecurity/wafw00f",
+  "categories": [
+    "scanner",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/wafw00f"
+}

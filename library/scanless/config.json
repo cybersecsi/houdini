@@ -1,0 +1,9 @@
+{
+  "fancy_name": "scanless",
+  "name": "scanless",
+  "description": "Utility for using websites that can perform port scans on your behalf.",
+  "official_doc": "https://github.com/vesche/scanless",
+  "categories": [],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/scanless"
+}

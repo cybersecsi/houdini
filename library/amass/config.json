@@ -1,0 +1,12 @@
+{
+  "fancy_name": "Amass",
+  "name": "amass",
+  "description": "In-depth subdomain enumeration written in Go.",
+  "official_doc": "https://github.com/OWASP/Amass",
+  "categories": [
+    "scanner",
+    "recon"
+  ],
+  "organization": "caffix",
+  "run_command": "docker run -it --rm -v <input_dir>:/.config/amass/ caffix/amass enum -share -d <target_url>"
+}

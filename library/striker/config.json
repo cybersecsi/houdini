@@ -1,0 +1,13 @@
+{
+  "fancy_name": "Striker",
+  "name": "striker",
+  "description": "An offensive information and vulnerability scanner.",
+  "official_doc": "https://github.com/s0md3v/Striker",
+  "categories": [
+    "scanner",
+    "recon",
+    "webapp"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/striker <target_domain>"
+}

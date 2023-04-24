@@ -1,0 +1,10 @@
+{
+  "fancy_name": "Memcrashed DDOS Exploit Tool",
+  "name": "memcrashed",
+  "official_doc": "https://github.com/649/Memcrashed-DDoS-Exploit",
+  "categories": [
+    "misc"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/memcrashed"
+}

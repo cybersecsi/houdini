@@ -1,0 +1,13 @@
+{
+  "fancy_name": "WPScan",
+  "name": "wpscan",
+  "description": "Black box WordPress vulnerability scanner",
+  "official_doc": "https://github.com/wpscanteam/wpscan",
+  "categories": [
+    "webapp",
+    "scanner",
+    "fingerprint"
+  ],
+  "organization": "wpscanteam",
+  "run_command": "docker run -it --rm wpscanteam/wpscan --url <target_url>"
+}

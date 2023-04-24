@@ -1,0 +1,11 @@
+{
+  "fancy_name": "ZMap",
+  "name": "zmap",
+  "description": "Fast network scanner designed for Internet-wide network surveys",
+  "official_doc": "https://zmap.io/",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "ilyaglow",
+  "run_command": "docker run -it --rm --net=host ilyaglow/zmap -p80 8.8.8.0/24"
+}

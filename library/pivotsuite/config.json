@@ -1,0 +1,12 @@
+{
+  "fancy_name": "PivotSuite",
+  "name": "pivotsuite",
+  "description": "A portable, platform independent and powerful network pivoting toolkit.",
+  "official_doc": "https://github.com/RedTeamOperations/PivotSuite",
+  "categories": [
+    "networking",
+    "backdoor"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/pivotsuite [options] <target_ip> <target_port>"
+}

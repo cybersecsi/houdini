@@ -1,0 +1,13 @@
+{
+  "fancy_name": "psalm",
+  "name": "psalm",
+  "official_doc": "https://github.com/vimeo/psalm",
+  "categories": [
+    "code-audit",
+    "tainting",
+    "webapp",
+    "php"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm -v <local_dir>:/src secsi/psalm --root=/src"
+}

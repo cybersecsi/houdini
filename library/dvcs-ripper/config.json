@@ -1,0 +1,11 @@
+{
+  "fancy_name": "dvcs-ripper",
+  "name": "dvcs-ripper",
+  "description": "Rip web accessible (distributed) version control systems: SVN/GIT/...",
+  "official_doc": "https://github.com/kost/dvcs-ripper",
+  "categories": [
+    "scanner"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/dvcs-ripper"
+}

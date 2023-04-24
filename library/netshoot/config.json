@@ -1,0 +1,12 @@
+{
+  "fancy_name": "netshoot",
+  "name": "netshoot",
+  "official_doc": "https://github.com/nicolaka/netshoot",
+  "organization": "nicolaka",
+  "run_command": "docker run -it --net container:<container_name> nicolaka/netshoot",
+  "categories": [
+    "networking",
+    "docker"
+  ],
+  "description": "netshoot: a Docker + Kubernetes network trouble-shooting swiss-army container"
+}

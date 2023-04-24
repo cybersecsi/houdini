@@ -1,0 +1,11 @@
+{
+  "fancy_name": "CeWL",
+  "name": "cewl",
+  "official_doc": "https://github.com/digininja/CeWL",
+  "categories": [
+    "automation",
+    "cracker"
+  ],
+  "organization": "nocflame",
+  "run_command": "docker run -it --rm cewl <target_url>"
+}

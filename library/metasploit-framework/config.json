@@ -1,0 +1,13 @@
+{
+  "fancy_name": "Metasploit",
+  "name": "metasploit-framework",
+  "official_doc": "https://github.com/rapid7/metasploit-framework/wiki",
+  "categories": [
+    "scanner",
+    "exploitation",
+    "fuzzer",
+    "networking"
+  ],
+  "organization": "metasploitframework",
+  "run_command": "docker run -it --rm metasploitframework/metasploit-framework"
+}

@@ -1,0 +1,10 @@
+{
+  "fancy_name": "CloudFail",
+  "name": "cloudfail",
+  "official_doc": "https://github.com/m0rtem/CloudFail",
+  "categories": [
+    "recon"
+  ],
+  "organization": "secsi",
+  "run_command": "docker run -it --rm secsi/cloudfail"
+}
