@@ -1,0 +1,6 @@
+[submodule "cli"]
+	path = cli
+	url = https://github.com/cybersecsi/houdini-cli
+[submodule "website"]
+	path = website
+	url = https://github.com/cybersecsi/houdini-website
