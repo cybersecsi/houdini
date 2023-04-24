@@ -1,7 +1,7 @@
 {
   "name": "houdini-web",
   "license": "GPL-3.0",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "type": "module",
   "scripts": {
     "fetch-library": "npx ts-node --esm scripts/fetch_library.ts",
@@ -16,12 +16,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-helmet": "^6.1.6",
     "copyfiles": "^2.4.1",
     "fuse.js": "^6.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-btn": "^1.4.0",
     "react-github-corner": "^2.5.0",
+    "react-helmet": "^6.1.0",
     "react-hotkeys-hook": "^4.4.0",
     "react-icons": "^4.8.0",
     "react-markdown": "^8.0.7",

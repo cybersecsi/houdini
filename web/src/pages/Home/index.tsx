@@ -4,6 +4,7 @@ import { CONFIG, TOOLS_LIST } from '@/config';
 import { ITool, ICategory } from '@/types';
 import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { Helmet } from "react-helmet";
 import { BsArrowReturnRight } from "react-icons/bs";
 import { ClipboardCode } from '@/components';
 import { getTools } from '@/utils/helper';
@@ -112,8 +113,10 @@ const Home = () => {
 
     return (
         <>
-
-
+            <Helmet>
+              <title>HOUDINI: Hundreds of Offensive and Useful Docker Images for Network Intrusion</title>
+              <meta name="description" content="HOUDINI (Hundreds of Offensive and Useful Docker Images for Network Intrusion) is a curated list of Network Security related Docker Images for Network Intrusion purposes. A lot of images are created and kept updated through our RAUDI project which is able to automatically update a Docker Image every time there is a new version." />
+            </Helmet>
             <div ref={houdiniDescriptionRef}>
                 <p className="text-justify">
                     <b>HOUDINI</b> (Hundreds of Offensive and Useful Docker Images for Network Intrusion)  is a curated list of <b>Network Security</b> related Docker Images for Network Intrusion purposes.
