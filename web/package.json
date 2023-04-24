@@ -1,0 +1,52 @@
+{
+  "name": "houdini-website",
+  "license": "GPL-3.0",
+  "version": "0.0.2",
+  "type": "module",
+  "scripts": {
+    "fetch-library": "npx ts-node --esm scripts/fetch_library.ts",
+    "copy-library": "copyfiles -u 2  ../library/**/* src/library/",
+    "postinstall": "pnpm copy-library",
+    "check": "npx ts-node --esm scripts/check.ts",
+    "build-sitemap": "npx ts-node --esm scripts/sitemap-builder.ts",
+    "dev": "pnpm check && vite",
+    "build": "pnpm check && tsc && vite build && pnpm build-sitemap",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "fuse.js": "^6.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-github-btn": "^1.4.0",
+    "react-github-corner": "^2.5.0",
+    "react-hotkeys-hook": "^4.4.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.7",
+    "react-router-dom": "^6.10.0",
+    "remark-gfm": "^3.0.1",
+    "url": "^0.11.0",
+    "use-clipboard-copy": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0-beta.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-release-fetch": "^3.0.2",
+    "node-fetch": "^3.3.1",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.0",
+    "vite-plugin-dynamic-import": "^1.2.7"
+  }
+}
