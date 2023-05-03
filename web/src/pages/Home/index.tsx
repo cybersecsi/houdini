@@ -7,14 +7,16 @@ import { useHotkeys } from 'react-hotkeys-hook';
 import { Helmet } from "react-helmet";
 import { BsArrowReturnRight } from "react-icons/bs";
 import { ClipboardCode } from '@/components';
-import { getTools } from '@/utils/helper';
-
+import { replaceHoudiniVariables, getTools } from '@/utils/helper';
+import { useToolbox } from '@/context';
+import { IDynamicTool } from '@/types/ITool';
 
 const Home = () => {
-    const [fuse, setFuse] = useState<Fuse<ITool>>();
-    const [tools, setTools] = useState<ITool[]>([]);
+    const { toolbox } = useToolbox();
+    const [fuse, setFuse] = useState<Fuse<IDynamicTool>>();
+    const [tools, setTools] = useState<IDynamicTool[]>([]);
     const [categories, setCategories] = useState<ICategory[]>([]);
-    const [results, setResults] = useState<ITool[]>([]);
+    const [results, setResults] = useState<IDynamicTool[]>([]);
     const [showShortcutKeys, setShowShortcuteKeys] = useState<boolean>(false);
     const searchbarRef = useRef<any>();
     const houdiniDescriptionRef = useRef<any>();
@@ -37,8 +39,14 @@ const Home = () => {
       const setup = async () => {
         let _tools = await getTools();
         _tools = _tools.sort((a: ITool , b: ITool) => a.name > b.name ? 1 : -1 )
+        const dynamicTools = _tools.map((t: ITool): IDynamicTool => {
+          return {
+            ...t,
+            current_run_command: t.run_command,
+          }
+        })
         const _categories: ICategory[] = [...new Set(_tools.map((tool: ITool) => tool.categories).flat())].map((category: string) => {return {name:category, active: false}})
-          const _fuse = new Fuse(_tools, {
+          const _fuse = new Fuse(dynamicTools, {
             keys: [
                 'fancy_name',
                 'name',
@@ -46,8 +54,8 @@ const Home = () => {
             ]
         })
         // Set state
-        setTools(_tools);
-        setResults(_tools);
+        setTools(dynamicTools);
+        setResults(dynamicTools);
         setFuse(_fuse);
         setCategories(_categories);
         // Handle shortcut keys positioning on screen
@@ -65,6 +73,18 @@ const Home = () => {
 
       setup()
     }, [])
+
+    useEffect(() => {    
+      const updatedTools = tools.map((t: IDynamicTool) => {
+        return {
+          ...t,
+          current_run_command: replaceHoudiniVariables(t.run_command, toolbox)
+        }
+      })
+      setTools(updatedTools)
+      setResults(updatedTools);
+      
+    }, [toolbox])
 
     const searchWithFuse = (ev: any) => {
         const query = ev.target.value
@@ -98,7 +118,7 @@ const Home = () => {
 
         const activeCategories = _categories.filter((category: ICategory) => category.active).map((category: ICategory) => category.name);
         if (activeCategories.length > 0) {
-            const _results = tools.filter((result: ITool) => {
+            const _results = tools.filter((result: IDynamicTool) => {
                 return result.categories.some((category: string) => {
                     return activeCategories.indexOf(category) >= 0;
                 })
@@ -162,7 +182,7 @@ const Home = () => {
                 </label>
             </div>
 
-            {results.map((tool: ITool) => {
+            {results.map((tool: IDynamicTool) => {
                 return (
                     <div key={tool.name}>
                         <h3 className="text-center">
@@ -197,7 +217,7 @@ const Home = () => {
                             </div>
 
                             <ClipboardCode fixedBtn>
-                                {tool.run_command}
+                                {tool.current_run_command}
                             </ClipboardCode>
                         </div>
                     </div>

@@ -5,7 +5,8 @@ import gfm from 'remark-gfm'
 import { Helmet } from "react-helmet";
 import { ITool } from '@/types';
 import { ClipboardCode } from '@/components';
-import { getTool } from '@/utils/helper';
+import { replaceHoudiniVariables, getTool } from '@/utils/helper';
+import { useToolbox } from '@/context';
 
 const Loading = () => {
     return (
@@ -20,6 +21,7 @@ const Loading = () => {
 
 const Tool = () => {
     const { name } = useParams();
+    const { toolbox } = useToolbox();
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [currentTool, setCurrentTool] = useState<ITool>()
@@ -77,7 +79,7 @@ const Tool = () => {
             </p>
 
             <ClipboardCode fixedBtn>
-                {currentTool?.run_command}
+                {replaceHoudiniVariables(currentTool?.run_command ?? '', toolbox)}
             </ClipboardCode>
 
             {/* Categories */}
@@ -104,7 +106,7 @@ const Tool = () => {
                         const code = codeChild.children[0].value;
                         return (
                             <ClipboardCode>
-                                {code}
+                                {replaceHoudiniVariables(code, toolbox)}
                             </ClipboardCode>
                         )
                     }

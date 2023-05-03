@@ -1,11 +1,14 @@
 import AppRouter from '@/AppRouter';
 import { BrowserRouter } from 'react-router-dom';
+import { ToolboxProvider } from '@/context';
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppRouter/>
-    </BrowserRouter>
+    <ToolboxProvider>
+      <BrowserRouter>
+        <AppRouter/>
+      </BrowserRouter>
+    </ToolboxProvider>
   );
 }
 

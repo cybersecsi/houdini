@@ -11,3 +11,7 @@ export interface ITool {
     organization?: string,
     run_command: string,
 }
+
+export interface IDynamicTool extends ITool{
+    current_run_command: string,
+}

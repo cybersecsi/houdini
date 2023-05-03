@@ -24,6 +24,7 @@
     "react-github-btn": "^1.4.0",
     "react-github-corner": "^2.5.0",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.43.9",
     "react-hotkeys-hook": "^4.4.0",
     "react-icons": "^4.8.0",
     "react-markdown": "^8.0.7",
