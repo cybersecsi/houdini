@@ -16,6 +16,9 @@
     @apply flex-col;
     @apply h-screen;
   }
+  header {
+    @apply fixed mx-auto w-full default-tr bg-white z-40 shadow-md flex h-20;
+  }
   a {
     @apply text-sky-400;
     @apply underline;
@@ -138,6 +141,7 @@
     @apply duration-200;
     @apply bg-gray-700 hover:bg-gray-900;
     @apply p-2 text-white rounded-md;
+    @apply cursor-pointer disabled:bg-gray-500 disabled:hover:bg-gray-500 disabled:cursor-default;
   }
   .textfield {
     @apply h-full bg-gray-50 shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight;
@@ -146,10 +150,34 @@
   .textfield:focus {
     @apply outline-none;
   }
-  .toolbox {
-    @apply h-[calc(100vh-6%)] top-[3%];
-    @apply left-4;
-    @apply flex justify-center items-center rounded-md;
+
+  .toolbox-base {
+    @apply fixed w-[256px];
+    @apply flex flex-col justify-center items-center;
+    @apply bg-white;
+    @apply border-0 border-r-4 border-slate-200 border-solid;
+  }
+  .toolbox-minimal {
+    @apply toolbox-base;
+    @apply h-[calc(100vh-80px)] top-[80px];
+  }
+  .toolbox-scrollable {
+    @apply toolbox-base;
+    @apply h-[calc(100vh-224px)] top-[224px];
+  }
+  .workspace {
+    @apply w-[calc(100vw-256px)];
+    @apply ml-[256px];
+  }
+}
+
+@layer utilities {
+  .default-tr {
+    @apply transition-all;
+    @apply duration-300;
+  }
+  .blur-bg-white {
+    @apply bg-white/95;
   }
 }
 
