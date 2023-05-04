@@ -4,6 +4,7 @@
   "version": "0.2.5",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "fetch-library": "npx ts-node --esm scripts/fetch_library.ts",
     "copy-library": "copyfiles -u 2  ../library/**/* src/library/",
     "generate-tools-list": "npx ts-node --esm scripts/generate_tools_list.ts",
@@ -45,6 +46,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "gh-release-fetch": "^3.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "node-fetch": "^3.3.1",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.1",
@@ -52,5 +55,13 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.0",
     "vite-plugin-dynamic-import": "^1.2.7"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx, jsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md,html,js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   }
 }
