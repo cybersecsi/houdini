@@ -1,1 +1,1 @@
-export { ToolboxProvider, useToolbox } from '@/context/toolbox'
+export { ToolboxProvider, useToolbox } from "@/context/toolbox";

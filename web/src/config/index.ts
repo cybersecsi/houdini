@@ -1,13 +1,13 @@
-import { IToolsList } from '@/types';
-import data from '@/config/tools.json';
+import { IToolsList } from "@/types";
+import data from "@/config/tools.json";
 
 export const CONFIG = {
-    ORGANIZATION: "secsi",
-    DOCKER: {
-        BASE_URL: "https://hub.docker.com/v2/repositories/",
-        TAGS: "/tags?page=1&page_size=50"
-    }
-}
+  ORGANIZATION: "secsi",
+  DOCKER: {
+    BASE_URL: "https://hub.docker.com/v2/repositories/",
+    TAGS: "/tags?page=1&page_size=50",
+  },
+};
 
 /*
 A tool is composed by a few fields:
