@@ -3,10 +3,11 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm'
 import { Helmet } from "react-helmet";
-import { ITool } from '@/types';
+import { IHeaderType, ITool } from '@/types';
 import { ClipboardCode } from '@/components';
 import { replaceHoudiniVariables, getTool } from '@/utils/helper';
 import { useToolbox } from '@/context';
+import { useStyle } from '@/context/style';
 
 const Loading = () => {
     return (
@@ -20,12 +21,17 @@ const Loading = () => {
 }
 
 const Tool = () => {
+    const { setHeaderType } = useStyle();
     const { name } = useParams();
     const { toolbox } = useToolbox();
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [currentTool, setCurrentTool] = useState<ITool>()
     const [md, setMd] = useState<string>()
+
+    useEffect(() => {
+     setHeaderType(IHeaderType.minimal)  
+    }, [])
 
     useEffect(() => {
         const setup = async () => {

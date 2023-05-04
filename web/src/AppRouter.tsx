@@ -4,67 +4,42 @@ import { Header, Content, Footer, Toolbox } from '@/containers';
 import { Home, Tool, NoMatch } from '@/pages';
 
 
-const ScrollableRoute = () => {
-
+const GenericRoute = () => {
   return (
       <>
-          <Header type='scrollable'/>
+          <Header/>
           <Toolbox />
-          <Content type='scrollable'>
-            <Outlet />
-          </Content>
-          <Footer/>
+          <div className='workspace'>
+            <Content>
+              <Outlet />
+            </Content>
+            <Footer/>
+          </div>
           <GithubCorner className='z-50 fixed right-0 top-0' href="https://github.com/cybersecsi/HOUDINI" bannerColor="#475569"/>
       </>
   )
 }
 
-const MinimalRoute = () => {
-    return (
-        <>
-            <Header type='minimal'/>
-            <Toolbox />
-            <Content type='minimal'>
-              <Outlet />
-            </Content>
-            <Footer/>
-            <GithubCorner className='z-50 fixed right-0 top-0' href="https://github.com/cybersecsi/HOUDINI" bannerColor="#475569"/>
-        </>
-    )
-}
-
-
 
 const AppRouter = createBrowserRouter([
   {
     path: '/',
+    element: <GenericRoute />,
     children: [
       {
-        element: <ScrollableRoute />,
-        children: [
-          {
-            path: '',
-            element: <Home />,
-          },
-          {
-            path: '*',
-            element: <NoMatch />,
-          }
-        ]
-
+        path: '',
+        element: <Home />,
       },
       {
-        element: <MinimalRoute />,
-        children: [
-          {
-            path: '/tool/:name',
-            element: <Tool />
-          }
-        ]
+        path: '*',
+        element: <NoMatch />,
+      },
+      {
+        path: '/tool/:name',
+        element: <Tool />
       }
     ]
   },
-
 ]);
 
 export default AppRouter;

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CONFIG, TOOLS_LIST } from '@/config';
-import { ITool, ICategory } from '@/types';
+import { ITool, ICategory, IHeaderType } from '@/types';
 import Fuse from 'fuse.js';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { Helmet } from "react-helmet";
@@ -10,8 +10,10 @@ import { ClipboardCode } from '@/components';
 import { replaceHoudiniVariables, getTools } from '@/utils/helper';
 import { useToolbox } from '@/context';
 import { IDynamicTool } from '@/types/ITool';
+import { useStyle } from '@/context/style';
 
 const Home = () => {
+    const {setHeaderType} = useStyle();
     const { toolbox } = useToolbox();
     const [fuse, setFuse] = useState<Fuse<IDynamicTool>>();
     const [tools, setTools] = useState<IDynamicTool[]>([]);
@@ -71,7 +73,8 @@ const Home = () => {
         searchbarIntersectionObserver.observe(searchbarRef.current);
       }
 
-      setup()
+      setHeaderType(IHeaderType.scrollable);
+      setup();
     }, [])
 
     useEffect(() => {    
@@ -112,9 +115,6 @@ const Home = () => {
                 return category
             }
         })
-
-        
-
 
         const activeCategories = _categories.filter((category: ICategory) => category.active).map((category: ICategory) => category.name);
         if (activeCategories.length > 0) {
@@ -226,7 +226,7 @@ const Home = () => {
 
             {/* Shortcut for searchbar */}
             {showShortcutKeys && (
-                <span className="fixed right-8 bottom-8 flex items-center pl-2 select-none mr-1 hidden lg:block">
+                <span className="fixed right-8 bottom-8 flex items-center pl-2 select-none mr-1 hidden lg:block bg-white p-2 shadow-md rounded-md">
                     <span className="border-2 border-gray-300 text-gray-400 rounded text-base p-1 mr-1">Shift</span>
                     <span className="border-2 border-gray-300 text-gray-400 rounded text-base p-1">K</span>
                 </span>

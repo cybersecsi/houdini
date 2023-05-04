@@ -5,12 +5,14 @@ import { getTools } from '@/utils/helper';
 interface ProviderInterface {
   toolbox: IToolbox[];
   setToolboxInput: (inputName: string, value: string) => void;
+  toolboxEmpty: boolean;
   cleanToolbox: () => void;
 }
 
 const ToolboxContext = createContext<ProviderInterface | null>(null)
 
 const ToolboxProvider = ({ children }: any): any => {
+  const [toolboxEmpty, setToolboxEmpty] = useState<boolean>(true);
   const [toolbox, setToolbox] = useState<IToolbox[]>([])
 
   useEffect(() => {
@@ -54,6 +56,7 @@ const ToolboxProvider = ({ children }: any): any => {
         }
       })
     })
+    setToolboxEmpty(false)
   }
 
   const cleanToolbox = () => {
@@ -65,6 +68,7 @@ const ToolboxProvider = ({ children }: any): any => {
         }
       })
     })
+    setToolboxEmpty(true);
   }
 
 
@@ -74,6 +78,7 @@ const ToolboxProvider = ({ children }: any): any => {
         toolbox: toolbox,
         setToolboxInput: setToolboxInput,
         cleanToolbox: cleanToolbox,
+        toolboxEmpty: toolboxEmpty,
       }}
     >
       {children}
