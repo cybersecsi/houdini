@@ -24,7 +24,7 @@ const Header = () => {
                       <GitHubButton href="https://github.com/cybersecsi/HOUDINI" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star cybersecsi/HOUDINI on GitHub">Star</GitHubButton>
                   </div>
                   
-                  <h2 className={headerFixed || headerType === IHeaderType.minimal ? 'hidden' : "text-3xl text-center mt-6 font-normal"}>Hundreds of Offensive and Useful Docker Images for Network Intrusion</h2>
+                  <h2 className={headerFixed || headerType === IHeaderType.minimal ? 'hidden' : "text-xl md:text-2xl lg:text-3xl text-center mt-6 font-normal"}>Hundreds of Offensive and Useful Docker Images for Network Intrusion</h2>
 
                   {/*<Ads/>*/}
               </div>
