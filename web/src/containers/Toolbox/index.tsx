@@ -1,15 +1,9 @@
-import { useEffect } from 'react';
 import { useForm, FormProvider } from 'react-hook-form'
 import { useToolbox } from "@/context"
 import { IHeaderType, IToolbox } from "@/types";
-import { FaToolbox } from 'react-icons/fa';
+// import { FaToolbox } from 'react-icons/fa';
 import { useStyle } from '@/context/style';
 
-
-// TODO:
-// - responsive
-// - overflow-y-scroll
-// - hide & show
 
 const Toolbox = () => {
   const { headerType, headerFixed } = useStyle();
