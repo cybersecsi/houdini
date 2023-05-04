@@ -4,7 +4,7 @@
   "version": "0.2.5",
   "type": "module",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "cd .. && husky install web/.husky",
     "fetch-library": "npx ts-node --esm scripts/fetch_library.ts",
     "copy-library": "copyfiles -u 2  ../library/**/* src/library/",
     "generate-tools-list": "npx ts-node --esm scripts/generate_tools_list.ts",
@@ -13,7 +13,11 @@
     "build-sitemap": "npx ts-node --esm scripts/sitemap-builder.ts",
     "dev": "pnpm check && vite",
     "build": "pnpm check && tsc && vite build && pnpm build-sitemap",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src",
+    "lint:fix": "pnpm lint --fix",
+    "prettier": "prettier src --check",
+    "prettier:fix": "pnpm prettier --write",
+    "format": "pnpm prettier:fix && pnpm lint:fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -50,6 +54,7 @@
     "lint-staged": "^13.2.2",
     "node-fetch": "^3.3.1",
     "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
     "tailwindcss": "^3.3.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
