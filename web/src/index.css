@@ -1,137 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply text-slate-700;
-        @apply leading-8;
-        @apply overflow-x-hidden;
-        @apply scroll-smooth;
-    }
-    #root {
-        @apply flex;
-        @apply flex-col;
-        @apply h-screen;
-    }
-    a {
-      @apply text-sky-400;
-      @apply underline;
-      @apply transition-colors;
-      @apply duration-300;
-    }
-    a:hover {
-      @apply text-sky-600;
-    }
-    h1 {
-      @apply text-4xl;
-      @apply text-slate-700;
-    }
-    h2 {
-      @apply text-3xl;
-      @apply text-slate-700;
-      @apply my-6;
-      @apply font-semibold;
-    }
-    h3 {
-      @apply text-2xl;
-      @apply text-slate-700;
-      @apply font-semibold;
-      @apply my-6;
-    }
-    h4 {
-      @apply text-xl;
-      @apply text-slate-700;
-      @apply font-semibold;
-      @apply my-6;
-    }
-    h5 {
-      @apply text-base;
-      @apply text-slate-700;
-      @apply font-semibold;
-      @apply my-6;
-    }
-    ul {
-      @apply list-disc;
-      @apply list-inside;
-    }
-    table {
-      @apply table-auto;
-      @apply bg-slate-200;
-    }
-    tr {
-      @apply border-solid;
-      @apply border-2;
-      @apply border-slate-300;
-    }
-    th {
-      @apply p-2;
-      @apply text-left;
-    }
-    td {
-      @apply p-2;
-      @apply text-left;
-    }
-    pre {
-      @apply text-sm;
-      @apply my-3;
-      @apply p-2;
-      @apply bg-slate-200;
-      @apply overflow-x-auto;
-    }
-    code {
-      @apply text-sm;
-      @apply bg-slate-200;
-      @apply break-words;
-    }
-    p code {
-      @apply p-1;
-    }
-    table code {
-      @apply text-sm;
-      @apply bg-slate-300;
-      @apply p-1;
-      @apply break-words;
-    }
-    .markdown-content {
-      @apply text-slate-700;
-      @apply text-justify;
-    }
-    .markdown-content a{
-      @apply text-sky-400;
-      @apply underline;
-    }
-    .clipboardcode-fixed-pre {
-      width: calc(100% - 32px);
-    }
-    .clipboardcode-btn{
-      @apply transition-colors;
-      @apply absolute;
-      @apply bg-cyan-600 ;
-      @apply hover:bg-cyan-800;
-      @apply active:bg-cyan-400;
-      @apply flex;
-      @apply items-center;
-      @apply p-2;
-      @apply duration-200;
-      @apply h-8; 
-    }
-    .clipboardcode-default-btn {
-      @apply opacity-0;
-      @apply group-hover:opacity-100;
-      @apply transition-opacity;
-      @apply rounded;
-      @apply inset-y-0;
-      @apply top-2;
-      @apply right-2;
-    }
-    .clipboardcode-fixed-btn {
-      @apply top-0;
-      @apply right-0;
-      @apply h-full;
-      @apply rounded-r;
-    }
-
+  body {
+    @apply text-slate-700;
+    @apply leading-8;
+    @apply overflow-x-hidden;
+    @apply scroll-smooth;
   }
+  #root {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+  }
+  header {
+    @apply fixed mx-auto w-full default-tr bg-white z-40 shadow-md flex h-20;
+  }
+  a {
+    @apply text-sky-400;
+    @apply underline;
+    @apply transition-colors;
+    @apply duration-300;
+  }
+  a:hover {
+    @apply text-sky-600;
+  }
+  h1 {
+    @apply text-4xl;
+    @apply text-slate-700;
+  }
+  h2 {
+    @apply text-3xl;
+    @apply text-slate-700;
+    @apply my-6;
+    @apply font-semibold;
+  }
+  h3 {
+    @apply text-2xl;
+    @apply text-slate-700;
+    @apply font-semibold;
+    @apply my-6;
+  }
+  h4 {
+    @apply text-xl;
+    @apply text-slate-700;
+    @apply font-semibold;
+    @apply my-6;
+  }
+  h5 {
+    @apply text-base;
+    @apply text-slate-700;
+    @apply font-semibold;
+    @apply my-6;
+  }
+  ul {
+    @apply list-disc;
+    @apply list-inside;
+  }
+  table {
+    @apply table-auto;
+    @apply bg-slate-200;
+  }
+  tr {
+    @apply border-solid;
+    @apply border-2;
+    @apply border-slate-300;
+  }
+  th {
+    @apply p-2;
+    @apply text-left;
+  }
+  td {
+    @apply p-2;
+    @apply text-left;
+  }
+  pre {
+    @apply text-sm;
+    @apply my-3;
+    @apply p-2;
+    @apply bg-slate-200;
+    @apply overflow-x-auto;
+  }
+  code {
+    @apply text-sm;
+    @apply bg-slate-200;
+    @apply break-words;
+  }
+  p code {
+    @apply p-1;
+  }
+  table code {
+    @apply text-sm;
+    @apply bg-slate-300;
+    @apply p-1;
+    @apply break-words;
+  }
+  .markdown-content {
+    @apply text-slate-700;
+    @apply text-justify;
+  }
+  .markdown-content a {
+    @apply text-sky-400;
+    @apply underline;
+  }
+  .clipboardcode-fixed-pre {
+    width: calc(100% - 32px);
+  }
+  .clipboardcode-btn {
+    @apply transition-colors;
+    @apply absolute;
+    @apply bg-cyan-600;
+    @apply hover:bg-cyan-800;
+    @apply active:bg-cyan-400;
+    @apply flex;
+    @apply items-center;
+    @apply p-2;
+    @apply duration-200;
+    @apply h-8;
+  }
+  .clipboardcode-default-btn {
+    @apply opacity-0;
+    @apply group-hover:opacity-100;
+    @apply transition-opacity;
+    @apply rounded;
+    @apply inset-y-0;
+    @apply top-2;
+    @apply right-2;
+  }
+  .clipboardcode-fixed-btn {
+    @apply top-0;
+    @apply right-0;
+    @apply h-full;
+    @apply rounded-r;
+  }
+  .btn-common {
+    @apply transition-colors;
+    @apply duration-200;
+    @apply bg-gray-700 hover:bg-gray-900;
+    @apply p-2 text-white rounded-md;
+    @apply cursor-pointer disabled:bg-gray-500 disabled:hover:bg-gray-500 disabled:cursor-default;
+  }
+  .textfield {
+    @apply h-full bg-gray-50 shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight;
+    @apply transition-all duration-300 border-gray-300 dark:bg-slate-800 dark:text-white/80 dark:border-slate-600 tracking-wide font-light text-sm placeholder-gray-400 bg-gray-50 focus:ring disabled:opacity-40 disabled:cursor-not-allowed focus:border-blue-500 focus:ring-blue-500/20;
+  }
+  .textfield:focus {
+    @apply outline-none;
+  }
+
+  .toolbox-base {
+    @apply fixed w-[256px];
+    @apply flex flex-col justify-center items-center;
+    @apply bg-white;
+    @apply border-0 border-r-4 border-slate-200 border-solid;
+  }
+  .toolbox-minimal {
+    @apply toolbox-base;
+    @apply h-[calc(100vh-80px)] top-[80px];
+  }
+  .toolbox-scrollable {
+    @apply toolbox-base;
+    @apply h-[calc(100vh-224px)] top-[224px];
+  }
+  .workspace {
+    @apply w-[calc(100vw-256px)];
+    @apply ml-[256px];
+  }
+}
+
+@layer utilities {
+  .default-tr {
+    @apply transition-all;
+    @apply duration-300;
+  }
+  .blur-bg-white {
+    @apply bg-white/95;
+  }
+}
+
+.blur-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
