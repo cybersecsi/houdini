@@ -6,6 +6,6 @@
   "categories": [
     "recon"
   ],
-  "organization": "secsi",
-  "run_command": "docker run -it --rm secsi/subfinder -d <target_domain>"
+  "organization": "projectdiscovery",
+  "run_command": "docker run -it --rm projectdiscovery/subfinder -d <target_domain>"
 }
