@@ -16,6 +16,9 @@
     @apply flex-col;
     @apply h-screen;
   }
+  header {
+    @apply fixed mx-auto w-full default-tr bg-white z-40 shadow-md flex h-20;
+  }
   a {
     @apply text-sky-400;
     @apply underline;
@@ -150,6 +153,16 @@
     @apply h-[calc(100vh-6%)] top-[3%];
     @apply left-4;
     @apply flex justify-center items-center rounded-md;
+  }
+}
+
+@layer utilities {
+  .default-tr {
+    @apply transition-all;
+    @apply duration-300;
+  }
+  .blur-bg-white {
+    @apply bg-white/95;
   }
 }
 

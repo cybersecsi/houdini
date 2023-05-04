@@ -1,14 +1,14 @@
-import routes from '@/routes'
-import { useRoutes } from "react-router-dom";
+interface IContentProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+  type: "minimal" | "scrollable"
+}
 
-const Content = () => {
-    const content = useRoutes(routes)
-
+const Content: React.FC<IContentProps> = ({type, children}: IContentProps) => {
+    const contentMargin = type === "minimal" ? "mt-20" : "mt-56";
     return (
-        <main className="bg-slate-100 py-6 grow border-0 border-t-4 border-slate-200 border-solid">
+        <main className={`bg-slate-100 py-6 grow ${contentMargin}`}>
             <div className="md:container mx-auto font-Karla h-full">
                 <div className="w-4/5 md:w-full mx-auto h-full">
-                    {content}
+                    {children}
                 </div>
             </div>
         </main>
