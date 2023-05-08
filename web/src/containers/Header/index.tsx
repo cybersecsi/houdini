@@ -18,7 +18,7 @@ const Header = () => {
         }
       >
         <div className="w-4/5 md:w-full container mx-auto py-3 font-Karla">
-          <h1 className="text-6xl text-center select-none flex justify-center align-center">
+          <h1 className="text-4xl lg:text-6xl text-center select-none flex justify-center align-center">
             <Link
               to={`/`}
               className="no-underline text-slate-600 hover:text-slate-900"
