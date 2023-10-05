@@ -52,7 +52,7 @@ And using the following packages:
 ## Add a tool
 A tool is composed by:
 - A markdown file in the */tools* folder
-- An entry into a Javascript file (in */webapp/src/config/tools.ts*)
+- An entry into a Javascript file (in */web/src/config/tools.ts*)
 
 We want people to contribute, so we created a script to automate the process of adding a new tool. All you have to do is add the **description** and (optionally) the **cheatsheet**. The command is ``bootstrap``, here is an example:
 <p align="center">
@@ -95,7 +95,7 @@ To execute the app locally you have to run:
 yarn dev
 ```
 
-Please note that the folder used for showing the Markdown files in the React application is **not** the */tools* folder, but a directory inside the source code of the React app itself (*/webapp/src/_tools*). Every time you run ``yarn start`` from the main directory the */tools* folder is copied in */webapp/src/_tools*. So if you add a new tool while the app is running it won't show up until you update the */webapp/src/_tools* folder. For this reason a command has been added to ease this work, you can easily copy the */tools* folder by running the following command while in the main directory:
+Please note that the folder used for showing the Markdown files in the React application is **not** the */tools* folder, but a directory inside the source code of the React app itself (*/web/src/_tools*). Every time you run ``yarn start`` from the main directory the */tools* folder is copied in */web/src/_tools*. So if you add a new tool while the app is running it won't show up until you update the */web/src/_tools* folder. For this reason a command has been added to ease this work, you can easily copy the */tools* folder by running the following command while in the main directory:
 ```
 yarn run update
 ```
