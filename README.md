@@ -80,7 +80,7 @@ PLEASE use **yarn** over **npm**
 ### Setup
 This is a **React** based application. Before running it you have to install all the needed packages with the following command:
 ```
-yarn install && cd ./webapp && yarn install
+yarn install && cd ./web && yarn install
 ```
 
 ### Build
@@ -92,7 +92,7 @@ yarn run build
 ### Run
 To execute the app locally you have to run:
 ```
-yarn start
+yarn dev
 ```
 
 Please note that the folder used for showing the Markdown files in the React application is **not** the */tools* folder, but a directory inside the source code of the React app itself (*/webapp/src/_tools*). Every time you run ``yarn start`` from the main directory the */tools* folder is copied in */webapp/src/_tools*. So if you add a new tool while the app is running it won't show up until you update the */webapp/src/_tools* folder. For this reason a command has been added to ease this work, you can easily copy the */tools* folder by running the following command while in the main directory:
