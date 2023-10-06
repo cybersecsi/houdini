@@ -60,8 +60,8 @@ We want people to contribute, so we created a script to automate the process of 
 </p>
 
 To use the ``boostrap`` command you have to:
-- ``yarn install`` in the main directory
-- ``yarn run bootstrap`` in the main directory
+- ``pnpm install`` in the `web` folder
+- ``pnpm run bootstrap`` in the `web` folder
 - Add the mandatory informations to add a new tool
 
 The mandatory informations are the following:
@@ -75,29 +75,29 @@ The last thing you have to do is to add the **description** and (optionally) the
 ## Development
 This section provides a set of commands to run the application locally. 
 
-PLEASE use **yarn** over **npm**
+PLEASE use **pnpm** over **npm**
 
 ### Setup
 This is a **React** based application. Before running it you have to install all the needed packages with the following command:
 ```
-yarn install && cd ./web && yarn install
+cd ./web && pnpm install
 ```
 
 ### Build
 To build the app you have to run:
 ```
-yarn run build
+pnpm run build
 ```
 
 ### Run
 To execute the app locally you have to run:
 ```
-yarn dev
+pnpm dev
 ```
 
 Please note that the folder used for showing the Markdown files in the React application is **not** the */tools* folder, but a directory inside the source code of the React app itself (*/web/src/_tools*). Every time you run ``yarn start`` from the main directory the */tools* folder is copied in */web/src/_tools*. So if you add a new tool while the app is running it won't show up until you update the */web/src/_tools* folder. For this reason a command has been added to ease this work, you can easily copy the */tools* folder by running the following command while in the main directory:
 ```
-yarn run update
+pnpm run update
 ```
 
 
