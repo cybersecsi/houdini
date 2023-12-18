@@ -1,0 +1,11 @@
+{
+  "fancy_name": "CryptoLyzer",
+  "name": "cryptolyzer",
+  "official_doc": "https://cryptolyzer.readthedocs.io",
+  "organization": "coroner",
+  "run_command": "docker run -it --rm coroner/cryptolyzer <target_url>",
+  "categories": [
+    "scanner"
+  ],
+  "description": "Fast, flexible and comprehensive cryptographic settings analyzer library for Python with CLI."
+}
