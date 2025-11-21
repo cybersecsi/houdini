@@ -127,3 +127,24 @@ HOUDINI is an idea of [Gaetano Perrone](https://github.com/giper45) and is proud
 
 ## License
 **HOUDINI** is an open-source and free software released under the [GNU GPL v3](/LICENSE).
+
+
+## Citation
+
+If you find this repository useful, please cite our paper:
+
+```bibtex
+@inproceedings{CaponeDelicatoPerroneRomano2023,
+  title        = {Container‑based Virtualization for Ethical Hacking with HOUDINI},
+  author       = {Capone, Daniele and Delicato, Angelo and Perrone, Gaetano and Romano, Simon Pietro},
+  booktitle    = {Proceedings of the Italian Conference on Cyber Security (ITASEC) 2023},
+  editor       = {Francesco Buccafurri and Elena Ferrari and Gianluca Lax},
+  year         = {2023},
+  volume       = {3488},
+  series       = {CEUR Workshop Proceedings},
+  address      = {Bari, Italy},
+  month        = may,
+  url          = {[https://ceur-ws.org/Vol-3488/paper09.pdf](https://ceur-ws.org/Vol-3488/paper09.pdf)},
+  isbn         = {1613-0073}
+}
+```
